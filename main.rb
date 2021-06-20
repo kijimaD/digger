@@ -4,9 +4,9 @@ def main
   x = 1
   y = 1
 
-  while c = STDIN.getch
+  while (c = $stdin.getch)
     puts "\e[H\e[2J" # clear display
-    # puts "You typed: #{c}"
+
     case c
     when 'w'
       y -= 1
@@ -22,15 +22,15 @@ def main
 
     puts "#{x}, #{y}"
 
-    map = '#---#
-           |###|
-           |###|
-           |###|
-           #---#'
-    test = map.gsub(' ', '').split("\n")
+    map = <<ROOM
+  #---#
+  |###|
+  |###|
+  |###|
+  #---#
+ROOM
 
-    plane = test.map(&:chars)
-
+    plane = map.gsub(' ', '').split("\n").map(&:chars)
     plane[y][x] = '@'
     puts plane.map { |row| row }.map(&:join).join("\n")
   end
