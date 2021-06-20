@@ -11,9 +11,10 @@ Dir.glob(require_pattern).each do |f|
   require_relative f.gsub("#{root_dir}/", '')
 end
 
-$test_run = true if ARGV[0] == '--test-run'
-
+# Run script.
 class Main
+  @test_run = true if ARGV[0] == '--test-run'
+
   x = 1
   y = 1
 
@@ -47,7 +48,7 @@ ROOM
     plane[y][x] = '@'
     puts plane.map { |row| row }.map(&:join).join("\n")
 
-    exit if $test_run
+    exit if @test_run
   end
 end
 
