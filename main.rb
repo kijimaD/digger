@@ -5,6 +5,7 @@ def main
   y = 1
 
   while c = STDIN.getch
+    puts "\e[H\e[2J" # clear display
     # puts "You typed: #{c}"
     case c
     when 'w'
@@ -28,13 +29,10 @@ def main
            #---#'
     test = map.gsub(' ', '').split("\n")
 
-    plane = test.map do |row|
-      row.chars
-    end
+    plane = test.map(&:chars)
 
     plane[y][x] = '@'
-    puts plane.map { |row| row }.map{ |char| char.join }.join("\n")
-
+    puts plane.map { |row| row }.map(&:join).join("\n")
   end
 end
 
