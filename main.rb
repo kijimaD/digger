@@ -36,7 +36,7 @@ class Main
 
     puts "#{x}, #{y}"
 
-    map = <<ROOM
+    room = <<ROOM
   #---#
   |###|
   |###|
@@ -44,9 +44,9 @@ class Main
   #---#
 ROOM
 
-    plane = map.gsub(' ', '').split("\n").map(&:chars)
-    plane[y][x] = '@'
-    puts plane.map { |row| row }.map(&:join).join("\n")
+    two_dimension = room.gsub(' ', '').split("\n").map(&:chars)
+    two_dimension[y][x] = '@'
+    puts two_dimension.map { |row| row }.map(&:join).join("\n")
 
     exit if @test_run
   end
