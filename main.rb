@@ -1,4 +1,6 @@
 require 'io/console'
+require 'curses'
+include Curses
 
 root_dir = File.dirname(__FILE__)
 require_pattern = File.join(root_dir, '**/*.rb')
@@ -13,30 +15,9 @@ end
 
 # Run script.
 class Main
-  @test_run = true if ARGV[0] == '--test-run'
+  include Curses
 
-  x = 1
-  y = 1
-
-  while (c = $stdin.getch)
-    puts "\e[H\e[2J" # clear display
-
-    case c
-    when 'w'
-      y -= 1
-    when 'a'
-      x -= 1
-    when 's'
-      y += 1
-    when 'd'
-      x += 1
-    when 'c'
-      exit
-    end
-
-    puts "#{x}, #{y}"
-
-    room = <<ROOM
+  ROOM = <<ROOM
   #---#
   |###|
   |###|
@@ -44,12 +25,55 @@ class Main
   #---#
 ROOM
 
-    two_dimension = room.gsub(' ', '').split("\n").map(&:chars)
-    two_dimension[y][x] = '@'
-    puts two_dimension.map { |row| row }.map(&:join).join("\n")
+  def run
+    @x = 1
+    @y = 1
 
-    exit if @test_run
+    init_screen
+    begin
+      width = 20
+      @win = Window.new(5, width, (lines - 5) / 2, (cols - width) / 2)
+      crmode
+      setpos((lines - 5) / 2, (cols - 10) / 2)
+      cbreak
+      noecho
+      # stdscr.nodelay = 1
+      curs_set(0)
+
+      loop do
+        @win.clear
+        char = getch
+
+        case char
+        when 'w'
+          @y -= 1
+        when 'a'
+          @x -= 1
+        when 's'
+          @y += 1
+        when 'd'
+          @x += 1
+        when 'c'
+          exit
+        end
+
+        @win.addstr(plus_player_map)
+        @win.refresh
+      end
+    ensure
+      close_screen
+    end
+  end
+
+  def dimension
+    ROOM.gsub(' ', '').split("\n").map(&:chars)
+  end
+
+  def plus_player_map
+    p_dimension = dimension
+    p_dimension[@y][@x] = '@'
+    p_dimension.map { |row| row }.map(&:join).join("\n")
   end
 end
 
-main.new
+Main.new.run
