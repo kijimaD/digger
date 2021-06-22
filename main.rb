@@ -15,25 +15,18 @@ end
 
 # Run script.
 class Main
-  include Curses
-
   def initialize
-    init_screen
-    width = 20
-    @win = Window.new(5, width, (lines - 5) / 2, (cols - width) / 2)
-    crmode
-    setpos((lines - 5) / 2, (cols - 10) / 2)
-    cbreak
-    noecho
-    curs_set(0)
-
+    @game_window = GameWindow.new
     @map = Map.new
     @player = Character.new
   end
 
   def run
     loop do
-      @win.clear
+      @game_window.window.clear
+      @game_window.window.addstr(@map.map_with_player(@player))
+      @game_window.window.refresh
+
       case getch
       when 'w'
         @player.up
@@ -46,9 +39,6 @@ class Main
       when 'c'
         exit
       end
-
-      @win.addstr(@map.map_with_player(@player))
-      @win.refresh
     end
   end
 end
