@@ -1,3 +1,5 @@
+# Player, enemy character class.
+# Can move.
 class Character
   attr_accessor :x, :y
 

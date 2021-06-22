@@ -3,10 +3,15 @@ class GameWindow
   include Curses
   attr_accessor :window, :state
 
+  DISPLAY_WIDTH = 20
+
   def initialize
     init_screen
-    width = 20
-    $window = Window.new(5, width, (lines - 5) / 2, (cols - width) / 2)
+    $window = Window.new(5, DISPLAY_WIDTH, (lines - 5) / 2, (cols - DISPLAY_WIDTH) / 2)
+    display_settings
+  end
+
+  def display_settings
     crmode
     setpos((lines - 5) / 2, (cols - 10) / 2)
     cbreak

@@ -1,5 +1,6 @@
+# Field map class.
 class Map
-  RAW = <<MAP
+  RAW = <<MAP.freeze
   #---#
   |###|
   |###|

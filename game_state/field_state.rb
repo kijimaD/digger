@@ -1,20 +1,19 @@
+# It's in a cave. The player explores.
 class FieldState < GameState
   include Singleton
   attr_accessor :play_state
 
   def initialize
+    super
     @map = Map.new
     @player = Character.new
   end
 
-  def enter
-  end
+  def enter; end
 
-  def leave
-  end
+  def leave; end
 
-  def draw
-  end
+  def draw; end
 
   def update
     $window.addstr(@map.map_with_player(@player))
@@ -24,6 +23,7 @@ class FieldState < GameState
     true
   end
 
+  # rubocop:disable Metrics/MethodLength
   def button_down(char)
     case char
     when 'w'
@@ -38,4 +38,5 @@ class FieldState < GameState
       exit
     end
   end
+  # rubocop:enable Metrics/MethodLength
 end
