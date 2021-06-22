@@ -17,34 +17,24 @@ end
 class Main
   include Curses
 
-  ROOM = <<ROOM
-  #---#
-  |###|
-  |###|
-  |###|
-  #---#
-ROOM
+  def initialize
+    init_screen
+    width = 20
+    @win = Window.new(5, width, (lines - 5) / 2, (cols - width) / 2)
+    crmode
+    setpos((lines - 5) / 2, (cols - 10) / 2)
+    cbreak
+    noecho
+    curs_set(0)
+
+    @x, @y = 1, 1
+  end
 
   def run
-    @x = 1
-    @y = 1
-
-    init_screen
     begin
-      width = 20
-      @win = Window.new(5, width, (lines - 5) / 2, (cols - width) / 2)
-      crmode
-      setpos((lines - 5) / 2, (cols - 10) / 2)
-      cbreak
-      noecho
-      # stdscr.nodelay = 1
-      curs_set(0)
-
       loop do
         @win.clear
-        char = getch
-
-        case char
+        case getch
         when 'w'
           @y -= 1
         when 'a'
@@ -66,7 +56,7 @@ ROOM
   end
 
   def dimension
-    ROOM.gsub(' ', '').split("\n").map(&:chars)
+    Map::RAW.gsub(' ', '').split("\n").map(&:chars)
   end
 
   def plus_player_map
