@@ -27,42 +27,29 @@ class Main
     noecho
     curs_set(0)
 
-    @x, @y = 1, 1
+    @map = Map.new
+    @player = Character.new
   end
 
   def run
-    begin
-      loop do
-        @win.clear
-        case getch
-        when 'w'
-          @y -= 1
-        when 'a'
-          @x -= 1
-        when 's'
-          @y += 1
-        when 'd'
-          @x += 1
-        when 'c'
-          exit
-        end
-
-        @win.addstr(plus_player_map)
-        @win.refresh
+    loop do
+      @win.clear
+      case getch
+      when 'w'
+        @player.up
+      when 'a'
+        @player.left
+      when 's'
+        @player.down
+      when 'd'
+        @player.right
+      when 'c'
+        exit
       end
-    ensure
-      close_screen
+
+      @win.addstr(@map.map_with_player(@player))
+      @win.refresh
     end
-  end
-
-  def dimension
-    Map::RAW.gsub(' ', '').split("\n").map(&:chars)
-  end
-
-  def plus_player_map
-    p_dimension = dimension
-    p_dimension[@y][@x] = '@'
-    p_dimension.map { |row| row }.map(&:join).join("\n")
   end
 end
 
