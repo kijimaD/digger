@@ -6,3 +6,10 @@ CLI game
 bundle install
 ruby main.rb
 ```
+
+Test
+
+```shell
+COVERAGE=true bundle exec rspec
+xdg-open coverage/index.html
+```
