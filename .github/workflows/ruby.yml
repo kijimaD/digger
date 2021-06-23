@@ -19,8 +19,11 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run rspec
       run: COVERAGE=true bundle exec rspec
-    - store_artifacts:
-      path: coverage
+    - name: Upload coverage results
+      uses: actions/upload-artifact@master
+      with:
+        name: coverage-report
+        path: coverage
 
   lint:
     runs-on: ubuntu-latest
