@@ -1,7 +1,6 @@
 # It's in a cave. The player explores.
 class FieldState < GameState
   include Singleton
-  attr_accessor :play_state
 
   def initialize
     super
@@ -16,7 +15,7 @@ class FieldState < GameState
   def draw; end
 
   def update
-    $window.addstr(@map.map_with_player(@player))
+    $game.window.addstr(@map.map_with_player(@player))
   end
 
   def needs_redraw?

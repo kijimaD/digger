@@ -7,7 +7,6 @@ class GameWindow
 
   def initialize
     init_screen
-    $window = Window.new(5, DISPLAY_WIDTH, (lines - 5) / 2, (cols - DISPLAY_WIDTH) / 2)
     display_settings
   end
 
@@ -21,13 +20,13 @@ class GameWindow
 
   def main_loop
     loop do
-      $window.clear
+      @window.clear
 
       @state.draw
       @state.button_down(getch)
       @state.update
 
-      $window.refresh
+      @window.refresh
     end
   end
 end
