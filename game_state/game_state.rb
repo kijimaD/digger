@@ -13,8 +13,6 @@ class GameState
     $game.state&.leave
     $game.state = new_state
     new_state.enter
-
-    $game.main_loop # TMP
   end
 
   def enter; end

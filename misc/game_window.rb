@@ -7,6 +7,8 @@ class GameWindow
 
   def initialize
     init_screen
+    cbreak
+    stdscr.refresh
     display_settings
   end
 
@@ -19,12 +21,15 @@ class GameWindow
   end
 
   def main_loop
+    @state.draw
+    @window.refresh
+
     loop do
       @window.clear
 
-      @state.draw
-      @state.button_down(getch)
       @state.update
+      @state.button_down(getch)
+      @state.draw
 
       @window.refresh
     end
