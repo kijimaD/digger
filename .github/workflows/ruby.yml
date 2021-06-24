@@ -18,7 +18,7 @@ jobs:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run rspec
-      run: make test
+      run: make cov
       env:
         COVERAGE: true
     - name: Upload coverage results
