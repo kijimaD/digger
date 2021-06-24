@@ -7,7 +7,10 @@ class GameWindow
 
   def initialize
     init_screen
+    cbreak
+    stdscr.refresh
     display_settings
+    @window = Window.new(5, DISPLAY_WIDTH, (lines - 5) / 2, (cols - DISPLAY_WIDTH) / 2)
   end
 
   def display_settings
@@ -19,12 +22,15 @@ class GameWindow
   end
 
   def main_loop
+    @state.draw
+    @window.refresh
+
     loop do
       @window.clear
 
-      @state.draw
-      @state.button_down(getch)
       @state.update
+      @state.button_down(getch)
+      @state.draw
 
       @window.refresh
     end

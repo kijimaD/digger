@@ -14,3 +14,4 @@ end
 
 $game = GameWindow.new
 GameState.switch(FieldState.instance)
+$game.main_loop

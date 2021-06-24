@@ -1,6 +1,7 @@
 # It's in a cave. The player explores.
 class FieldState < GameState
   include Singleton
+  attr_reader :player
 
   def initialize
     super
@@ -12,11 +13,11 @@ class FieldState < GameState
 
   def leave; end
 
-  def draw; end
-
-  def update
+  def draw
     $game.window.addstr(@map.map_with_player(@player))
   end
+
+  def update; end
 
   def needs_redraw?
     true

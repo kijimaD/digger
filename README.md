@@ -6,3 +6,10 @@ CLI game
 bundle install
 ruby main.rb
 ```
+
+Test
+
+```shell
+export TERM=xterm && bundle exec rspec
+xdg-open coverage/index.html
+```
