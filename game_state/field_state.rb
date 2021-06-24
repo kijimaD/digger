@@ -1,6 +1,7 @@
 # It's in a cave. The player explores.
 class FieldState < GameState
   include Singleton
+  attr_reader :player
 
   def initialize
     super
