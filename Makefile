@@ -1,5 +1,5 @@
 test:
-	bundle exec rspec
+        export TERM=xterm && bundle exec rspec
 lint:
 	bundle exec rubocop
 run:

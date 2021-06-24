@@ -10,6 +10,6 @@ ruby main.rb
 Test
 
 ```shell
-COVERAGE=true bundle exec rspec
+export TERM=xterm && bundle exec rspec
 xdg-open coverage/index.html
 ```
