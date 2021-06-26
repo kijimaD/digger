@@ -2,6 +2,8 @@
 # digger
 CLI game
 
+![image](https://user-images.githubusercontent.com/11595790/123513003-8e588780-d6c5-11eb-9f7e-4935d00bbb58.png)
+
 ```shell
 bundle install
 ruby main.rb
