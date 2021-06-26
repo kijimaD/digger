@@ -2,3 +2,5 @@ Style/FrozenStringLiteralComment:
   Enabled: false
 Style/GlobalVars:
   Enabled: false
+Naming/MethodParameterName:
+  Enabled: false
