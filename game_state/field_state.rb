@@ -5,7 +5,7 @@ class FieldState < GameState
 
   def initialize
     super
-    @map = Map.new
+    @map = Map.new('debug_map.txt')
     @player = Character.new
   end
 
