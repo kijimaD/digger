@@ -10,6 +10,12 @@ class Map
     new_map[character.y][character.x] = '@'
     new_map.map { |row| row }.map(&:join).join("\n")
   end
+
+  def can_move_to?(x, y)
+    terrain = @map[y][x]
+    terrain && terrain != '#'
+  end
+
   private
 
   def text_to_array

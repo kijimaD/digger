@@ -30,4 +30,10 @@ RSpec.describe Map do
     character.left
     expect(map.map_with_player(character)).to eq(test_before)
   end
+
+  it '#can_move_to?' do
+    map = Map.new('test_map.txt')
+    expect(map.can_move_to?(1, 1)).to be(true)
+    expect(map.can_move_to?(0, 0)).to be(false)
+  end
 end
