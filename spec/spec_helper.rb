@@ -1,7 +1,7 @@
 if ENV['COVERAGE']
   require 'simplecov'
   SimpleCov.start do
-    track_files '{entities,game_state,misc}/**/*.rb'
+    add_filter 'spec'
   end
 end
 

@@ -3,14 +3,19 @@ class GameWindow
   include Curses
   attr_accessor :window, :state
 
-  DISPLAY_WIDTH = 20
+  DISPLAY_HEIGHT = 40
+  DISPLAY_WIDTH = 40
+  PADDING = 5
 
   def initialize
     init_screen
     cbreak
     stdscr.refresh
     display_settings
-    @window = Window.new(5, DISPLAY_WIDTH, (lines - 5) / 2, (cols - DISPLAY_WIDTH) / 2)
+    @window = Window.new(DISPLAY_HEIGHT,
+                         DISPLAY_WIDTH,
+                         (lines - PADDING) / 2,
+                         (cols - DISPLAY_WIDTH) / 2)
   end
 
   def display_settings

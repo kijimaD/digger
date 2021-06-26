@@ -5,7 +5,7 @@ class FieldState < GameState
 
   def initialize
     super
-    @map = Map.new
+    @map = Map.new('debug_map.txt')
     @player = Character.new
   end
 
@@ -23,20 +23,28 @@ class FieldState < GameState
     true
   end
 
-  # rubocop:disable Metrics/MethodLength
+  # rubocop:disable Metrics/MethodLength, Metrics/AbcSize, Metrics/CyclomaticComplexity
   def button_down(char)
+    # TODO: Move to Character class
+    old_x = @player.x
+    old_y = @player.y
+
     case char
-    when 'w'
-      @player.up
-    when 'a'
-      @player.left
-    when 's'
-      @player.down
-    when 'd'
-      @player.right
+    when 'w' # up
+      @player.move(@player.x, @player.y - 1)
+      @player.move(old_x, old_y) unless @map.can_move_to?(@player.x, @player.y)
+    when 'a' # left
+      @player.move(@player.x - 1, @player.y)
+      @player.move(old_x, old_y) unless @map.can_move_to?(@player.x, @player.y)
+    when 's' # down
+      @player.move(@player.x, @player.y + 1)
+      @player.move(old_x, old_y) unless @map.can_move_to?(@player.x, @player.y)
+    when 'd' # right
+      @player.move(@player.x + 1, @player.y)
+      @player.move(old_x, old_y) unless @map.can_move_to?(@player.x, @player.y)
     when 'c'
       exit
     end
   end
-  # rubocop:enable Metrics/MethodLength
+  # rubocop:enable Metrics/MethodLength, Metrics/AbcSize, Metrics/CyclomaticComplexity
 end
