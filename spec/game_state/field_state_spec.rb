@@ -9,14 +9,14 @@ RSpec.describe FieldState do
     expect($game.state.player.x).to eq(1)
     expect($game.state.player.y).to eq(1)
 
-    $game.state.button_down('w')
-    $game.state.button_down('a')
-
-    expect($game.state.player.x).to eq(0)
-    expect($game.state.player.y).to eq(0)
-
     $game.state.button_down('s')
     $game.state.button_down('d')
+
+    expect($game.state.player.x).to eq(2)
+    expect($game.state.player.y).to eq(2)
+
+    $game.state.button_down('w')
+    $game.state.button_down('a')
 
     expect($game.state.player.x).to eq(1)
     expect($game.state.player.y).to eq(1)

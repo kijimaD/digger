@@ -14,7 +14,7 @@ RSpec.describe Map do
 #####'
     expect(map.map_with_player(character)).to eq(test_before)
 
-    character.right
+    character.move(character.x + 1, character.y) # right
     test_after =
       '#####
 # @ #
@@ -23,11 +23,11 @@ RSpec.describe Map do
 #####'
     expect(map.map_with_player(character)).to eq(test_after)
 
-    character.up
-    character.down
+    character.move(character.x, character.y - 1) # up
+    character.move(character.x, character.y + 1) # down
     expect(map.map_with_player(character)).to eq(test_after)
 
-    character.left
+    character.move(character.x - 1, character.y) # left
     expect(map.map_with_player(character)).to eq(test_before)
   end
 
