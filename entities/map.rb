@@ -13,7 +13,14 @@ class Map
 
   def can_move_to?(x, y)
     terrain = @map[y][x]
-    terrain && terrain != '#'
+    case terrain
+    when '#'
+      false
+    when '|'
+      false
+    else
+      true
+    end
   end
 
   private
