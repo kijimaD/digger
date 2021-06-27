@@ -19,6 +19,7 @@ class FieldState < GameState
 
     @object_pool.draw_all
 
+    # TODO: Move to msg class
     $game.window.setpos(0, 20)
     $game.window.addstr("(#{@player.x}, #{@player.y})")
   end
@@ -31,23 +32,16 @@ class FieldState < GameState
 
   # rubocop:disable Metrics/MethodLength, Metrics/AbcSize, Metrics/CyclomaticComplexity
   def button_down(char)
-    # TODO: Move to Character class
-    old_x = @player.x
-    old_y = @player.y
-
+    # TODO: Move to Character input class
     case char
     when 'w' # up
-      @player.move(@player.x, @player.y - 1)
-      @player.move(old_x, old_y) unless @map.can_move_to?(@player.x, @player.y)
+      @player.move_to(@player.x, @player.y - 1)
     when 'a' # left
-      @player.move(@player.x - 1, @player.y)
-      @player.move(old_x, old_y) unless @map.can_move_to?(@player.x, @player.y)
+      @player.move_to(@player.x - 1, @player.y)
     when 's' # down
-      @player.move(@player.x, @player.y + 1)
-      @player.move(old_x, old_y) unless @map.can_move_to?(@player.x, @player.y)
+      @player.move_to(@player.x, @player.y + 1)
     when 'd' # right
-      @player.move(@player.x + 1, @player.y)
-      @player.move(old_x, old_y) unless @map.can_move_to?(@player.x, @player.y)
+      @player.move_to(@player.x + 1, @player.y)
     when 'c'
       exit
     end
