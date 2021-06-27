@@ -20,5 +20,7 @@ RSpec.describe FieldState do
 
     expect($game.state.player.x).to eq(1)
     expect($game.state.player.y).to eq(1)
+
+    expect { $game.state.button_down('c') }.to raise_error SystemExit
   end
 end
