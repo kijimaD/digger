@@ -1,6 +1,6 @@
 # Abstruct class.
 class GameObject
-  attr_reader :x, :y
+  attr_reader :x, :y, :object_pool
 
   def initialize(object_pool, x, y)
     @x = x
@@ -16,12 +16,5 @@ class GameObject
     @y = new_y
   end
 
-  def draw
-  end
-
-  protected
-
-  def object_pool
-    @object_pool
-  end
+  def draw; end
 end
