@@ -23,6 +23,8 @@ end
   require_relative f.gsub("#{root_dir}/", '')
 end
 
+$debug = true if ARGV[0] == '--debug'
+
 $game = GameWindow.new
 GameState.switch(FieldState.instance)
 $game.main_loop

@@ -5,8 +5,10 @@ class FieldState < GameState
 
   def initialize
     super
-    @map = Map.new('debug_map.txt')
-    @player = Character.new
+    @object_pool = ObjectPool.new
+    @map = Map.new(@object_pool, 'debug_map.txt')
+    @player = Character.new(@object_pool)
+    @message_display = MessageDisplay.new(@object_pool, @player)
   end
 
   def enter; end
@@ -14,37 +16,33 @@ class FieldState < GameState
   def leave; end
 
   def draw
-    $game.window.addstr(@map.map_with_player(@player))
+    @map.draw
+    @object_pool.draw_all
   end
 
-  def update; end
-
-  def needs_redraw?
-    true
+  def update
+    @object_pool.update_all
   end
 
-  # rubocop:disable Metrics/MethodLength, Metrics/AbcSize, Metrics/CyclomaticComplexity
+  # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
   def button_down(char)
-    # TODO: Move to Character class
-    old_x = @player.x
-    old_y = @player.y
-
+    # TODO: Move to Character input class
     case char
-    when 'w' # up
-      @player.move(@player.x, @player.y - 1)
-      @player.move(old_x, old_y) unless @map.can_move_to?(@player.x, @player.y)
-    when 'a' # left
-      @player.move(@player.x - 1, @player.y)
-      @player.move(old_x, old_y) unless @map.can_move_to?(@player.x, @player.y)
-    when 's' # down
-      @player.move(@player.x, @player.y + 1)
-      @player.move(old_x, old_y) unless @map.can_move_to?(@player.x, @player.y)
-    when 'd' # right
-      @player.move(@player.x + 1, @player.y)
-      @player.move(old_x, old_y) unless @map.can_move_to?(@player.x, @player.y)
+    when 'w'
+      @player.move_to(@player.x, @player.y - 1) # up
+      @object_pool.message.add('Move up')
+    when 'a'
+      @player.move_to(@player.x - 1, @player.y) # left
+      @object_pool.message.add('Move left')
+    when 's'
+      @player.move_to(@player.x, @player.y + 1) # down
+      @object_pool.message.add('Move down')
+    when 'd'
+      @player.move_to(@player.x + 1, @player.y) # right
+      @object_pool.message.add('Move right')
     when 'c'
       exit
     end
   end
-  # rubocop:enable Metrics/MethodLength, Metrics/AbcSize, Metrics/CyclomaticComplexity
+  # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 end

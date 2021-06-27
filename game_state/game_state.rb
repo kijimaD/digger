@@ -14,9 +14,5 @@ class GameState
 
   def update; end
 
-  def needs_redraw?
-    true
-  end
-
   def button_down(char); end
 end

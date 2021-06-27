@@ -1,14 +1,18 @@
 # Field map class.
 class Map
-  def initialize(file)
+  attr_reader :text
+
+  def initialize(object_pool, file)
+    @object_pool = object_pool
+    object_pool.map = self
+
     @text = File.read(Utils.media_path(file))
-    @map = text_to_array
+    @map = @text.split("\n").map(&:chars)
   end
 
-  def map_with_player(character)
-    new_map = text_to_array
-    new_map[character.y][character.x] = '@'
-    new_map.map { |row| row }.map(&:join).join("\n")
+  def draw
+    $game.window.setpos(0, 0)
+    $game.window.addstr(@text)
   end
 
   def can_move_to?(x, y)
@@ -21,11 +25,5 @@ class Map
     else
       true
     end
-  end
-
-  private
-
-  def text_to_array
-    @text.split("\n").map(&:chars)
   end
 end
