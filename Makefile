@@ -8,5 +8,5 @@ lint:
 	bundle exec rubocop
 run:
 	ruby main.rb
-test-run:
-	ruby main.rb --test-run
+run-debug:
+	ruby main.rb --debug
