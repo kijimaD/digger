@@ -3,8 +3,8 @@ class GameWindow
   include Curses
   attr_accessor :window, :state
 
-  DISPLAY_HEIGHT = 40
-  DISPLAY_WIDTH = 40
+  DISPLAY_HEIGHT = 60
+  DISPLAY_WIDTH = 60
   PADDING = 5
 
   def initialize
