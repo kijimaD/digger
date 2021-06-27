@@ -26,21 +26,21 @@ class FieldState < GameState
 
   def update; end
 
-  # rubocop:disable Metrics/MethodLength, Metrics/AbcSize, Metrics/CyclomaticComplexity
+  # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
   def button_down(char)
     # TODO: Move to Character input class
     case char
-    when 'w' # up
-      @player.move_to(@player.x, @player.y - 1)
-    when 'a' # left
-      @player.move_to(@player.x - 1, @player.y)
-    when 's' # down
-      @player.move_to(@player.x, @player.y + 1)
-    when 'd' # right
-      @player.move_to(@player.x + 1, @player.y)
+    when 'w'
+      @player.move_to(@player.x, @player.y - 1) # up
+    when 'a'
+      @player.move_to(@player.x - 1, @player.y) # left
+    when 's'
+      @player.move_to(@player.x, @player.y + 1) # down
+    when 'd'
+      @player.move_to(@player.x + 1, @player.y) # right
     when 'c'
       exit
     end
   end
-  # rubocop:enable Metrics/MethodLength, Metrics/AbcSize, Metrics/CyclomaticComplexity
+  # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 end
