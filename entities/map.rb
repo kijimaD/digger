@@ -10,6 +10,11 @@ class Map
     @map = @text.split("\n").map(&:chars)
   end
 
+  def draw
+    $game.window.setpos(0, 0)
+    $game.window.addstr(@text)
+  end
+
   def can_move_to?(x, y)
     terrain = @map[y][x]
     case terrain

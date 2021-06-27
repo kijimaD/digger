@@ -15,8 +15,7 @@ class FieldState < GameState
   def leave; end
 
   def draw
-    $game.window.addstr(@map.text)
-
+    @map.draw
     @object_pool.draw_all
 
     # TODO: Move to msg class
