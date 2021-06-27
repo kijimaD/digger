@@ -1,14 +1,10 @@
 # Field map class.
 class Map
+  attr_reader :text
+
   def initialize(file)
     @text = File.read(Utils.media_path(file))
-    @map = text_to_array
-  end
-
-  def map_with_player(character)
-    new_map = text_to_array
-    new_map[character.y][character.x] = '@'
-    new_map.map { |row| row }.map(&:join).join("\n")
+    @map = @text.split("\n").map(&:chars)
   end
 
   def can_move_to?(x, y)
@@ -21,11 +17,5 @@ class Map
     else
       true
     end
-  end
-
-  private
-
-  def text_to_array
-    @text.split("\n").map(&:chars)
   end
 end

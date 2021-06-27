@@ -14,7 +14,14 @@ class FieldState < GameState
   def leave; end
 
   def draw
-    $game.window.addstr(@map.map_with_player(@player))
+    $game.window.addstr(@map.text)
+
+    # TODO: Move to each game object
+    $game.window.setpos(@player.y, @player.x)
+    $game.window.addstr('@')
+
+    $game.window.setpos(0, 20)
+    $game.window.addstr("(#{@player.x}, #{@player.y})")
   end
 
   def update; end
