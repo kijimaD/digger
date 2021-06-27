@@ -26,10 +26,6 @@ class FieldState < GameState
 
   def update; end
 
-  def needs_redraw?
-    true
-  end
-
   # rubocop:disable Metrics/MethodLength, Metrics/AbcSize, Metrics/CyclomaticComplexity
   def button_down(char)
     # TODO: Move to Character input class
