@@ -5,8 +5,9 @@ class FieldState < GameState
 
   def initialize
     super
-    @map = Map.new('debug_map.txt')
-    @player = Character.new
+    @object_pool = ObjectPool.new
+    @map = Map.new(@object_pool, 'debug_map.txt')
+    @player = Character.new(@object_pool)
   end
 
   def enter; end
@@ -16,9 +17,7 @@ class FieldState < GameState
   def draw
     $game.window.addstr(@map.text)
 
-    # TODO: Move to each game object
-    $game.window.setpos(@player.y, @player.x)
-    $game.window.addstr('@')
+    @object_pool.draw_all
 
     $game.window.setpos(0, 20)
     $game.window.addstr("(#{@player.x}, #{@player.y})")
