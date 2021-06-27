@@ -22,7 +22,7 @@ RSpec.describe MessageDisplay do
     expect(message_display.messages.length).to eq(10)
     message_display.add('test')
     expect(message_display.messages.length).to eq(11)
-    message_display.latest_messages
+    object_pool.update_all
     expect(message_display.messages.length).to eq(10)
   end
 end

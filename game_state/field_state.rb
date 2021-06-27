@@ -21,7 +21,7 @@ class FieldState < GameState
   end
 
   def update
-    @message_display.update
+    @object_pool.update_all
   end
 
   # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
