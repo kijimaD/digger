@@ -2,6 +2,10 @@
 class MessageDisplay
   attr_reader :messages
 
+  LOG_LENGTH = 10
+  MESSAGE_X = 30
+  MESSAGE_Y = 0
+
   def initialize(object_pool, character)
     # TODO: Remove redundunt object_pool description.
     @object_pool = object_pool
@@ -12,12 +16,12 @@ class MessageDisplay
   end
 
   def draw
-    $game.window.setpos(0, 30)
+    $game.window.setpos(MESSAGE_Y, MESSAGE_X)
     $game.window.addstr("(#{@character.x}, #{@character.y})")
 
-    (1..10).each do |i|
-      $game.window.setpos(i, 30)
-      $game.window.addstr(@messages[-i])
+    @messages.each.with_index(1) do |message, i|
+      $game.window.setpos(MESSAGE_Y + i, MESSAGE_X)
+      $game.window.addstr(message)
     end
   end
 
@@ -30,6 +34,6 @@ class MessageDisplay
   end
 
   def latest_messages
-    @messages.pop while @messages.length > 10
+    @messages.shift while @messages.length > LOG_LENGTH
   end
 end

@@ -20,7 +20,9 @@ class FieldState < GameState
     @object_pool.draw_all
   end
 
-  def update; end
+  def update
+    @message_display.update
+  end
 
   # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
   def button_down(char)
