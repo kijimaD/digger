@@ -9,7 +9,6 @@ class MessageDisplay
   def initialize(object_pool, character)
     # TODO: Remove redundunt object_pool description.
     @object_pool = object_pool
-    object_pool.add(self)
     object_pool.message = self
     @character = character
     @messages = []
