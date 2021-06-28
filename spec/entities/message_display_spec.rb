@@ -5,7 +5,7 @@ require_relative '../../entities/message_display'
 RSpec.describe MessageDisplay do
   it '#add' do
     object_pool = ObjectPool.new
-    character = Character.new(object_pool)
+    character = Character.new(object_pool, 1, 1)
     message_display = MessageDisplay.new(object_pool, character)
 
     expect(message_display.messages.length).to eq(0)
@@ -15,7 +15,7 @@ RSpec.describe MessageDisplay do
 
   it '#latest_messages' do
     object_pool = ObjectPool.new
-    character = Character.new(object_pool)
+    character = Character.new(object_pool, 1, 1)
     message_display = MessageDisplay.new(object_pool, character)
 
     10.times { message_display.add('test') }

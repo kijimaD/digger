@@ -7,7 +7,7 @@ class FieldState < GameState
     super
     @object_pool = ObjectPool.new
     @map = Map.new(@object_pool, 'debug_map.txt')
-    @player = Character.new(@object_pool)
+    @player = Character.new(@object_pool, 1, 1)
     @message_display = MessageDisplay.new(@object_pool, @player)
   end
 
