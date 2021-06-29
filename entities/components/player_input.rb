@@ -9,6 +9,7 @@ class PlayerInput < Component
     self.object = obj
   end
 
+  # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
   def button_down(char)
     case char
     when 'w'
@@ -23,4 +24,5 @@ class PlayerInput < Component
       exit
     end
   end
+  # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 end

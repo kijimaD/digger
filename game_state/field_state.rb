@@ -26,9 +26,7 @@ class FieldState < GameState
     @object_pool.update_all
   end
 
-  # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
   def button_down(char)
     @character.input.button_down(char)
   end
-  # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 end
