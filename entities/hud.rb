@@ -4,6 +4,8 @@ class HUD
 
   def initialize(object_pool, character)
     @object_pool = object_pool
+    object_pool.hud = self
+
     @character = character
     @message_display = MessageDisplay.new(self, object_pool, character)
   end

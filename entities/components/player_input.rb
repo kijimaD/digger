@@ -14,14 +14,20 @@ class PlayerInput < Component
     case char
     when 'w'
       object.move_to(object.x, object.y - 1) # up
+      @object_pool.hud.message_display.add('Move up')
     when 'a'
       object.move_to(object.x - 1, object.y) # left
+      @object_pool.hud.message_display.add('Move left')
     when 's'
       object.move_to(object.x, object.y + 1) # down
+      @object_pool.hud.message_display.add('Move down')
     when 'd'
       object.move_to(object.x + 1, object.y) # right
+      @object_pool.hud.message_display.add('Move right')
     when 'c'
       exit
+    else
+      @object_pool.hud.message_display.add('Invalid key')
     end
   end
   # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
