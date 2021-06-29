@@ -1,14 +1,14 @@
 # It's in a cave. The player explores.
 class FieldState < GameState
   include Singleton
-  attr_reader :player
+  attr_reader :character
 
   def initialize
     super
     @object_pool = ObjectPool.new
     @map = Map.new(@object_pool, 'debug_map.txt')
-    @player = Character.new(@object_pool)
-    @message_display = MessageDisplay.new(@object_pool, @player)
+    @character = Character.new(@object_pool, PlayerInput.new(@object_pool), 1, 1)
+    @hud = HUD.new(@object_pool, @character)
   end
 
   def enter; end
@@ -17,32 +17,16 @@ class FieldState < GameState
 
   def draw
     @map.draw
+    @hud.draw
     @object_pool.draw_all
   end
 
   def update
+    @hud.update
     @object_pool.update_all
   end
 
-  # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
   def button_down(char)
-    # TODO: Move to Character input class
-    case char
-    when 'w'
-      @player.move_to(@player.x, @player.y - 1) # up
-      @object_pool.message.add('Move up')
-    when 'a'
-      @player.move_to(@player.x - 1, @player.y) # left
-      @object_pool.message.add('Move left')
-    when 's'
-      @player.move_to(@player.x, @player.y + 1) # down
-      @object_pool.message.add('Move down')
-    when 'd'
-      @player.move_to(@player.x + 1, @player.y) # right
-      @object_pool.message.add('Move right')
-    when 'c'
-      exit
-    end
+    @character.input.button_down(char)
   end
-  # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 end

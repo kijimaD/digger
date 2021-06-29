@@ -1,16 +1,17 @@
 # Message display.
-class MessageDisplay
+class MessageDisplay < Component
   attr_reader :messages
 
   LOG_LENGTH = 10
   MESSAGE_X = 30
   MESSAGE_Y = 0
 
-  def initialize(object_pool, character)
-    # TODO: Remove redundunt object_pool description.
+  # TODO: Divide message and display
+
+  def initialize(hud, object_pool, character)
+    super(nil)
+    @hud = hud
     @object_pool = object_pool
-    object_pool.add(self)
-    object_pool.message = self
     @character = character
     @messages = []
   end

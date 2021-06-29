@@ -3,7 +3,7 @@ RSpec.describe Map do
 
   it '#size' do
     expect(object_pool.size).to eq(0)
-    Character.new(object_pool)
+    Character.new(object_pool, PlayerInput.new(object_pool), 1, 1)
     expect(object_pool.size).to eq(1)
   end
 

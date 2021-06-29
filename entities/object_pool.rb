@@ -1,6 +1,6 @@
 # Objects array.
 class ObjectPool
-  attr_accessor :objects, :map, :message
+  attr_accessor :objects, :map, :hud
 
   def initialize
     @objects = []
