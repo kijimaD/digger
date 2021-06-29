@@ -7,6 +7,7 @@ require_relative '../entities/character'
 require_relative '../entities/hud'
 require_relative '../entities/components/component'
 require_relative '../entities/components/message_display'
+require_relative '../entities/components/player_input'
 
 RSpec.describe 'Simulate running main' do
   it 'Can run' do
