@@ -18,6 +18,10 @@ class Character < GameObject
     old_x = @x
     old_y = @y
     move(x, y)
-    move(old_x, old_y) unless @object_pool.map.can_move_to?(x, y)
+
+    return if @object_pool.map.can_move_to?(x, y)
+
+    move(old_x, old_y)
+    @object_pool.hud.message_display.add('Bump into a wall')
   end
 end
