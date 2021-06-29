@@ -6,6 +6,8 @@ class MessageDisplay < Component
   MESSAGE_X = 30
   MESSAGE_Y = 0
 
+  # TODO: Divide message and display
+
   def initialize(hud, object_pool, character)
     super(nil)
     @hud = hud
