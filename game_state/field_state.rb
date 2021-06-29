@@ -17,10 +17,12 @@ class FieldState < GameState
 
   def draw
     @map.draw
+    @hud.draw
     @object_pool.draw_all
   end
 
   def update
+    @hud.update
     @object_pool.update_all
   end
 
