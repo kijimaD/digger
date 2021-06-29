@@ -1,6 +1,14 @@
 # Player, enemy character class.
 # Can move.
 class Character < GameObject
+  attr_accessor :input
+
+  def initialize(object_pool, input, x, y)
+    super(object_pool, x, y)
+    @input = input
+    @input.control(self)
+  end
+
   def draw
     $game.window.setpos(@y, @x)
     $game.window.addstr('@')
