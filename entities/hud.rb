@@ -8,11 +8,6 @@ class HUD
     @message_display = MessageDisplay.new(self, object_pool, character)
   end
 
-  def player=(character)
-    @character = character
-    @message_display.character = character
-  end
-
   def update
     @message_display.update
   end
