@@ -20,6 +20,8 @@ class PlayerInput < Component
       object.move_to(object.x, object.y + 1) # down
     when 'd'
       object.move_to(object.x + 1, object.y) # right
+    when ' '
+      nil
     when 'c'
       exit
     else

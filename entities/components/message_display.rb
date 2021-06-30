@@ -22,7 +22,7 @@ class MessageDisplay < Component
 
     @messages.each.with_index(1) do |message, i|
       $game.window.setpos(MESSAGE_Y + i, MESSAGE_X)
-      $game.window.addstr("#{[i]}: " + "#{message}")
+      $game.window.addstr("#{i.to_s.ljust(2)}: " + "#{message}")
     end
   end
 
