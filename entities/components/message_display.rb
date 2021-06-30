@@ -22,19 +22,14 @@ class MessageDisplay < Component
 
     @messages.each.with_index(1) do |message, i|
       $game.window.setpos(MESSAGE_Y + i, MESSAGE_X)
-      $game.window.addstr(message)
+      $game.window.addstr("#{[i]}: " + "#{message}")
     end
   end
 
-  def update
-    latest_messages
-  end
+  def update; end
 
   def add(message)
     @messages << message
-  end
-
-  def latest_messages
     @messages.shift while @messages.length > LOG_LENGTH
   end
 end

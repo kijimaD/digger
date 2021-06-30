@@ -8,6 +8,7 @@ class FieldState < GameState
     @object_pool = ObjectPool.new
     @map = Map.new(@object_pool, 'debug_map.txt')
     @character = Character.new(@object_pool, PlayerInput.new(@object_pool), 1, 1)
+    Character.new(@object_pool, AiInput.new(@object_pool), 14, 7) # enemy
     @hud = HUD.new(@object_pool, @character)
   end
 

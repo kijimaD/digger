@@ -22,6 +22,6 @@ class Character < GameObject
     return if @object_pool.map.can_move_to?(x, y)
 
     move(old_x, old_y)
-    @object_pool.hud.message_display.add('Bump into a wall')
+    @object_pool.hud.message_display.add("Bump into a wall(#{self.x}, #{self.y})")
   end
 end
