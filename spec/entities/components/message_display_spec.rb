@@ -21,11 +21,11 @@ RSpec.describe MessageDisplay do
     hud = HUD.new(object_pool, character)
     message_display = MessageDisplay.new(hud, object_pool, character)
 
-    10.times { message_display.add('test') }
+    9.times { message_display.add('test') }
+    expect(message_display.messages.length).to eq(9)
+    message_display.add('test')
     expect(message_display.messages.length).to eq(10)
     message_display.add('test')
-    expect(message_display.messages.length).to eq(11)
-    message_display.update
-    expect(message_display.messages.length).to eq(10)
+    expect(message_display.messages.length).to eq(10) # no more than 10
   end
 end
