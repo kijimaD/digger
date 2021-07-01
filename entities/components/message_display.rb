@@ -16,25 +16,22 @@ class MessageDisplay < Component
     @messages = []
   end
 
+  # rubocop:disable Metrics/AbcSize
   def draw
     $game.window.setpos(MESSAGE_Y, MESSAGE_X)
     $game.window.addstr("(#{@character.x}, #{@character.y})")
 
     @messages.each.with_index(1) do |message, i|
       $game.window.setpos(MESSAGE_Y + i, MESSAGE_X)
-      $game.window.addstr(message)
+      $game.window.addstr("#{i.to_s.ljust(2)}: " + message.to_s)
     end
   end
+  # rubocop:enable Metrics/AbcSize
 
-  def update
-    latest_messages
-  end
+  def update; end
 
   def add(message)
     @messages << message
-  end
-
-  def latest_messages
     @messages.shift while @messages.length > LOG_LENGTH
   end
 end
