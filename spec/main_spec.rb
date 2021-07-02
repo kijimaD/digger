@@ -1,4 +1,5 @@
 require_relative '../misc/game_window'
+require_relative '../misc/stats'
 require_relative '../game_state/game_state'
 require_relative '../game_state/field_state'
 require_relative '../entities/object_pool'
