@@ -1,31 +1,8 @@
-require_relative '../../../entities/character'
-require_relative '../../../entities/game_object'
-require_relative '../../../entities/components/component'
-require_relative '../../../entities/components/message_display'
-
 RSpec.describe MessageDisplay do
-  it '#add' do
+  it '#initialize' do
     object_pool = ObjectPool.new
     character = Character.new(object_pool, PlayerInput.new(object_pool), 1, 1)
     hud = HUD.new(object_pool, character)
-    message_display = MessageDisplay.new(hud, object_pool, character)
-
-    expect(message_display.messages.length).to eq(0)
-    message_display.add('test')
-    expect(message_display.messages.length).to eq(1)
-  end
-
-  it '#latest_messages' do
-    object_pool = ObjectPool.new
-    character = Character.new(object_pool, PlayerInput.new(object_pool), 1, 1)
-    hud = HUD.new(object_pool, character)
-    message_display = MessageDisplay.new(hud, object_pool, character)
-
-    9.times { message_display.add('test') }
-    expect(message_display.messages.length).to eq(9)
-    message_display.add('test')
-    expect(message_display.messages.length).to eq(10)
-    message_display.add('test')
-    expect(message_display.messages.length).to eq(10) # no more than 10
+    MessageDisplay.new(hud, object_pool, character)
   end
 end

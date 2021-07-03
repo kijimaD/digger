@@ -1,12 +1,7 @@
 # Message display.
 class MessageDisplay < Component
-  attr_reader :messages
-
-  LOG_LENGTH = 10
   MESSAGE_X = 30
   MESSAGE_Y = 0
-
-  # TODO: Divide message and display
 
   def initialize(hud, object_pool, character)
     super(nil)
@@ -16,22 +11,24 @@ class MessageDisplay < Component
     @messages = []
   end
 
-  # rubocop:disable Metrics/AbcSize
   def draw
-    $game.window.setpos(MESSAGE_Y, MESSAGE_X)
-    $game.window.addstr("(#{@character.x}, #{@character.y})")
-
-    @messages.each.with_index(1) do |message, i|
-      $game.window.setpos(MESSAGE_Y + i, MESSAGE_X)
-      $game.window.addstr("#{i.to_s.ljust(2)}: " + message.to_s)
-    end
+    coordinate
+    log_messages
   end
-  # rubocop:enable Metrics/AbcSize
 
   def update; end
 
-  def add(message)
-    @messages << message
-    @messages.shift while @messages.length > LOG_LENGTH
+  private
+
+  def coordinate
+    $game.window.setpos(MESSAGE_Y, MESSAGE_X)
+    $game.window.addstr("(#{@character.x}, #{@character.y})")
+  end
+
+  def log_messages
+    @character.stats.messages.each.with_index(1) do |message, i|
+      $game.window.setpos(MESSAGE_Y + i, MESSAGE_X)
+      $game.window.addstr("#{i.to_s.ljust(2)}: " + message.to_s)
+    end
   end
 end

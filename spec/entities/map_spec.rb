@@ -1,7 +1,3 @@
-require_relative '../../entities/map'
-require_relative '../../entities/game_object'
-require_relative '../../entities/character'
-
 RSpec.describe Map do
   it '#can_move_to?' do
     object_pool = ObjectPool.new

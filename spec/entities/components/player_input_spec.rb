@@ -1,5 +1,3 @@
-require_relative '../../../entities/components/player_input'
-
 RSpec.describe PlayerInput do
   let(:object_pool) { ObjectPool.new }
   let(:input) { PlayerInput.new(object_pool) }
