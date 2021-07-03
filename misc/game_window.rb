@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Curses window class.
 class GameWindow
   include Curses

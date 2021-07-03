@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Objects array.
 class ObjectPool
   attr_accessor :objects, :map, :hud

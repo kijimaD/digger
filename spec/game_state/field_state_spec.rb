@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 RSpec.describe FieldState do
   it '#button_down' do
     $game = GameWindow.new
-    GameState.switch(FieldState.instance)
+    GameState.switch(described_class.instance)
 
     expect($game.state.character.x).to eq(1)
     expect($game.state.character.y).to eq(1)

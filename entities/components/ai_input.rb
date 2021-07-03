@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # NPC character input.
 class AiInput < Component
   def initialize(object_pool)

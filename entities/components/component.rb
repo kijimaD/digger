@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Components make up a game_object.
 class Component
   attr_reader :object

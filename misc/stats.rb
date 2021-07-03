@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Character interactive parameters
 class Stats
   attr_accessor :messages

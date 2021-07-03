@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Message display.
 class MessageDisplay < Component
   MESSAGE_X = 30

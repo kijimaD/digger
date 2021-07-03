@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # It's in a cave. The player explores.
 class FieldState < GameState
   include Singleton

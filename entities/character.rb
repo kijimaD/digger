@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Player, enemy character class.
 # Can move.
 class Character < GameObject

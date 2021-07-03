@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Character do
   let(:object_pool) { ObjectPool.new }
   let(:input) { AiInput.new(object_pool) }

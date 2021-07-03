@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Information display
 class HUD
   attr_accessor :message_display

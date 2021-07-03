@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Player input(move, get item...) class.
 class PlayerInput < Component
   def initialize(object_pool)

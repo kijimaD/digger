@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Field map class.
 class Map
   attr_reader :text

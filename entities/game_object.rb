@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Abstruct class.
 # GameObject is exist on map. etc) character, item
 class GameObject
