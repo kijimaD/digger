@@ -1,25 +1,44 @@
 # frozen_string_literal: true
 
 RSpec.describe FieldState do
-  it '#button_down' do
+  before do
     $game = GameWindow.new
     GameState.switch(described_class.instance)
+  end
 
-    expect($game.state.character.x).to eq(1)
-    expect($game.state.character.y).to eq(1)
+  let(:field_state) { described_class.instance }
 
-    $game.state.button_down('s')
-    $game.state.button_down('d')
+  describe '#button_down' do
+    it 'default' do
+      expect([field_state.character.x, field_state.character.y]).to eq([2, 2])
+    end
 
-    expect($game.state.character.x).to eq(2)
-    expect($game.state.character.y).to eq(2)
+    it 'key down w' do
+      expect { $game.state.button_down('w') }
+        .to change { [$game.state.character.x, $game.state.character.y] }.from([2, 2]).to([2, 1])
+      $game.state.button_down('s')
+    end
 
-    $game.state.button_down('w')
-    $game.state.button_down('a')
+    it 'key down a' do
+      expect { $game.state.button_down('a') }
+        .to change { [$game.state.character.x, $game.state.character.y] }.from([2, 2]).to([1, 2])
+      $game.state.button_down('d')
+    end
 
-    expect($game.state.character.x).to eq(1)
-    expect($game.state.character.y).to eq(1)
+    it 'key down s' do
+      expect { $game.state.button_down('s') }
+        .to change { [$game.state.character.x, $game.state.character.y] }.from([2, 2]).to([2, 3])
+      $game.state.button_down('w')
+    end
 
-    expect { $game.state.button_down('c') }.to raise_error SystemExit
+    it 'key down d' do
+      expect { $game.state.button_down('d') }
+        .to change { [$game.state.character.x, $game.state.character.y] }.from([2, 2]).to([3, 2])
+      $game.state.button_down('a')
+    end
+
+    it 'key down c' do
+      expect { $game.state.button_down('c') }.to raise_error SystemExit
+    end
   end
 end

@@ -6,9 +6,7 @@ RSpec.describe ObjectPool do
   describe '#size' do
     it 'can count objects' do
       expect { Character.new(object_pool, PlayerInput.new(object_pool), 1, 1) }
-        .to change(object_pool, :size)
-        .from(0)
-        .to(1)
+        .to change(object_pool, :size).from(0).to(1)
     end
   end
 
@@ -21,29 +19,42 @@ RSpec.describe ObjectPool do
     end
   end
 
-  it '#update_all' do
-    game_object_mock = double
-    expect(game_object_mock).to receive(:update)
+  describe '#update_all' do
+    it 'call update' do
+      game_object_mock = double
+      allow(game_object_mock).to receive(:update)
 
-    object_pool.add(game_object_mock)
-    object_pool.update_all
+      object_pool.add(game_object_mock)
+      object_pool.update_all
+      expect(game_object_mock).to have_received(:update).once
+    end
   end
 
-  it '#draw_all' do
-    game_object_mock = double
-    expect(game_object_mock).to receive(:draw)
+  describe '#draw_all' do
+    it 'call draw' do
+      game_object_mock = double
+      allow(game_object_mock).to receive(:draw)
 
-    object_pool.add(game_object_mock)
-    object_pool.draw_all
+      object_pool.add(game_object_mock)
+      object_pool.draw_all
+      expect(game_object_mock).to have_received(:draw).once
+    end
   end
 
-  it '#same_point' do
-    input = AiInput.new(object_pool)
-    character = Character.new(object_pool, input, 1, 1)
-    Character.new(object_pool, input, 1, 2)
-    expect(object_pool.same_point_objects(character).count).to eq(0)
+  describe '#same_point' do
+    let(:input) { AiInput.new(object_pool) }
+    let(:character) { Character.new(object_pool, input, 1, 1) }
 
-    Character.new(object_pool, input, 1, 1)
-    expect(object_pool.same_point_objects(character).count).to eq(1)
+    context 'when not exist same coordinate' do
+      before { Character.new(object_pool, input, 1, 2) }
+
+      it { expect(object_pool.same_point_objects(character).count).to eq(0) }
+    end
+
+    context 'when exist same coordinate' do
+      before { Character.new(object_pool, input, 1, 1) }
+
+      it { expect(object_pool.same_point_objects(character).count).to eq(1) }
+    end
   end
 end
