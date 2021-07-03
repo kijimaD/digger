@@ -117,6 +117,7 @@ RSpec.configure do |config|
   Dir.glob(require_pattern).each do |f|
     next if f.end_with?('/main.rb')
     next if f.include?('/spec')
+    next if f.include?('/vendor')
 
     begin
       puts f.gsub("#{root_dir}/", '../')
