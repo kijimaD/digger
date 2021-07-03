@@ -1,6 +1,3 @@
-require_relative '../../../entities/components/component'
-require_relative '../../../entities/components/ai_input'
-
 RSpec.describe AiInput do
   let(:object_pool) { ObjectPool.new }
   let(:input) { AiInput.new(object_pool) }

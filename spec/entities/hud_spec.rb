@@ -1,5 +1,3 @@
-require_relative '../../entities/hud'
-
 RSpec.describe HUD do
   it '#initialize' do
     object_pool = ObjectPool.new

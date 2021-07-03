@@ -1,8 +1,3 @@
-require_relative '../../../entities/character'
-require_relative '../../../entities/game_object'
-require_relative '../../../entities/components/component'
-require_relative '../../../entities/components/message_display'
-
 RSpec.describe MessageDisplay do
   it '#initialize' do
     object_pool = ObjectPool.new

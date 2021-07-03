@@ -1,6 +1,3 @@
-require_relative '../../entities/game_object'
-require_relative '../../entities/character'
-
 RSpec.describe Character do
   let(:object_pool) { ObjectPool.new }
   let(:input) { AiInput.new(object_pool) }
