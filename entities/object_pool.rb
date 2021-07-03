@@ -21,4 +21,10 @@ class ObjectPool
   def draw_all
     @objects.map(&:draw)
   end
+
+  def same_point_objects(object)
+    objects.select do |obj|
+      obj.x == object.x && obj.y == object.y && object != obj
+    end
+  end
 end

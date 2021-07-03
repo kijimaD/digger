@@ -25,4 +25,6 @@ class GameObject
   def update
     @components.map(&:update)
   end
+
+  def on_collision(object); end
 end
