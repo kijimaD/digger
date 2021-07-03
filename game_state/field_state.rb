@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # It's in a cave. The player explores.
 class FieldState < GameState
   include Singleton
@@ -7,7 +9,7 @@ class FieldState < GameState
     super
     @object_pool = ObjectPool.new
     @map = Map.new(@object_pool, 'debug_map.txt')
-    @character = Character.new(@object_pool, PlayerInput.new(@object_pool), 1, 1)
+    @character = Character.new(@object_pool, PlayerInput.new(@object_pool), 2, 2)
     Character.new(@object_pool, AiInput.new(@object_pool), 14, 7) # enemy
     @hud = HUD.new(@object_pool, @character)
   end

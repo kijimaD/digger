@@ -1,5 +1,8 @@
-Style/FrozenStringLiteralComment:
-  Enabled: false
+require:
+  - rubocop-rspec
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
 Style/GlobalVars:
   Enabled: false
 Naming/MethodParameterName:

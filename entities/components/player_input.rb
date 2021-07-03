@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Player input(move, get item...) class.
 class PlayerInput < Component
   def initialize(object_pool)
@@ -25,7 +27,7 @@ class PlayerInput < Component
     when 'c'
       exit
     else
-      @object_pool.hud.message_display.add('Invalid key')
+      object.stats.add_message('Invalid key')
     end
   end
   # rubocop:enable Metrics/MethodLength, Metrics/AbcSize

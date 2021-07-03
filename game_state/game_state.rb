@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Abstruct class.
 class GameState
   def self.switch(new_state)

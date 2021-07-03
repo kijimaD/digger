@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 RSpec.describe PlayerInput do
   let(:object_pool) { ObjectPool.new }
-  let(:input) { PlayerInput.new(object_pool) }
+  let(:input) { described_class.new(object_pool) }
   let(:character) { Character.new(object_pool, input, 1, 1) }
 
   it '#control' do

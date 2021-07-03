@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Abstruct class.
 # GameObject is exist on map. etc) character, item
 class GameObject
@@ -25,4 +27,6 @@ class GameObject
   def update
     @components.map(&:update)
   end
+
+  def on_collision(object); end
 end
