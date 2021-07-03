@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe 'Simulate running main' do
+RSpec.describe 'Main' do
   it 'Can run' do
     $game = GameWindow.new
     GameState.switch(FieldState.instance)
