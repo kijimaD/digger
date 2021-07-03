@@ -119,6 +119,7 @@ RSpec.configure do |config|
     next if f.include?('/spec')
 
     begin
+      puts f.gsub("#{root_dir}/", '../')
       require_relative f.gsub("#{root_dir}/", '../')
     rescue NameError
       # May fail if parent class not required yet
