@@ -5,14 +5,16 @@ class Character < GameObject
 
   def initialize(object_pool, input, x, y)
     super(object_pool, x, y)
+    @object_pool = object_pool
     @input = input
     @input.control(self)
     @stats = Stats.new
+    @symbol = ['@', 't'].sample
   end
 
   def draw
     $game.window.setpos(@y, @x)
-    $game.window.addstr('@')
+    $game.window.addstr(@symbol)
   end
 
   def move_to(x, y)
