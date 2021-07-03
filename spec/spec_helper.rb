@@ -23,6 +23,8 @@ end
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+# rubocop:disable Metrics/BlockLength
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
@@ -129,3 +131,4 @@ RSpec.configure do |config|
     require_relative f.gsub("#{root_dir}/", '../')
   end
 end
+# rubocop:enable Metrics/BlockLength
