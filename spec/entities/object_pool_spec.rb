@@ -1,17 +1,24 @@
-RSpec.describe Map do
-  let!(:object_pool) { ObjectPool.new }
+# frozen_string_literal: true
 
-  it '#size' do
-    expect(object_pool.size).to eq(0)
-    Character.new(object_pool, PlayerInput.new(object_pool), 1, 1)
-    expect(object_pool.size).to eq(1)
+RSpec.describe ObjectPool do
+  let!(:object_pool) { described_class.new }
+
+  describe '#size' do
+    it 'can count objects' do
+      expect { Character.new(object_pool, PlayerInput.new(object_pool), 1, 1) }
+        .to change(object_pool, :size)
+        .from(0)
+        .to(1)
+    end
   end
 
-  it '#add' do
-    obj = Object.new
+  describe '#add' do
+    it 'can add' do
+      obj = Object.new
 
-    object_pool.add(obj)
-    expect(object_pool.objects).to eq([obj])
+      object_pool.add(obj)
+      expect(object_pool.objects).to eq([obj])
+    end
   end
 
   it '#update_all' do

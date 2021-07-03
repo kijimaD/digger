@@ -1,7 +1,7 @@
 RSpec.describe Character do
   let(:object_pool) { ObjectPool.new }
   let(:input) { AiInput.new(object_pool) }
-  let(:character) { Character.new(object_pool, input, 1, 1) }
+  let(:character) { described_class.new(object_pool, input, 1, 1) }
   let!(:map) { Map.new(object_pool, 'test_map.txt') }
 
   it '#move_to' do
@@ -15,7 +15,7 @@ RSpec.describe Character do
   end
 
   it '#can_move_to?' do
-    Character.new(object_pool, input, 1, 2)
+    described_class.new(object_pool, input, 1, 2)
 
     expect(character.can_move_to?(0, 0)).to be(false) # map
     expect(character.can_move_to?(1, 2)).to be(false) # character
