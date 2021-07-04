@@ -6,12 +6,15 @@ graph TD
     Manufacture{Manufacture State}
     Member{Member State}
     Menu{Menu State}
+    Talk{Talk State}
 
     Battle --> |win| Field
+    Battle --> |win| Talk
     Equipment --> |key| Field
     Equipment --> |key| Menu
     Field --> |event| Battle
     Field --> |event| Menu
+    Field --> |event| Talk
     Field --> |key| Equipment
     Field --> |key| Inventory
     Inventory --> |key| Field
@@ -23,3 +26,6 @@ graph TD
     Menu --> |cursor| Inventory
     Menu --> |cursor| Manufacture
     Menu --> |cursor| Member
+    Talk --> |finish| Battle
+    Talk --> |finish| Field
+    Talk --> |finish| Menu
