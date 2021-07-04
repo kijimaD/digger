@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-# Base menu state.
-class BaseMenuState < GameState
+# Home menu state.
+class HomeState < GameState
   include Singleton
   attr_accessor :field_state
 

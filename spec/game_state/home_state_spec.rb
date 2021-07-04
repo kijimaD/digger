@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe BaseMenuState do
+RSpec.describe HomeState do
   before { $game = GameWindow.new }
 
   describe 'switch' do
