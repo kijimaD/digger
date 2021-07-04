@@ -3,7 +3,7 @@
 # Message display.
 class MessageDisplay < Component
   MESSAGE_X = 30
-  MESSAGE_Y = 0
+  MESSAGE_Y = 1
 
   def initialize(hud, object_pool, character)
     super(nil)

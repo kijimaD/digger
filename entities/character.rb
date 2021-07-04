@@ -15,7 +15,7 @@ class Character < GameObject
   end
 
   def draw
-    $game.window.setpos(@y, @x)
+    $game.window.setpos(@y + GameWindow::PADDING, @x + GameWindow::PADDING)
     $game.window.addstr(@symbol)
   end
 

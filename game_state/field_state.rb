@@ -31,5 +31,11 @@ class FieldState < GameState
 
   def button_down(char)
     @character.input.button_down(char)
+    case char
+    when 'm' # TODO: debug mode only
+      home = HomeState.instance
+      home.field_state = self
+      GameState.switch(home)
+    end
   end
 end

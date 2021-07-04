@@ -26,8 +26,6 @@ class PlayerInput < Component
       nil
     when 'c'
       exit
-    else
-      object.stats.add_message('Invalid key')
     end
   end
   # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
