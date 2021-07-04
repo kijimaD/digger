@@ -1,0 +1,25 @@
+graph TD
+    Battle{Battle State}
+    Equipment{Equipment State}
+    Field{Field State}
+    Inventory{Inventory State}
+    Manufacture{Manufacture State}
+    Member{Member State}
+    Menu{Menu State}
+
+    Battle --> |win| Field
+    Equipment --> |key| Field
+    Equipment --> |key| Menu
+    Field --> |event| Battle
+    Field --> |event| Menu
+    Field --> |key| Equipment
+    Field --> |key| Inventory
+    Inventory --> |key| Field
+    Inventory --> |key| Menu
+    Manufacture --> |key| Menu
+    Member --> |key| Menu
+    Menu --> |cursor| Equipment
+    Menu --> |cursor| Field
+    Menu --> |cursor| Inventory
+    Menu --> |cursor| Manufacture
+    Menu --> |cursor| Member
