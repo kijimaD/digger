@@ -24,21 +24,22 @@ class GameWindow
     curs_set(0)
   end
 
-  # rubocop: disable Metrics/MethodLength
   def main_loop
-    @state.draw
-    @window.box('|', '-', '*')
-    @window.refresh
+    one_tern
 
     loop do
-      @window.clear
-      @window.box('|', '-', '*')
-      @state.update
-      @state.button_down(getch)
-      @state.draw
-
-      @window.refresh
+      one_tern
     end
   end
-  # rubocop: enable Metrics/MethodLength
+
+  def one_tern
+    @window.clear
+
+    @state.update
+    @state.draw
+
+    @window.box('|', '-', '*')
+    @window.refresh
+    @state.button_down(getch)
+  end
 end
