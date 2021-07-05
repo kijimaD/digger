@@ -9,8 +9,11 @@ class Map
     @text = File.read(Utils.media_path(file)).split("\n")
   end
 
-  def draw
-    @text.each_with_index do |line, index|
+  def draw(viewport)
+    x0, x1, y0, y1 = viewport.map(&:to_i)
+    map = @text.slice(y0..y1).map { |y| y.slice(x0..x1) }
+
+    map.each_with_index do |line, index|
       $game.window.setpos(1 + index, 1)
       $game.window.addstr(line)
     end

@@ -2,7 +2,7 @@
 
 # Objects array.
 class ObjectPool
-  attr_accessor :objects, :map, :hud
+  attr_accessor :objects, :map, :hud, :camera
 
   def initialize
     @objects = []
