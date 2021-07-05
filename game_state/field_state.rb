@@ -29,6 +29,7 @@ class FieldState < GameState
   end
 
   def update
+    @map.update
     @hud.update
     @object_pool.update_all
   end

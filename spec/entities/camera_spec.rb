@@ -21,8 +21,17 @@ RSpec.describe Camera do
       camera.target = character
       expect(camera.viewport).to eq([0, 40, 0, 40])
 
-      character.move(30, 30)
-      expect(camera.viewport).not_to eq([0, 40, 0, 40])
+      character.move(20, 20)
+      expect(camera.viewport).to eq([0, 40, 0, 40])
+
+      character.move(21, 21)
+      expect(camera.viewport).to eq([1, 41, 1, 41])
+
+      character.move(22, 22)
+      expect(camera.viewport).to eq([2, 42, 2, 42])
+
+      character.move(21, 2)
+      expect(camera.viewport).to eq([1, 41, 0, 40])
     end
   end
 end

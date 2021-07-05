@@ -14,9 +14,10 @@ class Character < GameObject
     @symbol = ['@', 't'].sample
   end
 
-  def draw
-    $game.window.setpos(@y + GameWindow::PADDING, @x + GameWindow::PADDING)
-    $game.window.addstr(@symbol)
+  def draw; end
+
+  def update
+    object_pool.map(&:chars).text[@y][@x] = @symbol
   end
 
   def move_to(x, y)

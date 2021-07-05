@@ -2,6 +2,8 @@
 
 # Field map class.
 class Map
+  attr_accessor :text
+
   def initialize(object_pool, file)
     @object_pool = object_pool
     object_pool.map = self
@@ -17,6 +19,11 @@ class Map
       $game.window.setpos(1 + index, 1)
       $game.window.addstr(line)
     end
+  end
+
+  def update
+    @text = File.read(Utils.media_path('debug_map.txt')).split("\n")
+    # TODO: Remove redundant
   end
 
   def can_move_to?(x, y)
