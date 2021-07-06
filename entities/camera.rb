@@ -27,8 +27,8 @@ class Camera
       y0 = 0
     end
 
-    $game.window.setpos(12, 50)
-    $game.window.addstr("x0, x1, y0, y1 - #{x0}, #{x1}, #{y0}, #{y1}")
+    $game.window.setpos(12, 50) if $debug
+    $game.window.addstr("x0, x1, y0, y1 - #{x0}, #{x1}, #{y0}, #{y1}") if $debug
 
     [x0, x1, y0, y1]
   end

@@ -110,6 +110,8 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 
   # My settings ================
+  $debug = false
+
   root_dir = File.dirname(File.dirname(__FILE__))
   require_pattern = File.join(root_dir, '**/*.rb')
   @failed = []
