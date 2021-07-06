@@ -11,6 +11,7 @@ class Camera
     @y = target.y
   end
 
+  # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
   def viewport
     x0 = @target.x - (GameWindow::WIDTH / 2)
     x1 = @target.x + (GameWindow::WIDTH / 2)
@@ -32,4 +33,5 @@ class Camera
 
     [x0, x1, y0, y1]
   end
+  # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 end
