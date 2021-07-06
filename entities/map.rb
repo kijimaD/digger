@@ -8,7 +8,8 @@ class Map
     @object_pool = object_pool
     object_pool.map = self
 
-    @text = File.read(Utils.media_path(file)).split("\n")
+    @file = file
+    @text = load_text.split("\n")
   end
 
   def draw(viewport)
@@ -22,8 +23,7 @@ class Map
   end
 
   def update
-    @text = File.read(Utils.media_path('debug_map.txt')).split("\n")
-    # TODO: Remove redundant
+    @text = load_text.split("\n")
   end
 
   def can_move_to?(x, y)
@@ -36,5 +36,9 @@ class Map
     else
       true
     end
+  end
+
+  def load_text
+    @load_text ||= File.read(Utils.media_path(@file))
   end
 end
