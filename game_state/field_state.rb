@@ -22,16 +22,16 @@ class FieldState < GameState
   def leave; end
 
   def draw
+    @object_pool.draw_all
     viewport = @camera.viewport
     @map.draw(viewport)
     @hud.draw
-    @object_pool.draw_all
   end
 
   def update
+    @object_pool.update_all
     @map.update
     @hud.update
-    @object_pool.update_all
   end
 
   def button_down(char)
