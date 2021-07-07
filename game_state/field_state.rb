@@ -15,8 +15,7 @@ class FieldState < GameState
     @camera = Camera.new
     @camera.target = @character
     @object_pool.camera = @camera
-
-    Item.new(@object_pool, rand(1..10), 10)
+    generate_items
   end
 
   def enter; end
@@ -43,6 +42,14 @@ class FieldState < GameState
       home = HomeState.instance
       home.field_state = self
       GameState.switch(home)
+    end
+  end
+
+  def generate_items
+    @map.spawn_points(10)
+    10.times do
+      x, y = @map.spawn_point
+      Item.new(@object_pool, x, y)
     end
   end
 end

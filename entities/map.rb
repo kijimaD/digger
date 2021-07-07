@@ -51,12 +51,12 @@ class Map
   end
 
   def spawn_point
-    @spawn_points[(@spawn_points_pointer += 1) % @spawn_points.size]
+    @spawn_points.pop
   end
 
   def spawn_points(max)
     @spawn_points_pointer = 0
-    @spawn_points = (0..max).map do
+    @spawn_points = (0..(max - 1)).map do
       find_spawn_point
     end
   end
