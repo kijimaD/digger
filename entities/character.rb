@@ -31,7 +31,7 @@ class Character < GameObject
       return false
     end
 
-    @object_pool.same_point_objects(self).each do |obj|
+    @object_pool.same_point_objects(self.x, self.y, self).each do |obj|
       if obj.is_a? Character
         stats.add_message("Bump into a chara(#{self.x}, #{self.y})")
         return false
