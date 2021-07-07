@@ -20,7 +20,7 @@ class Character < GameObject
     move(x, y) if can_move_to?(x, y)
   end
 
-  # rubocop: disable Metrics/MethodLength
+  # rubocop: disable Metrics/MethodLength, Metrics/AbcSize
   def can_move_to?(x, y)
     old_x = @x
     old_y = @y
@@ -42,5 +42,5 @@ class Character < GameObject
   ensure
     move(old_x, old_y)
   end
-  # rubocop: enable Metrics/MethodLength
+  # rubocop: enable Metrics/MethodLength, Metrics/AbcSize
 end
