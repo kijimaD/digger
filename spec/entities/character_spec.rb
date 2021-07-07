@@ -21,4 +21,16 @@ RSpec.describe Character do
     it { expect(character.can_move_to?(1, 2)).to be(false) }
     it { expect(character.can_move_to?(1, 3)).to be(true) }
   end
+
+  describe '#draw' do
+    it '#draw implemented in GameObject class' do
+      expect(character.method(:draw).source_location[0]).to include('game_object.rb')
+    end
+  end
+
+  describe '#update' do
+    it '#update implemented in GameObject class' do
+      expect(character.method(:update).source_location[0]).to include('game_object.rb')
+    end
+  end
 end

@@ -2,7 +2,7 @@
 
 # Message display.
 class MessageDisplay < Component
-  MESSAGE_X = 30
+  MESSAGE_X = 50
   MESSAGE_Y = 1
 
   def initialize(hud, object_pool, character)
@@ -14,7 +14,7 @@ class MessageDisplay < Component
   end
 
   def draw
-    coordinate
+    coordinate if $debug
     log_messages
   end
 

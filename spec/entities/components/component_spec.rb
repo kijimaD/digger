@@ -5,9 +5,9 @@ RSpec.describe Component do
 
   describe 'initialize' do
     it 'can run' do
-      character = Character.new(object_pool, PlayerInput.new(object_pool), 1, 1)
-      expect { described_class.new(character) }
-        .to change { character.components.length }.from(1).to(2)
+      game_object = GameObject.new(object_pool, 1, 1)
+      expect { described_class.new(game_object) }
+        .to change { game_object.components.length }.from(0).to(1)
     end
   end
 end

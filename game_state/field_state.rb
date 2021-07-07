@@ -12,6 +12,9 @@ class FieldState < GameState
     @character = Character.new(@object_pool, PlayerInput.new(@object_pool), 2, 2)
     Character.new(@object_pool, AiInput.new(@object_pool), 14, 7) # enemy
     @hud = HUD.new(@object_pool, @character)
+    @camera = Camera.new
+    @camera.target = @character # tmp
+    @object_pool.camera = @camera
   end
 
   def enter; end
@@ -19,14 +22,16 @@ class FieldState < GameState
   def leave; end
 
   def draw
-    @map.draw
-    @hud.draw
     @object_pool.draw_all
+    viewport = @camera.viewport
+    @map.draw(viewport)
+    @hud.draw
   end
 
   def update
-    @hud.update
     @object_pool.update_all
+    @map.update
+    @hud.update
   end
 
   def button_down(char)
