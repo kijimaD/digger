@@ -14,7 +14,6 @@ class GameWindow
     cbreak
     stdscr.refresh
     display_settings
-    @window = Window.new(lines - 1, cols - 1, PADDING, PADDING)
   end
 
   def display_settings
@@ -33,6 +32,7 @@ class GameWindow
   end
 
   def one_tern
+    @window = Window.new(lines - 1, cols - 1, PADDING, PADDING) # For variable window. It has performance problem?
     @window.clear
 
     @state.update
