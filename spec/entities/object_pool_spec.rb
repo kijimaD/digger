@@ -41,20 +41,26 @@ RSpec.describe ObjectPool do
     end
   end
 
-  describe '#same_point' do
+  describe '#same_point_objects' do
     let(:input) { AiInput.new(object_pool) }
-    let(:character) { Character.new(object_pool, input, 1, 1) }
 
     context 'when not exist same coordinate' do
-      before { Character.new(object_pool, input, 1, 2) }
+      it 'return []' do
+        Character.new(object_pool, input, 2, 2)
+        expect(object_pool.same_point_objects(1, 1)).to eq([])
+      end
 
-      it { expect(object_pool.same_point_objects(character).count).to eq(0) }
+      it 'not include self game_object' do
+        character = Character.new(object_pool, input, 1, 1)
+        expect(object_pool.same_point_objects(character.x, character.y, character)).to eq([])
+      end
     end
 
     context 'when exist same coordinate' do
-      before { Character.new(object_pool, input, 1, 1) }
-
-      it { expect(object_pool.same_point_objects(character).count).to eq(1) }
+      it 'return same coordinate game_object' do
+        character = Character.new(object_pool, input, 1, 1)
+        expect(object_pool.same_point_objects(1, 1)).to eq([character])
+      end
     end
   end
 end
