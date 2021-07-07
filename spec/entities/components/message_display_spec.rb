@@ -1,10 +1,13 @@
 # frozen_string_literal: true
 
 RSpec.describe MessageDisplay do
-  it '#initialize' do
-    object_pool = ObjectPool.new
-    character = Character.new(object_pool, PlayerInput.new(object_pool), 1, 1)
-    hud = HUD.new(object_pool, character)
-    described_class.new(hud, object_pool, character)
+  let(:object_pool) { ObjectPool.new }
+
+  describe '#initialize' do
+    it 'generate message_display' do
+      character = Character.new(object_pool, PlayerInput.new(object_pool), 1, 1)
+      hud = HUD.new(object_pool, character)
+      expect(hud.message_display).to be_truthy
+    end
   end
 end
