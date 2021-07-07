@@ -13,8 +13,10 @@ class FieldState < GameState
     Character.new(@object_pool, AiInput.new(@object_pool), 14, 7) # enemy
     @hud = HUD.new(@object_pool, @character)
     @camera = Camera.new
-    @camera.target = @character # tmp
+    @camera.target = @character
     @object_pool.camera = @camera
+
+    Item.new(@object_pool, rand(1..10), 10)
   end
 
   def enter; end
