@@ -32,10 +32,11 @@ class Character < GameObject
     end
 
     @object_pool.same_point_objects(self.x, self.y, self).each do |obj|
-      if obj.is_a? Character
+      case obj
+      when Character
         stats.add_message("Bump into a chara(#{self.x}, #{self.y})")
         return false
-      elsif obj.is_a? Item
+      when Item
         stats.add_message("Get item(#{self.x}, #{self.y})")
         obj.mark_for_removal
       end

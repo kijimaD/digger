@@ -23,6 +23,7 @@ RSpec.describe ObjectPool do
     it 'call update' do
       game_object_mock = double
       allow(game_object_mock).to receive(:update)
+      allow(game_object_mock).to receive(:removable?)
 
       object_pool.add(game_object_mock)
       object_pool.update_all
