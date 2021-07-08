@@ -28,5 +28,13 @@ class GameObject
     @components.map(&:update)
   end
 
+  def removable?
+    @removable
+  end
+
+  def mark_for_removal
+    @removable = true
+  end
+
   def on_collision(object); end
 end

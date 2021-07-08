@@ -18,6 +18,7 @@ class ObjectPool
 
   def update_all
     @objects.map(&:update)
+    @objects.reject! { |o| o.removable? }
   end
 
   def draw_all

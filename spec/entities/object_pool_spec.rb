@@ -28,6 +28,12 @@ RSpec.describe ObjectPool do
       object_pool.update_all
       expect(game_object_mock).to have_received(:update).once
     end
+
+    it 'remove flag objects' do
+      game_object = GameObject.new(object_pool, 1, 1)
+      game_object.mark_for_removal
+      expect { object_pool.update_all }.to change(object_pool.objects, :count).from(1).to(0)
+    end
   end
 
   describe '#draw_all' do
