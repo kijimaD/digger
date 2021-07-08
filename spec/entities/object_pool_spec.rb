@@ -20,16 +20,6 @@ RSpec.describe ObjectPool do
   end
 
   describe '#update_all' do
-    it 'call update' do
-      game_object_mock = double
-      allow(game_object_mock).to receive(:update)
-      allow(game_object_mock).to receive(:removable?)
-
-      object_pool.add(game_object_mock)
-      object_pool.update_all
-      expect(game_object_mock).to have_received(:update).once
-    end
-
     it 'remove flag objects' do
       game_object = GameObject.new(object_pool, 1, 1)
       game_object.mark_for_removal
