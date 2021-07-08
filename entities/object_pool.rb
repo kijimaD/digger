@@ -18,15 +18,16 @@ class ObjectPool
 
   def update_all
     @objects.map(&:update)
+    @objects.reject!(&:removable?)
   end
 
   def draw_all
     @objects.map(&:draw)
   end
 
-  def same_point_objects(object)
+  def same_point_objects(x, y, object = nil)
     objects.select do |obj|
-      obj.x == object.x && obj.y == object.y && object != obj
+      obj.x == x && obj.y == y && object != obj # filter self object
     end
   end
 end

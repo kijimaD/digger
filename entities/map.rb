@@ -41,4 +41,31 @@ class Map
   def load_text
     @load_text ||= File.read(Utils.media_path(@file))
   end
+
+  def map_width
+    @map_width ||= @text.first.length
+  end
+
+  def map_height
+    @map_height ||= @text.length
+  end
+
+  def spawn_point
+    @spawn_points.pop
+  end
+
+  def spawn_points(max)
+    @spawn_points_pointer = 0
+    @spawn_points = (0..(max - 1)).map do
+      find_spawn_point
+    end
+  end
+
+  def find_spawn_point
+    loop do
+      x = rand(0..(map_width - 1))
+      y = rand(0..(map_height - 1))
+      return [x, y] if can_move_to?(x, y) && @object_pool.same_point_objects(x, y).empty?
+    end
+  end
 end

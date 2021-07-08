@@ -20,7 +20,7 @@ class Character < GameObject
     move(x, y) if can_move_to?(x, y)
   end
 
-  # rubocop: disable Metrics/MethodLength
+  # rubocop: disable Metrics/MethodLength, Metrics/AbcSize
   def can_move_to?(x, y)
     old_x = @x
     old_y = @y
@@ -31,10 +31,14 @@ class Character < GameObject
       return false
     end
 
-    @object_pool.same_point_objects(self).each do |obj|
-      if obj.is_a? Character
+    @object_pool.same_point_objects(self.x, self.y, self).each do |obj|
+      case obj
+      when Character
         stats.add_message("Bump into a chara(#{self.x}, #{self.y})")
         return false
+      when Item
+        stats.add_message("Get item(#{self.x}, #{self.y})")
+        obj.mark_for_removal
       end
     end
 
@@ -42,5 +46,5 @@ class Character < GameObject
   ensure
     move(old_x, old_y)
   end
-  # rubocop: enable Metrics/MethodLength
+  # rubocop: enable Metrics/MethodLength, Metrics/AbcSize
 end

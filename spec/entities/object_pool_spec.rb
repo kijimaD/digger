@@ -20,13 +20,10 @@ RSpec.describe ObjectPool do
   end
 
   describe '#update_all' do
-    it 'call update' do
-      game_object_mock = double
-      allow(game_object_mock).to receive(:update)
-
-      object_pool.add(game_object_mock)
-      object_pool.update_all
-      expect(game_object_mock).to have_received(:update).once
+    it 'remove flag objects' do
+      game_object = GameObject.new(object_pool, 1, 1)
+      game_object.mark_for_removal
+      expect { object_pool.update_all }.to change(object_pool.objects, :count).from(1).to(0)
     end
   end
 
@@ -41,20 +38,26 @@ RSpec.describe ObjectPool do
     end
   end
 
-  describe '#same_point' do
+  describe '#same_point_objects' do
     let(:input) { AiInput.new(object_pool) }
-    let(:character) { Character.new(object_pool, input, 1, 1) }
 
     context 'when not exist same coordinate' do
-      before { Character.new(object_pool, input, 1, 2) }
+      it 'return []' do
+        Character.new(object_pool, input, 2, 2)
+        expect(object_pool.same_point_objects(1, 1)).to eq([])
+      end
 
-      it { expect(object_pool.same_point_objects(character).count).to eq(0) }
+      it 'not include self game_object' do
+        character = Character.new(object_pool, input, 1, 1)
+        expect(object_pool.same_point_objects(character.x, character.y, character)).to eq([])
+      end
     end
 
     context 'when exist same coordinate' do
-      before { Character.new(object_pool, input, 1, 1) }
-
-      it { expect(object_pool.same_point_objects(character).count).to eq(1) }
+      it 'return same coordinate game_object' do
+        character = Character.new(object_pool, input, 1, 1)
+        expect(object_pool.same_point_objects(1, 1)).to eq([character])
+      end
     end
   end
 end
