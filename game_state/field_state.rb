@@ -10,12 +10,11 @@ class FieldState < GameState
     @object_pool = ObjectPool.new
     @map = Map.new(@object_pool, 'debug_map.txt')
     @character = Character.new(@object_pool, PlayerInput.new(@object_pool), 2, 2)
-    Character.new(@object_pool, AiInput.new(@object_pool), 14, 7) # enemy
     @hud = HUD.new(@object_pool, @character)
     @camera = Camera.new
     @camera.target = @character
     @object_pool.camera = @camera
-    generate_items
+    generate_game_objects
   end
 
   def enter; end
@@ -38,18 +37,26 @@ class FieldState < GameState
   def button_down(char)
     @character.input.button_down(char)
     case char
-    when 'm' # TODO: debug mode only
+    when 'm'
+      return unless $debug
+
       home = HomeState.instance
       home.field_state = self
       GameState.switch(home)
     end
   end
 
-  def generate_items
-    @map.spawn_points(10)
-    10.times do
+  private
+
+  def generate_game_objects
+    @map.spawn_points(10).each do
       x, y = @map.spawn_point
       Item.new(@object_pool, x, y)
+    end
+
+    @map.spawn_points(10).each do
+      x, y = @map.spawn_point
+      Character.new(@object_pool, AiInput.new(@object_pool), x, y)
     end
   end
 end
