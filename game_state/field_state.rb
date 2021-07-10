@@ -53,9 +53,7 @@ class FieldState < GameState
     @map.spawn_points(10).each do
       x, y = @map.spawn_point
       Item.new(@object_pool, x, y)
-    end
 
-    @map.spawn_points(10).each do
       x, y = @map.spawn_point
       Character.new(@object_pool, AiInput.new(@object_pool), x, y)
     end
