@@ -16,7 +16,8 @@
     "url": "https://github.com/kijimaD/digger/issues"
   },
   "homepage": "https://github.com/kijimaD/digger#readme",
-  "dependencies": {
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^8.11.0",
     "jsonlint": "^1.6.3"
   }
 }
