@@ -1,0 +1,22 @@
+{
+  "name": "digger",
+  "version": "1.0.0",
+  "description": "[![Check](https://github.com/kijimaD/digger/actions/workflows/ruby.yml/badge.svg)](https://github.com/kijimaD/digger/actions/workflows/ruby.yml) # digger CLI game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kijimaD/digger.git"
+  },
+  "author": "Kijima Daigo <norimaking777@gmail.com> (https://github.com/kijimaD)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kijimaD/digger/issues"
+  },
+  "homepage": "https://github.com/kijimaD/digger#readme",
+  "dependencies": {
+    "jsonlint": "^1.6.3"
+  }
+}
