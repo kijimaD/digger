@@ -3,8 +3,8 @@
 # Player, enemy character class.
 # Can move.
 class Character < GameObject
-  attr_reader :stats, :input, :symbol
-  attr_accessor :graphics
+  attr_reader :stats, :input
+  attr_accessor :graphics, :symbol, :name
 
   def initialize(object_pool, input, x, y)
     super(object_pool, x, y)
@@ -12,8 +12,8 @@ class Character < GameObject
     @input = input
     @input.control(self)
     @stats = Stats.new
-    @symbol = ['@', 't'].sample
     @graphics = CharacterGraphics.new(self)
+    @type = CharacterType.new(self).new_character
   end
 
   def move_to(x, y)

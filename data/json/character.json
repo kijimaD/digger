@@ -1,0 +1,22 @@
+[
+    {
+        "id": "player",
+        "name": "プレイヤー",
+        "symbol": "@"
+    },
+    {
+        "id": "robot",
+        "name": "ロボット",
+        "symbol": "s"
+    },
+    {
+        "id": "dragon",
+        "name": "ドラゴン",
+        "symbol": "d"
+    },
+    {
+        "id": "human",
+        "name": "人型",
+        "symbol": "v"
+    }
+]
