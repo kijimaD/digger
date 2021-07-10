@@ -15,7 +15,7 @@ module Utils
 
   def self.load_json(file)
     File.open(data_path(file)) do |j|
-      JSON.load(j, { symbolize_names: true })
+      JSON.parse(j.read, symbolize_names: true)
     end
   end
 end
