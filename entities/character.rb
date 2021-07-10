@@ -17,7 +17,10 @@ class Character < GameObject
   end
 
   def move_to(x, y)
-    move(x, y) if can_move_to?(x, y)
+    return unless can_move_to?(x, y)
+
+    move(x, y)
+    true
   end
 
   # rubocop: disable Metrics/MethodLength, Metrics/AbcSize

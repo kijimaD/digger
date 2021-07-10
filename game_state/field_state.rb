@@ -3,6 +3,7 @@
 # It's in a cave. The player explores.
 class FieldState < GameState
   include Singleton
+  attr_accessor :execute
   attr_reader :character
 
   def initialize

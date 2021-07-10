@@ -11,19 +11,23 @@ class PlayerInput < Component
     self.object = obj
   end
 
+  def move_to(x, y)
+    FieldState.instance.execute = object.move_to(x, y) ? true : false
+  end
+
   # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
   def button_down(char)
     case char
     when 'w'
-      object.move_to(object.x, object.y - 1) # up
+      move_to(object.x, object.y - 1) # up
     when 'a'
-      object.move_to(object.x - 1, object.y) # left
+      move_to(object.x - 1, object.y) # left
     when 's'
-      object.move_to(object.x, object.y + 1) # down
+      move_to(object.x, object.y + 1) # down
     when 'd'
-      object.move_to(object.x + 1, object.y) # right
+      move_to(object.x + 1, object.y) # right
     when ' '
-      nil
+      FieldState.instance.execute = true
     when 'c'
       exit
     end
