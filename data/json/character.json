@@ -1,10 +1,5 @@
 [
     {
-        "id": "player",
-        "name": "Player",
-        "symbol": "@"
-    },
-    {
         "id": "robot",
         "name": "Robot",
         "symbol": "r"

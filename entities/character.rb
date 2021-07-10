@@ -13,7 +13,7 @@ class Character < GameObject
     @input.control(self)
     @stats = Stats.new
     @graphics = CharacterGraphics.new(self)
-    @type = CharacterType.new(self).new_character
+    @type = CharacterType.new(self)
   end
 
   def move_to(x, y)
@@ -34,7 +34,7 @@ class Character < GameObject
     @object_pool.same_point_objects(self.x, self.y, self).each do |obj|
       case obj
       when Character
-        stats.add_message("Bump into a #{obj.name} (#{self.x}, #{self.y})")
+        stats.add_message("#{name} bump into a #{obj.name} (#{self.x}, #{self.y})")
         return false
       when Item
         stats.add_message("Get item(#{self.x}, #{self.y})")
