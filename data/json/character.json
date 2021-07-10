@@ -1,22 +1,47 @@
 [
     {
         "id": "player",
-        "name": "プレイヤー",
+        "name": "Player",
         "symbol": "@"
     },
     {
         "id": "robot",
-        "name": "ロボット",
-        "symbol": "s"
+        "name": "Robot",
+        "symbol": "r"
     },
     {
         "id": "dragon",
-        "name": "ドラゴン",
+        "name": "Dragon",
         "symbol": "d"
     },
     {
         "id": "human",
-        "name": "人型",
-        "symbol": "v"
+        "name": "Human",
+        "symbol": "h"
+    },
+    {
+        "id": "ufo",
+        "name": "UFO",
+        "symbol": "o"
+    },
+    {
+        "id": "slime",
+        "name": "Slime",
+        "symbol": "s"
+    },
+    {
+        "id": "beast",
+        "name": "Beast",
+        "symbol": "b"
+    },
+    {
+        "id": "tank",
+        "name": "Tank",
+        "symbol": "t"
+    },
+    {
+        "id": "artillery",
+        "name": "Artillery",
+        "symbol": "a"
     }
 ]
