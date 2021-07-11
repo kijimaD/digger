@@ -2,7 +2,7 @@
 
 RSpec.describe Character do
   let(:object_pool) { ObjectPool.new }
-  let(:input) { AiInput.new(object_pool) }
+  let(:input) { PlayerInput.new(object_pool) }
   let(:character) { described_class.new(object_pool, input, 1, 1) }
 
   before { Map.new(object_pool, 'test_map.txt') }

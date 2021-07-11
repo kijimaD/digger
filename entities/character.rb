@@ -36,7 +36,7 @@ class Character < GameObject
     @object_pool.same_point_objects(self.x, self.y, self).each do |obj|
       case obj
       when Character
-        stats.add_message("#{name} bump into a #{obj.name} (#{self.x}, #{self.y})")
+        stats.add_message("#{type.name} bump into a #{obj.type.name} (#{self.x}, #{self.y})")
         return false
       when Item
         stats.add_message("Get item(#{self.x}, #{self.y})")
