@@ -3,8 +3,7 @@
 # Player, enemy character class.
 # Can move.
 class Character < GameObject
-  attr_reader :stats, :input
-  attr_accessor :graphics, :symbol, :name
+  attr_reader :stats, :input, :graphics, :type
 
   def initialize(object_pool, input, x, y)
     super(object_pool, x, y)

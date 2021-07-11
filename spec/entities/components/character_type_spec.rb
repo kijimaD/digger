@@ -6,12 +6,12 @@ RSpec.describe CharacterType do
 
     it 'set symbol @ to player character' do
       character = Character.new(object_pool, PlayerInput.new(object_pool), 1, 1)
-      expect(character.symbol).to eq('@')
+      expect(character.type.symbol).to eq('@')
     end
 
     it 'set symbol to AI character' do
       character = Character.new(object_pool, AiInput.new(object_pool), 1, 1)
-      expect(character.symbol).to be_truthy
+      expect(character.type.symbol).to be_truthy
     end
   end
 end
