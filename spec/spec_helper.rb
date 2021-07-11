@@ -2,6 +2,7 @@
 
 require 'curses'
 require 'singleton'
+require 'json'
 
 if ENV['COVERAGE']
   require 'simplecov'

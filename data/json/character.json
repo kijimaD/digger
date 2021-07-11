@@ -1,0 +1,42 @@
+[
+    {
+        "id": "robot",
+        "name": "Robot",
+        "symbol": "r"
+    },
+    {
+        "id": "dragon",
+        "name": "Dragon",
+        "symbol": "d"
+    },
+    {
+        "id": "human",
+        "name": "Human",
+        "symbol": "h"
+    },
+    {
+        "id": "ufo",
+        "name": "UFO",
+        "symbol": "o"
+    },
+    {
+        "id": "slime",
+        "name": "Slime",
+        "symbol": "s"
+    },
+    {
+        "id": "beast",
+        "name": "Beast",
+        "symbol": "b"
+    },
+    {
+        "id": "tank",
+        "name": "Tank",
+        "symbol": "t"
+    },
+    {
+        "id": "artillery",
+        "name": "Artillery",
+        "symbol": "a"
+    }
+]

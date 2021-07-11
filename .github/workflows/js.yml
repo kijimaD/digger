@@ -1,0 +1,22 @@
+name: Check
+
+on:
+  push:
+
+jobs:
+  jsonlint:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install
+        run: npm install
+      - name: Lint
+        run: make jsonlint

@@ -6,6 +6,8 @@ open:
 	export TERM=xterm && COVERAGE=true bundle exec rspec && xdg-open coverage/index.html
 lint:
 	bundle exec rubocop
+jsonlint:
+	npx jsonlint data/json/*.json
 run:
 	ruby main.rb
 run-debug:

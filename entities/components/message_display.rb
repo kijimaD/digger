@@ -24,7 +24,7 @@ class MessageDisplay < Component
 
   def coordinate
     $game.window.setpos(MESSAGE_Y, MESSAGE_X)
-    $game.window.addstr("(#{@character.x}, #{@character.y})")
+    $game.window.addstr("Execute: #{FieldState.instance.execute} (#{@character.x}, #{@character.y})")
   end
 
   def log_messages
