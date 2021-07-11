@@ -12,9 +12,10 @@ class AiInput < Component
   end
 
   def update
-    return unless FieldState.instance.execute
+    random_move
+  end
 
-    # Random move
-    object.physics.move_to(object.x + rand(-1..1), object.y + rand(-1..1))
+  def random_move
+    object.physics.move_to(object.x + rand(-1..1), object.y + rand(-1..1)) if FieldState.instance.execute
   end
 end
