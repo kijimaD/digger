@@ -6,7 +6,14 @@ class CharacterType < Component
 
   def initialize(game_object)
     super(game_object)
-    case object.input
+    @object = object
+    @object_pool = object.object_pool
+
+    set_parameter
+  end
+
+  def set_parameter
+    case @object.input
     when PlayerInput
       @symbol = '@'
       @name = 'Player'

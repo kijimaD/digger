@@ -12,7 +12,7 @@ class PlayerInput < Component
   end
 
   def move_to(x, y)
-    FieldState.instance.execute = object.move_to(x, y) ? true : false
+    FieldState.instance.execute = object.physics.move_to(x, y) ? true : false
   end
 
   # rubocop:disable Metrics/MethodLength, Metrics/AbcSize

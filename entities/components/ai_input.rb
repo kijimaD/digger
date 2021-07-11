@@ -15,6 +15,6 @@ class AiInput < Component
     return unless FieldState.instance.execute
 
     # Random move
-    object.move_to(object.x + rand(-1..1), object.y + rand(-1..1))
+    object.physics.move_to(object.x + rand(-1..1), object.y + rand(-1..1))
   end
 end
