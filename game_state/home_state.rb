@@ -5,7 +5,7 @@ class HomeState < GameState
   include Singleton
   attr_accessor :field_state
 
-  MENU = %w[休憩 アイテム 合成 装備 仲間 セーブ ロード].freeze
+  MENU = %w[休憩[b] アイテム[i] 合成[a] 装備[e] 仲間[t] セーブ[s] ロード[l]].freeze
 
   def enter; end
 
@@ -24,6 +24,8 @@ class HomeState < GameState
     case char
     when 'm'
       GameState.switch(@field_state)
+    when 'c'
+      exit
     end
   end
 end
