@@ -9,6 +9,7 @@ class InventoryState < GameState
 
   def leave; end
 
+  # rubocop:disable Metrics/AbcSize
   def draw
     $game.window.setpos(1, 1)
     $game.window.addstr('Inventory')
@@ -20,6 +21,7 @@ class InventoryState < GameState
       $game.window.addstr(item.type.description)
     end
   end
+  # rubocop:enable Metrics/AbcSize
 
   def update; end
 
