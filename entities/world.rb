@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-# Field map class.
-class Map
+# Field world class.
+class World
   attr_accessor :text
   attr_reader :world
 
   def initialize(object_pool, file)
     @object_pool = object_pool
-    object_pool.map = self
+    object_pool.world = self
 
     @file = file
     @text = load_text.split("\n")
@@ -16,9 +16,9 @@ class Map
 
   def draw(viewport)
     x0, x1, y0, y1 = viewport.map(&:to_i)
-    map = @text.slice(y0..y1).map { |y| y.slice(x0..x1) }
+    world = @text.slice(y0..y1).map { |y| y.slice(x0..x1) }
 
-    map.each_with_index do |line, index|
+    world.each_with_index do |line, index|
       $game.window.setpos(1 + index, 1)
       $game.window.addstr(line)
     end
@@ -63,12 +63,12 @@ class Map
     @load_text ||= File.read(Utils.media_path(@file))
   end
 
-  def map_width
-    @map_width ||= @text.first.length
+  def world_width
+    @world_width ||= @text.first.length
   end
 
-  def map_height
-    @map_height ||= @text.length
+  def world_height
+    @world_height ||= @text.length
   end
 
   def spawn_point
@@ -84,8 +84,8 @@ class Map
 
   def find_spawn_point
     loop do
-      x = rand(0..(map_width - 1))
-      y = rand(0..(map_height - 1))
+      x = rand(0..(world_width - 1))
+      y = rand(0..(world_height - 1))
       return [x, y] if can_move_to?(x, y) && @object_pool.same_point_objects(x, y).empty?
     end
   end

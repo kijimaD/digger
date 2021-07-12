@@ -2,7 +2,7 @@
 
 RSpec.describe Camera do
   let(:object_pool) { ObjectPool.new }
-  let(:map) { Map.new(object_pool, 'debug_map.txt') }
+  let(:world) { World.new(object_pool, 'debug_map.txt') }
   let(:character) { Character.new(object_pool, PlayerInput.new(object_pool), 2, 2) }
   let(:camera) { described_class.new }
 

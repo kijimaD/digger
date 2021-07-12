@@ -9,6 +9,6 @@ class ItemGraphics < Component
   end
 
   def draw
-    @object_pool.map(&:chars).text[@object.y][@object.x] = @object.symbol
+    @object_pool.world(&:chars).text[@object.y][@object.x] = @object.symbol
   end
 end

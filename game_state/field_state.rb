@@ -9,7 +9,7 @@ class FieldState < GameState
   def initialize
     super
     @object_pool = ObjectPool.new
-    @map = Map.new(@object_pool, 'debug_map.txt')
+    @world = World.new(@object_pool, 'debug_map.txt')
     @character = Character.new(@object_pool, PlayerInput.new(@object_pool), 2, 2)
     @hud = HUD.new(@object_pool, @character)
     @camera = Camera.new
@@ -25,13 +25,13 @@ class FieldState < GameState
   def draw
     @object_pool.draw_all
     viewport = @camera.viewport
-    @map.draw(viewport)
+    @world.draw(viewport)
     @hud.draw
   end
 
   def update
     @object_pool.update_all
-    @map.update
+    @world.update
     @hud.update
   end
 
@@ -50,11 +50,11 @@ class FieldState < GameState
   private
 
   def generate_game_objects
-    @map.spawn_points(10).each do
-      x, y = @map.spawn_point
+    @world.spawn_points(10).each do
+      x, y = @world.spawn_point
       Item.new(@object_pool, x, y)
 
-      x, y = @map.spawn_point
+      x, y = @world.spawn_point
       Character.new(@object_pool, AiInput.new(@object_pool), x, y)
     end
   end

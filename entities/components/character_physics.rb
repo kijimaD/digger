@@ -21,7 +21,7 @@ class CharacterPhysics < Component
     old_y = @object.y
     @object.move(x, y)
 
-    unless @object_pool.map.can_move_to?(x, y)
+    unless @object_pool.world.can_move_to?(x, y)
       @object.stats.add_message("Bump into a wall(#{@object.x}, #{@object.y})")
       return false
     end

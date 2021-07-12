@@ -9,6 +9,6 @@ class CharacterGraphics < Component
   end
 
   def draw
-    @object_pool.map(&:chars).text[@object.y][@object.x] = @object.type.symbol
+    @object_pool.world(&:chars).text[@object.y][@object.x] = @object.type.symbol
   end
 end

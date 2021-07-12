@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Map is composed by terrain.
+# World is composed by terrain.
 class Terrain
   attr_reader :symbol, :passable
 
