@@ -5,7 +5,7 @@ RSpec.describe Character do
   let(:input) { PlayerInput.new(object_pool) }
   let(:character) { described_class.new(object_pool, input, 1, 1) }
 
-  before { Map.new(object_pool, 'test_map.txt') }
+  before { World.new(object_pool, 'test_map.txt') }
 
   describe '#draw' do
     it '#draw implemented in GameObject class' do

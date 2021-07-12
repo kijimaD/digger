@@ -5,7 +5,7 @@ RSpec.describe CharacterPhysics do
   let(:input) { PlayerInput.new(object_pool) }
   let(:character) { Character.new(object_pool, input, 1, 1) }
 
-  before { Map.new(object_pool, 'debug_map.txt') }
+  before { World.new(object_pool, 'debug_map.txt') }
 
   describe '#move_to' do
     it 'can move' do

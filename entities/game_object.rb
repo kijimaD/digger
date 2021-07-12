@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Abstruct class.
-# GameObject is exist on map. etc) character, item
+# GameObject is exist on world. etc) character, item
 class GameObject
   attr_reader :x, :y, :object_pool, :components
 

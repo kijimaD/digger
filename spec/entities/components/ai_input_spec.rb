@@ -5,7 +5,7 @@ RSpec.describe AiInput do
   let(:input) { described_class.new(object_pool) }
   let(:character) { Character.new(object_pool, input, 1, 1) }
 
-  before { Map.new(object_pool, 'test_map.txt') }
+  before { World.new(object_pool, 'test_map.txt') }
 
   describe '#control' do
     it do
