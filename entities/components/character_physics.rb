@@ -34,6 +34,7 @@ class CharacterPhysics < Component
         return false
       when Item
         @object.stats.add_message("Get #{obj.type.name} (#{@object.x}, #{@object.y})")
+        Inventory.instance.add(obj)
         obj.mark_for_removal
       end
     end

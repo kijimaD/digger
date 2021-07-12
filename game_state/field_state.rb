@@ -44,6 +44,10 @@ class FieldState < GameState
       home = HomeState.instance
       home.field_state = self
       GameState.switch(home)
+    when 'e'
+      inventory = InventoryState.instance
+      inventory.field_state = self
+      GameState.switch(inventory)
     end
   end
 
