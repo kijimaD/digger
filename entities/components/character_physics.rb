@@ -22,7 +22,8 @@ class CharacterPhysics < Component
     @object.move(x, y)
 
     unless @object_pool.world.can_move_to?(x, y)
-      @object.stats.add_message("Bump into a wall(#{@object.x}, #{@object.y})")
+      terrain = @object_pool.world.world[y][x]
+      @object.stats.add_message("Bump into a #{terrain.name} #{terrain.symbol} (#{@object.x}, #{@object.y})")
       return false
     end
 

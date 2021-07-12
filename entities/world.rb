@@ -29,9 +29,9 @@ class World
   end
 
   def generate_terrain
-    @plain_terrain = Terrain.new(' ', true)
-    @wall_x_terrain = Terrain.new('#', false)
-    @wall_y_terrain = Terrain.new('|', false)
+    @plain_terrain = Terrain.new(' ', true, 'plain')
+    @wall_x_terrain = Terrain.new('#', false, 'wall')
+    @wall_y_terrain = Terrain.new('|', false, 'wall')
 
     @world = terrain_mapping
   end
