@@ -33,7 +33,7 @@ class CharacterPhysics < Component
         @object.stats.add_message("#{@object.type.name} bump into a #{obj.type.name} (#{@object.x}, #{@object.y})")
         return false
       when Item
-        @object.stats.add_message("Get item(#{@object.x}, #{@object.y})")
+        @object.stats.add_message("Get #{obj.type.name} (#{@object.x}, #{@object.y})")
         obj.mark_for_removal
       end
     end
