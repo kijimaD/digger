@@ -15,10 +15,9 @@ RSpec.describe AiInput do
   end
 
   describe '#random_move' do
-    context 'when player move' do
+    context 'when execute true' do
       before do
-        player = Character.new(object_pool, PlayerInput.new(object_pool), 1, 1)
-        player.physics.move_to(2, 2)
+        FieldState.instance.execute = true
       end
 
       it 'AI character move' do
@@ -27,10 +26,9 @@ RSpec.describe AiInput do
       end
     end
 
-    context 'when player not move' do
+    context 'when execute false' do
       before do
-        player = Character.new(object_pool, PlayerInput.new(object_pool), 1, 1)
-        player.physics.move_to(1, 1)
+        FieldState.instance.execute = false
       end
 
       it 'AI character not move' do
