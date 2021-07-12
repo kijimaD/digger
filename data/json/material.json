@@ -2,61 +2,73 @@
     {
         "id": "scrap",
         "name": "ガラクタ",
+        "description": "よくわからない金属類",
         "rarity": 1
     },
     {
         "id": "rag",
         "name": "ボロキレ",
+        "description": "布の切れ端",
         "rarity": 1
     },
     {
         "id": "hard_wood",
         "name": "堅い木",
+        "description": "ずっしりとした重い木の棒",
         "rarity": 1
     },
     {
         "id": "small_flower",
         "name": "小さな花",
+        "description": "鮮やかな色の花",
         "rarity": 1
     },
     {
         "id": "nuts",
         "name": "木の実",
+        "description": "堅い外殻に包まれた木の実",
         "rarity": 1
     },
     {
         "id": "sticky_liquid",
         "name": "粘つく液体",
+        "description": "粘性のある灰色の液体",
         "rarity": 1
     },
     {
         "id": "glass_fragment",
         "name": "ガラスの欠片",
+        "description": "粉々になったガラスの一部",
         "rarity": 1
     },
     {
         "id": "charcoal",
         "name": "炭",
+        "description": "炭化した木",
         "rarity": 2
     },
     {
         "id": "glass_bottle",
         "name": "ガラスのビン",
+        "description": "傷のない透明なビン",
         "rarity": 2
     },
     {
         "id": "prism",
         "name": "プリズム",
+        "description": "光を操作するための多面体",
         "rarity": 2
     },
     {
         "id": "strong_thread",
         "name": "丈夫な糸",
+        "description": "切断に刃物が必要な糸",
         "rarity": 2
     },
     {
         "id": "copper",
         "name": "銅",
+        "description": "赤黒く光沢のある金属",
         "rarity": 2
     }
 ]

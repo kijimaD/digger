@@ -2,7 +2,7 @@
 
 # Set item default parameters.
 class ItemType < Component
-  attr_reader :name
+  attr_reader :name, :description
 
   def initialize(game_object)
     super(game_object)
@@ -16,5 +16,6 @@ class ItemType < Component
   def load_attributes(file)
     json = Utils.load_json(file).sample
     @name = json[:name]
+    @description = json[:description]
   end
 end

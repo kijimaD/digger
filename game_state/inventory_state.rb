@@ -16,6 +16,8 @@ class InventoryState < GameState
     Inventory.instance.items.each.with_index(1) do |item, i|
       $game.window.setpos(1 + i, 1)
       $game.window.addstr(item.type.name)
+      $game.window.setpos(1 + i, 20)
+      $game.window.addstr(item.type.description)
     end
   end
 

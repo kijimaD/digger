@@ -2,46 +2,55 @@
     {
         "id": "portion",
         "name": "回復薬",
+        "description": "1人のHPを50%回復",
         "rarity": 1
     },
     {
         "id": "high_portion",
         "name": "高級回復薬",
+        "description": "1人のHPを100%回復",
         "rarity": 2
     },
     {
         "id": "splay",
         "name": "回復スプレー",
+        "description": "全体のHPを40%回復",
         "rarity": 2
     },
     {
         "id": "supplement",
         "name": "栄養剤",
+        "description": "1人のSPを30%回復",
         "rarity": 2
     },
     {
         "id": "grenade",
         "name": "手榴弾",
+        "description": "敵全体に爆発攻撃",
         "rarity": 3
     },
     {
         "id": "water_baloon",
         "name": "水風船",
+        "description": "敵全体に水攻撃",
         "rarity": 2
     },
     {
         "id": "smoke_grenade",
         "name": "煙幕",
+        "description": "逃走の成功率を上げる",
         "rarity": 1
     },
     {
         "id": "mind drug",
         "name": "やる気薬",
+        "description": "やる気が上がる",
         "rarity": 1
     },
     {
         "id": "food",
         "name": "食料",
+        "description": "生存に必要",
         "rarity": 1
     }
 ]
