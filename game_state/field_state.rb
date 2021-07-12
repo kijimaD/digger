@@ -35,6 +35,7 @@ class FieldState < GameState
     @hud.update
   end
 
+  # rubocop:disable Metrics/MethodLength
   def button_down(char)
     @character.input.button_down(char)
     case char
@@ -50,6 +51,7 @@ class FieldState < GameState
       GameState.switch(inventory)
     end
   end
+  # rubocop:enable Metrics/MethodLength
 
   private
 
