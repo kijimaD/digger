@@ -1,0 +1,62 @@
+[
+    {
+        "id": "scrap",
+        "name": "ガラクタ",
+        "rarity": 1
+    },
+    {
+        "id": "rag",
+        "name": "ボロキレ",
+        "rarity": 1
+    },
+    {
+        "id": "hard_wood",
+        "name": "堅い木",
+        "rarity": 1
+    },
+    {
+        "id": "small_flower",
+        "name": "小さな花",
+        "rarity": 1
+    },
+    {
+        "id": "nuts",
+        "name": "木の実",
+        "rarity": 1
+    },
+    {
+        "id": "sticky_liquid",
+        "name": "粘つく液体",
+        "rarity": 1
+    },
+    {
+        "id": "glass_fragment",
+        "name": "ガラスの欠片",
+        "rarity": 1
+    },
+    {
+        "id": "charcoal",
+        "name": "炭",
+        "rarity": 2
+    },
+    {
+        "id": "glass_bottle",
+        "name": "ガラスのビン",
+        "rarity": 2
+    },
+    {
+        "id": "prism",
+        "name": "プリズム",
+        "rarity": 2
+    },
+    {
+        "id": "strong_thread",
+        "name": "丈夫な糸",
+        "rarity": 2
+    },
+    {
+        "id": "copper",
+        "name": "銅",
+        "rarity": 2
+    }
+]

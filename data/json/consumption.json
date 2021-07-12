@@ -1,0 +1,47 @@
+[
+    {
+        "id": "portion",
+        "name": "回復薬",
+        "rarity": 1
+    },
+    {
+        "id": "high_portion",
+        "name": "高級回復薬",
+        "rarity": 2
+    },
+    {
+        "id": "splay",
+        "name": "回復スプレー",
+        "rarity": 2
+    },
+    {
+        "id": "supplement",
+        "name": "栄養剤",
+        "rarity": 2
+    },
+    {
+        "id": "grenade",
+        "name": "手榴弾",
+        "rarity": 3
+    },
+    {
+        "id": "water_baloon",
+        "name": "水風船",
+        "rarity": 2
+    },
+    {
+        "id": "smoke_grenade",
+        "name": "煙幕",
+        "rarity": 1
+    },
+    {
+        "id": "mind drug",
+        "name": "やる気薬",
+        "rarity": 1
+    },
+    {
+        "id": "food",
+        "name": "食料",
+        "rarity": 1
+    }
+]
