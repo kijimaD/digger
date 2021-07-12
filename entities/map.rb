@@ -3,6 +3,7 @@
 # Field map class.
 class Map
   attr_accessor :text
+  attr_reader :world
 
   def initialize(object_pool, file)
     @object_pool = object_pool
@@ -10,6 +11,7 @@ class Map
 
     @file = file
     @text = load_text.split("\n")
+    generate_terrain
   end
 
   def draw(viewport)
@@ -26,16 +28,35 @@ class Map
     @text = load_text.split("\n")
   end
 
-  def can_move_to?(x, y)
-    terrain = @text.map(&:chars)[y][x]
-    case terrain
-    when '#'
-      false
-    when '|'
-      false
-    else
-      true
+  def generate_terrain
+    @plain_terrain = Terrain.new(' ', true)
+    @wall_x_terrain = Terrain.new('#', false)
+    @wall_y_terrain = Terrain.new('|', false)
+
+    @world = terrain_mapping
+  end
+
+  # rubocop:disable Metrics/MethodLength
+  def terrain_mapping
+    result = []
+    load_text.split("\n").each do |row|
+      result << row.chars.map do |c|
+        case c
+        when @plain_terrain.symbol
+          @plain_terrain
+        when @wall_x_terrain.symbol
+          @wall_x_terrain
+        when @wall_y_terrain.symbol
+          @wall_y_terrain
+        end
+      end
     end
+    result
+  end
+  # rubocop:enable Metrics/MethodLength
+
+  def can_move_to?(x, y)
+    @world[y][x].passable
   end
 
   def load_text

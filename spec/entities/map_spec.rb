@@ -37,4 +37,17 @@ RSpec.describe Map do
       expect(map.find_spawn_point.length).to eq(2)
     end
   end
+
+  describe '#generate_terrain' do
+    it 'set @world' do
+      map.generate_terrain
+      expect(map.world).to be_truthy
+    end
+  end
+
+  describe '#terrain_mapping' do
+    it 'convert string map to terrain object map' do
+      expect(map.terrain_mapping[0][0].symbol).to eq('#')
+    end
+  end
 end
