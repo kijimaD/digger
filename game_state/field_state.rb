@@ -56,7 +56,7 @@ class FieldState < GameState
   private
 
   def generate_game_objects
-    @world.spawn_points(10).each do
+    @world.spawn_points(100).each do
       x, y = @world.spawn_point
       Item.new(@object_pool, x, y)
 

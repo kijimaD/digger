@@ -10,4 +10,10 @@ class Item < GameObject
     @graphics = ItemGraphics.new(self)
     @type = ItemType.new(self)
   end
+
+  def on_collision(obj)
+    obj.stats.add_message("Get #{@type.name} (#{obj.x}, #{obj.y})")
+    Inventory.instance.add(self)
+    mark_for_removal
+  end
 end
