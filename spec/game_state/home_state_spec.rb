@@ -1,12 +1,19 @@
 # frozen_string_literal: true
 
 RSpec.describe HomeState do
-  before { $game = GameWindow.new }
+  let(:home_state) { described_class.instance }
 
   describe 'switch' do
     it 'can switch to bese_menu_state' do
-      GameState.switch(described_class.instance)
-      expect($game.state).to eq(described_class.instance)
+      $game = GameWindow.new
+      GameState.switch(home_state)
+      expect($game.state).to eq(home_state)
+    end
+  end
+
+  describe '#button_down' do
+    it 'can exit' do
+      expect { home_state.button_down('c') }.to raise_error SystemExit
     end
   end
 end
