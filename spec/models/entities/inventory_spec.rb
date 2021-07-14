@@ -5,8 +5,7 @@ RSpec.describe Inventory do
 
   describe '#add' do
     it 'can push items' do
-      inventory.add(Object.new)
-      expect(inventory.items.length).to eq(1)
+      expect { inventory.add(Object.new) }.to change { inventory.items.length }.by(1)
     end
   end
 end
