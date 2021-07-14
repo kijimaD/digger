@@ -17,6 +17,6 @@ class Character < GameObject
   end
 
   def on_collision(obj)
-    @stats.add_message("#{@type.name} bump into a #{obj.type.name} (#{@x}, #{@y})")
+    obj.stats.add_message("#{obj.type.name} bump into a #{@type.name} (#{@x}, #{@y})")
   end
 end
