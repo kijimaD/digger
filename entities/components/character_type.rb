@@ -9,10 +9,10 @@ class CharacterType < Component
     @object = object
     @object_pool = object.object_pool
 
-    set_parameter
+    load_attributes
   end
 
-  def set_parameter
+  def load_attributes
     case @object.input
     when PlayerInput
       @symbol = '@'

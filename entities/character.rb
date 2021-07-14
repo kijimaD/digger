@@ -15,4 +15,8 @@ class Character < GameObject
     @type = CharacterType.new(self)
     @physics = CharacterPhysics.new(self)
   end
+
+  def on_collision(obj)
+    obj.stats.add_message("#{obj.type.name} bump into a #{@type.name} (#{@x}, #{@y})")
+  end
 end

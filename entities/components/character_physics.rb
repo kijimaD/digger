@@ -22,18 +22,20 @@ class CharacterPhysics < Component
     @object.move(x, y)
 
     unless @object_pool.world.can_move_to?(x, y)
-      @object.stats.add_message("Bump into a wall(#{@object.x}, #{@object.y})")
+      terrain = @object_pool.world.world[y][x]
+      @object.stats.add_message("Bump into a #{terrain.name} #{terrain.symbol} (#{@object.x}, #{@object.y})")
       return false
     end
 
     @object_pool.same_point_objects(@object.x, @object.y, @object).each do |obj|
       case obj
       when Character
-        @object.stats.add_message("#{@object.type.name} bump into a #{obj.type.name} (#{@object.x}, #{@object.y})")
+        obj.on_collision(@object)
         return false
       when Item
-        @object.stats.add_message("Get item(#{@object.x}, #{@object.y})")
-        obj.mark_for_removal
+        break if @object.input.is_a?(AiInput)
+
+        obj.on_collision(@object)
       end
     end
 

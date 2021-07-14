@@ -35,6 +35,7 @@ class FieldState < GameState
     @hud.update
   end
 
+  # rubocop:disable Metrics/MethodLength
   def button_down(char)
     @character.input.button_down(char)
     case char
@@ -44,13 +45,18 @@ class FieldState < GameState
       home = HomeState.instance
       home.field_state = self
       GameState.switch(home)
+    when 'e'
+      inventory = InventoryState.instance
+      inventory.field_state = self
+      GameState.switch(inventory)
     end
   end
+  # rubocop:enable Metrics/MethodLength
 
   private
 
   def generate_game_objects
-    @world.spawn_points(10).each do
+    @world.spawn_points(100).each do
       x, y = @world.spawn_point
       Item.new(@object_pool, x, y)
 

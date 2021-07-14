@@ -2,12 +2,18 @@
 
 # Field items.
 class Item < GameObject
-  attr_reader :symbol
-  attr_accessor :graphics
+  attr_reader :symbol, :type, :graphics
 
   def initialize(object_pool, x, y)
     super(object_pool, x, y)
-    @symbol = ['🙐', '🙑', '🙒'].sample
+    @symbol = '🗃'
     @graphics = ItemGraphics.new(self)
+    @type = ItemType.new(self)
+  end
+
+  def on_collision(obj)
+    obj.stats.add_message("Get #{@type.name} (#{obj.x}, #{obj.y})")
+    Inventory.instance.add(self)
+    mark_for_removal
   end
 end
