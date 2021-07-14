@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe FieldState do
-  let(:field_state) { described_class.instance }
+  let(:field_state) { described_class.send(:new) }
 
   describe '#button_down' do
     before { field_state.character.move(2, 2) }

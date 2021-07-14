@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe HomeState do
-  let(:home_state) { described_class.instance }
+  let(:home_state) { described_class.send(:new) }
 
   describe 'switch' do
     it 'can switch to bese_menu_state' do
