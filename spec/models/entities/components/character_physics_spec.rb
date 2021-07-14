@@ -3,7 +3,7 @@
 RSpec.describe CharacterPhysics do
   let(:object_pool) { ObjectPool.new }
 
-  before { World.new(object_pool, 'debug_map.txt') }
+  before { World.new(object_pool, 'test_map.txt') }
 
   describe '#move_to' do
     let(:input) { PlayerInput.new(object_pool) }

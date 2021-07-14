@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Inventory do
-  let(:inventory) { described_class.instance }
+  let(:inventory) { described_class.send(:new) }
 
   describe '#add' do
     it 'can push items' do
