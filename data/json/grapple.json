@@ -1,0 +1,122 @@
+[
+    {
+        "id": "bandage",
+        "name": "バンテージ",
+        "description": "",
+        "rank": 1,
+        "attack": 6,
+        "hit_rate": 80
+    },
+    {
+        "id": "leather_glove",
+        "name": "革グローブ",
+        "description": "",
+        "rank": 2,
+        "attack": 14,
+        "hit_rate": 90
+    },
+    {
+        "id": "reinforce_bandage",
+        "name": "強化バンテージ",
+        "description": "",
+        "rank": 2,
+        "attack": 21,
+        "hit_rate": 90
+    },
+    {
+        "id": "copper_knuckle",
+        "name": "銅のナックル",
+        "description": "",
+        "rank": 3,
+        "attack": 30,
+        "hit_rate": 100
+    },
+    {
+        "id": "iron_knuckle",
+        "name": "鉄のナックル",
+        "description": "",
+        "rank": 3,
+        "attack": 40,
+        "hit_rate": 100
+    },
+    {
+        "id": "steel_knuckle",
+        "name": "鋼のナックル",
+        "description": "",
+        "rank": 3,
+        "attack": 50,
+        "hit_rate": 100
+    },
+    {
+        "id": "heet_glove",
+        "name": "ヒートグローブ",
+        "description": "",
+        "rank": 4,
+        "attack": 35,
+        "hit_rate": 90
+    },
+    {
+        "id": "stun_glove",
+        "name": "スタングローブ",
+        "description": "",
+        "rank": 4,
+        "attack": 35,
+        "hit_rate": 90
+    },
+    {
+        "id": "super_knuckle",
+        "name": "スーパーナックル",
+        "description": "",
+        "rank": 4,
+        "attack": 60,
+        "hit_rate": 100
+    },
+    {
+        "id": "heavy_knuckle",
+        "name": "ヘビーナックル",
+        "description": "",
+        "rank": 5,
+        "attack": 84,
+        "hit_rate": 80
+    },
+    {
+        "id": "happy_bandage",
+        "name": "幸せバンテージ",
+        "description": "",
+        "rank": 5,
+        "attack": 42,
+        "hit_rate": 90
+    },
+    {
+        "id": "beast_fang",
+        "name": "ビーストファング",
+        "description": "",
+        "rank": 5,
+        "attack": 80,
+        "hit_rate": 100
+    },
+    {
+        "id": "flare_glove",
+        "name": "フレアグローブ",
+        "description": "",
+        "rank": 6,
+        "attack": 63,
+        "hit_rate": 90
+    },
+    {
+        "id": "plasma_glove",
+        "name": "プラズマグローブ",
+        "description": "",
+        "rank": 6,
+        "attack": 63,
+        "hit_rate": 90
+    },
+    {
+        "id": "dragon_heart",
+        "name": "ドラゴンハート",
+        "description": "",
+        "rank": 7,
+        "attack": 100,
+        "hit_rate": 100
+    },
+]
