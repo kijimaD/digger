@@ -6,7 +6,7 @@ class Item < GameObject
 
   def initialize(object_pool, x, y)
     super(object_pool, x, y)
-    @symbol = '🗃'
+    @symbol = '.'
     @graphics = ItemGraphics.new(self)
     @type = ItemType.new(self)
   end
