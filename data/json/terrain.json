@@ -1,0 +1,17 @@
+[
+    {
+        "id": "plain",
+        "symbol": " ",
+        "passable": true
+    },
+    {
+        "id": "wall_x",
+        "symbol": "#",
+        "passable": false
+    },
+    {
+        "id": "wall_y",
+        "symbol": "|",
+        "passable": false
+    }
+]
