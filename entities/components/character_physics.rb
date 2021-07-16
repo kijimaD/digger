@@ -23,7 +23,7 @@ class CharacterPhysics < Component
 
     unless @object_pool.world.can_move_to?(x, y)
       terrain = @object_pool.world.world[y][x]
-      @object.stats.add_message("Bump into a #{terrain.name} #{terrain.symbol} (#{@object.x}, #{@object.y})")
+      @object.stats.add_message("Bump into a #{terrain.id} #{terrain.symbol} (#{@object.x}, #{@object.y})")
       return false
     end
 

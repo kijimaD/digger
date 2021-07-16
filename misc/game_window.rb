@@ -40,6 +40,6 @@ class GameWindow
 
     @window.box('|', '-', '*')
     @window.refresh
-    @state.button_down(getch)
+    @state.button_down(getch) unless $test
   end
 end

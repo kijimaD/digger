@@ -1,0 +1,138 @@
+[
+    {
+        "id": "wood_sword",
+        "name": "木刀",
+        "description": "",
+        "rank": 1,
+        "attack": 10,
+        "hit_rate": 100,
+        "sp": 2
+    },
+    {
+        "id": "copper_knife",
+        "name": "銅のナイフ",
+        "description": "",
+        "rank": 1,
+        "attack": 18,
+        "hit_rate": 100,
+        "sp": 2
+    },
+    {
+        "id": "iron_knife",
+        "name": "鉄のナイフ",
+        "description": "",
+        "rank": 1,
+        "attack": 27,
+        "hit_rate": 100,
+        "sp": 2
+    },
+    {
+        "id": "sabel",
+        "name": "サーベル",
+        "description": "",
+        "rank": 1,
+        "attack": 18,
+        "hit_rate": 100,
+        "sp": 2
+    },
+    {
+        "id": "beam_knife",
+        "name": "ビームナイフ",
+        "description": "",
+        "rank": 1,
+        "attack": 36,
+        "hit_rate": 100,
+        "sp": 2
+    },
+    {
+        "id": "kodachi",
+        "name": "小太刀",
+        "description": "",
+        "rank": 1,
+        "attack": 45,
+        "hit_rate": 110,
+        "sp": 2
+    },
+    {
+        "id": "japanese_sword",
+        "name": "日本刀",
+        "description": "",
+        "rank": 1,
+        "attack": 66,
+        "hit_rate": 95,
+        "sp": 2
+    },
+    {
+        "id": "murata_sword",
+        "name": "村田刀",
+        "description": "",
+        "rank": 1,
+        "attack": 60,
+        "hit_rate": 100,
+        "sp": 2
+    },
+    {
+        "id": "raijin_sword",
+        "name": "雷神刀",
+        "description": "",
+        "rank": 1,
+        "attack": 77,
+        "hit_rate": 95,
+        "sp": 2
+    },
+    {
+        "id": "beast_edge",
+        "name": "ビーストエッジ",
+        "description": "",
+        "rank": 1,
+        "attack": 72,
+        "hit_rate": 110,
+        "sp": 2
+    },
+    {
+        "id": "freely_sword",
+        "name": "自在剣",
+        "description": "",
+        "rank": 1,
+        "attack": 72,
+        "hit_rate": 100,
+        "sp": 2
+    },
+    {
+        "id": "plasma_blade",
+        "name": "プラズマブレード",
+        "description": "",
+        "rank": 1,
+        "attack": 99,
+        "hit_rate": 95,
+        "sp": 2
+    },
+    {
+        "id": "light_sabel",
+        "name": "ライトサーベル",
+        "description": "",
+        "rank": 1,
+        "attack": 99,
+        "hit_rate": 95,
+        "sp": 2
+    },
+    {
+        "id": "cosmo_mixer",
+        "name": "コスモミキサー",
+        "description": "",
+        "rank": 1,
+        "attack": 63,
+        "hit_rate": 95,
+        "sp": 2
+    },
+    {
+        "id": "space_muramasa",
+        "name": "宇宙ムラマサ",
+        "description": "",
+        "rank": 1,
+        "attack": 110,
+        "hit_rate": 100,
+        "sp": 2
+    },
+
+]

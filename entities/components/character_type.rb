@@ -18,7 +18,7 @@ class CharacterType < Component
       @symbol = '@'
       @name = 'Player'
     else
-      json = Utils.load_json('character.json').sample
+      json = Utils.load_json('character').sample
       @symbol = json[:symbol]
       @name = json[:name]
     end

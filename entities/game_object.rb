@@ -11,6 +11,8 @@ class GameObject
     @object_pool = object_pool
     @object_pool.add(self)
     @components = []
+
+    @removable = false
   end
 
   def move(new_x, new_y)

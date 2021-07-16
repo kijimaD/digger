@@ -1,0 +1,137 @@
+[
+    {
+        "id": "monster_ym",
+        "name": "モンスターYM",
+        "description": "",
+        "rank": 1,
+        "attack": 14,
+        "hit_rate": 95,
+        "sp": 3
+    },
+    {
+        "id": "rifle",
+        "name": "ライフル",
+        "description": "",
+        "rank": 1,
+        "attack": 28,
+        "hit_rate": 90,
+        "sp": 3
+    },
+    {
+        "id": "machin_gun",
+        "name": "マシンガン",
+        "description": "",
+        "rank": 1,
+        "attack": 16,
+        "hit_rate": 85,
+        "sp": 3
+    },
+    {
+        "id": "sword_off",
+        "name": "ソードオフ",
+        "description": "",
+        "rank": 1,
+        "attack": 24,
+        "hit_rate": 80,
+        "sp": 3
+    },
+    {
+        "id": "pain_less",
+        "name": "ペインレス",
+        "description": "",
+        "rank": 1,
+        "attack": 28,
+        "hit_rate": 85,
+        "sp": 3
+    },
+    {
+        "id": "sniper",
+        "name": "スナイパー",
+        "description": "",
+        "rank": 1,
+        "attack": 56,
+        "hit_rate": 95,
+        "sp": 3
+    },
+    {
+        "id": "shotgun",
+        "name": "ショットガン",
+        "description": "",
+        "rank": 1,
+        "attack": 32,
+        "hit_rate": 85,
+        "sp": 3
+    },
+    {
+        "id": "laser_rifle",
+        "name": "レーザーライフル",
+        "description": "",
+        "rank": 1,
+        "attack": 70,
+        "hit_rate": 90,
+        "sp": 3
+    },
+    {
+        "id": "spark_gun",
+        "name": "スパークガン",
+        "description": "",
+        "rank": 1,
+        "attack": 48,
+        "hit_rate": 85,
+        "sp": 3
+    },
+    {
+        "id": "flamethrower",
+        "name": "火炎放射器",
+        "description": "",
+        "rank": 1,
+        "attack": 56,
+        "hit_rate": 85,
+        "sp": 3
+    },
+    {
+        "id": "stormer",
+        "name": "ストーマー",
+        "description": "",
+        "rank": 1,
+        "attack": 56,
+        "hit_rate": 85,
+        "sp": 3
+    },
+    {
+        "id": "gargantua",
+        "name": "ガルガンチュア",
+        "description": "",
+        "rank": 1,
+        "attack": 56,
+        "hit_rate": 85,
+        "sp": 3
+    },
+    {
+        "id": "kyubi",
+        "name": "キュウビ",
+        "description": "",
+        "rank": 1,
+        "attack": 112,
+        "hit_rate": 90,
+        "sp": 3
+    },
+    {
+        "id": "manticore",
+        "name": "マンティコア",
+        "description": "",
+        "rank": 1,
+        "attack": 126,
+        "hit_rate": 90,
+        "sp": 3
+    },
+    {
+        "id": "judgement",
+        "name": "ジャジメント",
+        "description": "",
+        "rank": 1,
+        "attack": 130,
+        "hit_rate": 95,
+        "sp": 3
+    }
+]

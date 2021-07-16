@@ -3,7 +3,7 @@
 # Field world class.
 class World
   attr_accessor :text
-  attr_reader :world
+  attr_reader :world, :terrain_pool
 
   def initialize(object_pool, file)
     @object_pool = object_pool
@@ -11,7 +11,8 @@ class World
 
     @file = file
     @text = load_text.split("\n")
-    generate_terrain
+    @terrain_pool = generate_terrain
+    @world = terrain_mapping
   end
 
   def draw(viewport)
@@ -29,31 +30,23 @@ class World
   end
 
   def generate_terrain
-    @plain_terrain = Terrain.new(' ', true, 'plain')
-    @wall_x_terrain = Terrain.new('#', false, 'wall')
-    @wall_y_terrain = Terrain.new('|', false, 'wall')
-
-    @world = terrain_mapping
+    terrain_pool = []
+    Utils.load_json('terrain').each do |obj|
+      terrain_pool << Terrain.new(obj[:id], obj[:symbol], obj[:passable])
+    end
+    terrain_pool
   end
 
-  # rubocop:disable Metrics/MethodLength
   def terrain_mapping
     result = []
     load_text.split("\n").each do |row|
       result << row.chars.map do |c|
-        case c
-        when @plain_terrain.symbol
-          @plain_terrain
-        when @wall_x_terrain.symbol
-          @wall_x_terrain
-        when @wall_y_terrain.symbol
-          @wall_y_terrain
-        end
+        @terrain_pool.find { |t| t.symbol == c }
+        # TODO: performance problem
       end
     end
     result
   end
-  # rubocop:enable Metrics/MethodLength
 
   def can_move_to?(x, y)
     @world[y][x].passable
