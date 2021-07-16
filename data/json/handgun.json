@@ -1,0 +1,146 @@
+[
+    {
+        "id": "clear_walther",
+        "name": "クリアワルザー",
+        "description": "",
+        "rank": 1,
+        "attack": 12,
+        "hit_rate": 95,
+        "sp": 2
+    },
+    {
+        "id": "handgun",
+        "name": "ハンドガン",
+        "description": "",
+        "rank": 1,
+        "attack": 12,
+        "hit_rate": 95,
+        "sp": 2
+    },
+    {
+        "id": "machin_pistol",
+        "name": "マシンピストル",
+        "description": "",
+        "rank": 1,
+        "attack": 14,
+        "hit_rate": 85,
+        "sp": 2
+    },
+    {
+        "id": "hand_blaster",
+        "name": "ハンドブラスター",
+        "description": "",
+        "rank": 1,
+        "attack": 42,
+        "hit_rate": 85,
+        "sp": 2
+    },
+    {
+        "id": "ray_gun",
+        "name": "レイガン",
+        "description": "",
+        "rank": 1,
+        "attack": 48,
+        "hit_rate": 95,
+        "sp": 2
+    },
+    {
+        "id": "accurate",
+        "name": "アキュレイト",
+        "description": "",
+        "rank": 1,
+        "attack": 48,
+        "hit_rate": 110,
+        "sp": 2
+    },
+    {
+        "id": "rapid_gun",
+        "name": "ラピッドガン",
+        "description": "",
+        "rank": 1,
+        "attack": 28,
+        "hit_rate": 85,
+        "sp": 2
+    },
+    {
+        "id": "lemat_gun",
+        "name": "ルマットガン",
+        "description": "",
+        "rank": 1,
+        "attack": 60,
+        "hit_rate": 95,
+        "sp": 2
+    },
+    {
+        "id": "dual_gun",
+        "name": "デュアルガン",
+        "description": "",
+        "rank": 1,
+        "attack": 60,
+        "hit_rate": 110,
+        "sp": 2
+    },
+    {
+        "id": "flare_blaster",
+        "name": "フレアブラスター",
+        "description": "",
+        "rank": 1,
+        "attack": 84,
+        "hit_rate": 85,
+        "sp": 2
+    },
+    {
+        "id": "pulse_gun",
+        "name": "パルスガン",
+        "description": "",
+        "rank": 1,
+        "attack": 42,
+        "hit_rate": 100,
+        "sp": 2
+    },
+    {
+        "id": "ray_blaster",
+        "name": "レイブラスター",
+        "description": "",
+        "rank": 1,
+        "attack": 98,
+        "hit_rate": 85,
+        "sp": 2
+    },
+    {
+        "id": "reflector",
+        "name": "リフレクター",
+        "description": "",
+        "rank": 1,
+        "attack": 84,
+        "hit_rate": 100,
+        "sp": 2
+    },
+    {
+        "id": "black_dog",
+        "name": "ブラックドッグ",
+        "description": "",
+        "rank": 1,
+        "attack": 96,
+        "hit_rate": 95,
+        "sp": 2
+    },
+    {
+        "id": "dragon_eater",
+        "name": "ドラゴイーター",
+        "description": "",
+        "rank": 1,
+        "attack": 108,
+        "hit_rate": 95,
+        "sp": 2
+    },
+    {
+        "id": "apocalypse",
+        "name": "アポカリプス",
+        "description": "",
+        "rank": 1,
+        "attack": 120,
+        "hit_rate": 100,
+        "sp": 2
+    },
+]
