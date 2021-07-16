@@ -9,7 +9,7 @@ class ItemType < Component
     @object = object
     @object_pool = object.object_pool
 
-    category = ['consumption', 'material'].sample
+    category = %w[consumption material].sample
     load_attributes(category)
   end
 
