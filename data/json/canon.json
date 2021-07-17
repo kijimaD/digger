@@ -17,7 +17,7 @@
         "hit_rate": 75,
         "sp": 4
     },
-        {
+    {
         "id": "anti_materiel_rifle",
         "name": "対物ライフル",
         "description": "",
@@ -26,7 +26,7 @@
         "hit_rate": 85,
         "sp": 3
     },
-        {
+    {
         "id": "heat_canon",
         "name": "ヒートキャノン",
         "description": "",
@@ -35,7 +35,7 @@
         "hit_rate": 75,
         "sp": 3
     },
-        {
+    {
         "id": "beam_canon",
         "name": "ビームキャノン",
         "description": "",
@@ -44,7 +44,7 @@
         "hit_rate": 75,
         "sp": 3
     },
-        {
+    {
         "id": "thunder_canon",
         "name": "サンダーキャノン",
         "description": "",
@@ -53,7 +53,7 @@
         "hit_rate": 75,
         "sp": 3
     },
-        {
+    {
         "id": "quick_fire",
         "name": "クイックファイヤ",
         "description": "",
@@ -62,7 +62,7 @@
         "hit_rate": 85,
         "sp": 3
     },
-        {
+    {
         "id": "aiming",
         "name": "エイミング",
         "description": "",
@@ -71,7 +71,7 @@
         "hit_rate": 3,
         "sp": 3
     },
-        {
+    {
         "id": "burst_canon",
         "name": "バーストキャノン",
         "description": "",
@@ -80,7 +80,7 @@
         "hit_rate": 80,
         "sp": 4
     },
-        {
+    {
         "id": "dazzle_canon",
         "name": "ダズルキャノン",
         "description": "",
@@ -89,7 +89,7 @@
         "hit_rate": 80,
         "sp": 4
     },
-        {
+    {
         "id": "plasma_canon",
         "name": "プラズマキャノン",
         "description": "",
@@ -98,7 +98,7 @@
         "hit_rate": 80,
         "sp": 4
     },
-        {
+    {
         "id": "flame_kiss",
         "name": "フレイムキッス",
         "description": "",
@@ -107,7 +107,7 @@
         "hit_rate": 85,
         "sp": 3
     },
-        {
+    {
         "id": "photon_spike",
         "name": "フォトンスパイク",
         "description": "",
@@ -116,7 +116,7 @@
         "hit_rate": 85,
         "sp": 3
     },
-        {
+    {
         "id": "thunder_bolt",
         "name": "サンダーボルト",
         "description": "",
@@ -125,7 +125,7 @@
         "hit_rate": 85,
         "sp": 3
     },
-        {
+    {
         "id": "punisher",
         "name": "パニッシャー",
         "description": "",
