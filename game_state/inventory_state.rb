@@ -29,7 +29,7 @@ class InventoryState < GameState
     when 'a'
       @cursor_x -= 1 if @cursor_x.positive?
     when 'd'
-      @cursor_x += 1 if @cursor_x < 1
+      @cursor_x += 1 if @cursor_x < 4
     when 'e'
       GameState.switch(@field_state)
     when 'c'
@@ -40,10 +40,11 @@ class InventoryState < GameState
   private
 
   def draw_tab
-    $game.window.setpos(2, 20)
-    $game.window.addstr('アイテム')
-    $game.window.setpos(2, 30)
-    $game.window.addstr('素材')
+    tabs = %w[アイテム 武器 装飾  素材 キー]
+    tabs.each.with_index(1) do |tab, i|
+      $game.window.setpos(2, 10 + 10 * i)
+      $game.window.addstr(tab)
+    end
 
     $game.window.setpos(1, 20 + @cursor_x * 10)
     $game.window.addstr('▼')
@@ -59,7 +60,7 @@ class InventoryState < GameState
         $game.window.setpos(3 + i, 20)
         $game.window.addstr(item.type.description)
       end
-    when 1
+    when 3
       materials = FieldState.instance.item_type_pool.types.select { |t| t.category == :material }
       materials.each.with_index(1) do |type, i|
         $game.window.setpos(3 + i, 1)
@@ -67,7 +68,7 @@ class InventoryState < GameState
         $game.window.setpos(3 + i, 20)
         $game.window.addstr(type.description)
         $game.window.setpos(3 + i, 50)
-        $game.window.addstr(type.count.to_s)
+        $game.window.addstr("x#{type.count}")
       end
     end
   end
