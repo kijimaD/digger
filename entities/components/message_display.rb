@@ -14,7 +14,7 @@ class MessageDisplay < Component
   end
 
   def draw
-    coordinate if $debug
+    coordinate if $debug || $test
     log_messages
   end
 
