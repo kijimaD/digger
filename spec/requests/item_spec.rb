@@ -12,7 +12,7 @@ RSpec.describe Item do
 
       before do
         Inventory.send(:new)
-        described_class.new(object_pool, 3, 3)
+        described_class.new(object_pool, 3, 3, ItemType.new('portion', '回復役', '回復する', :consumption))
       end
 
       it 'Get item' do
@@ -31,7 +31,7 @@ RSpec.describe Item do
 
       before do
         Inventory.send(:new)
-        described_class.new(object_pool, 3, 3)
+        described_class.new(object_pool, 3, 3, ItemType.new('portion', '回復役', '回復する', :consumption))
       end
 
       it 'Not get item' do
