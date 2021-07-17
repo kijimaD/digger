@@ -4,11 +4,11 @@
 class Item < GameObject
   attr_reader :symbol, :type, :graphics
 
-  def initialize(object_pool, x, y)
+  def initialize(object_pool, x, y, type)
     super(object_pool, x, y)
     @symbol = '.'
     @graphics = ItemGraphics.new(self)
-    @type = ItemType.new(self)
+    @type = type
   end
 
   def on_collision(obj)
