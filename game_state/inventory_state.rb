@@ -14,11 +14,33 @@ class InventoryState < GameState
 
   def leave; end
 
-  # rubocop:disable Metrics/AbcSize
   def draw
     $game.window.setpos(1, 1)
     $game.window.addstr('Inventory')
 
+    draw_tab
+    draw_main
+  end
+
+  def update; end
+
+  def button_down(char)
+    case char
+    when 'a'
+      @cursor_x -= 1 if @cursor_x.positive?
+    when 'd'
+      @cursor_x += 1 if @cursor_x < 1
+    when 'e'
+      GameState.switch(@field_state)
+    when 'c'
+      exit
+    end
+  end
+
+  private
+
+  # rubocop:disable Metrics/MethodLength
+  def draw_tab
     case @cursor_x
     when 0
       $game.window.setpos(1, 20)
@@ -31,7 +53,11 @@ class InventoryState < GameState
       $game.window.setpos(1, 30)
       $game.window.addstr('→素材')
     end
+  end
+  # rubocop:enable Metrics/MethodLength
 
+  # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
+  def draw_main
     case @cursor_x
     when 0
       Inventory.instance.items.each.with_index(1) do |item, i|
@@ -52,20 +78,5 @@ class InventoryState < GameState
       end
     end
   end
-  # rubocop:enable Metrics/AbcSize
-
-  def update; end
-
-  def button_down(char)
-    case char
-    when 'a'
-      @cursor_x -= 1 if @cursor_x > 0
-    when 'd'
-      @cursor_x += 1 if @cursor_x < 1
-    when 'e'
-      GameState.switch(@field_state)
-    when 'c'
-      exit
-    end
-  end
+  # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 end
