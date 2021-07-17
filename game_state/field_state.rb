@@ -4,7 +4,7 @@
 class FieldState < GameState
   include Singleton
   attr_accessor :execute
-  attr_reader :character
+  attr_reader :character, :item_type_pool
 
   def initialize
     super

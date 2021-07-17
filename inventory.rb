@@ -14,7 +14,7 @@ class Inventory
     when :consumption
       @items << item
     when :material
-      nil
+      item.type.count += 1
     end
   end
 end
