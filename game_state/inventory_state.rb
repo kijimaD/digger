@@ -39,41 +39,34 @@ class InventoryState < GameState
 
   private
 
-  # rubocop:disable Metrics/MethodLength
   def draw_tab
-    case @cursor_x
-    when 0
-      $game.window.setpos(1, 20)
-      $game.window.addstr('→アイテム')
-      $game.window.setpos(1, 30)
-      $game.window.addstr('素材')
-    when 1
-      $game.window.setpos(1, 20)
-      $game.window.addstr('アイテム')
-      $game.window.setpos(1, 30)
-      $game.window.addstr('→素材')
-    end
+    $game.window.setpos(2, 20)
+    $game.window.addstr('アイテム')
+    $game.window.setpos(2, 30)
+    $game.window.addstr('素材')
+
+    $game.window.setpos(1, 20 + @cursor_x * 10)
+    $game.window.addstr('▼')
   end
-  # rubocop:enable Metrics/MethodLength
 
   # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
   def draw_main
     case @cursor_x
     when 0
       Inventory.instance.items.each.with_index(1) do |item, i|
-        $game.window.setpos(2 + i, 1)
+        $game.window.setpos(3 + i, 1)
         $game.window.addstr(item.type.name)
-        $game.window.setpos(2 + i, 20)
+        $game.window.setpos(3 + i, 20)
         $game.window.addstr(item.type.description)
       end
     when 1
       materials = FieldState.instance.item_type_pool.types.select { |t| t.category == :material }
       materials.each.with_index(1) do |type, i|
-        $game.window.setpos(2 + i, 1)
+        $game.window.setpos(3 + i, 1)
         $game.window.addstr(type.name)
-        $game.window.setpos(2 + i, 20)
+        $game.window.setpos(3 + i, 20)
         $game.window.addstr(type.description)
-        $game.window.setpos(2 + i, 50)
+        $game.window.setpos(3 + i, 50)
         $game.window.addstr(type.count.to_s)
       end
     end
