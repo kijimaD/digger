@@ -24,8 +24,6 @@ class GameWindow
   end
 
   def main_loop
-    one_tern
-
     loop do
       one_tern
     end
