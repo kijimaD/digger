@@ -9,8 +9,4 @@ RSpec.describe PlayerInput do
     input.control(character)
     expect(input.object).to eq character
   end
-
-  it 'button_down' do
-    expect { input.button_down('c') }.to raise_error SystemExit
-  end
 end

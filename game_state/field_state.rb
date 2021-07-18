@@ -51,6 +51,8 @@ class FieldState < GameState
       inventory = InventoryState.instance
       inventory.field_state = self
       GameState.switch(inventory)
+    when 'c'
+      exit
     end
   end
   # rubocop:enable Metrics/MethodLength
