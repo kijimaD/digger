@@ -17,7 +17,7 @@ RSpec.describe HomeState do
 
   describe '#draw' do
     it 'can display' do
-      $game.one_tern
+      $game.one_turn
     end
   end
 

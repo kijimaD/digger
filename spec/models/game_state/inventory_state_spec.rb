@@ -20,13 +20,13 @@ RSpec.describe InventoryState do
   describe '#draw_tab' do
     it 'can display the item tab(consumption)' do
       Inventory.instance.add(item)
-      $game.one_tern
+      $game.one_turn
     end
 
     it 'can display other tabs' do
       4.times do
         inventory_state.button_down('d')
-        $game.one_tern
+        $game.one_turn
       end
     end
   end
