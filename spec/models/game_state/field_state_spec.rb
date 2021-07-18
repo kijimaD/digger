@@ -37,6 +37,10 @@ RSpec.describe FieldState do
       expect { field_state.button_down('d') }.to change { field_state.character.x }.by(1)
     end
 
+    it 'skip turn' do
+      expect { field_state.button_down(' ') }.to change(field_state, :execute) { field_state.character.x }.by(0)
+    end
+
     it 'switch home state' do
       field_state.button_down('m')
       expect($game.state.class).to eq(HomeState)
