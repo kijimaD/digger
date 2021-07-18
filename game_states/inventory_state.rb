@@ -25,6 +25,8 @@ class InventoryState < GameState
   def update; end
 
   def button_down(char)
+    super(char)
+
     case char
     when 'a'
       @cursor_x -= 1 if @cursor_x.positive?
@@ -32,8 +34,6 @@ class InventoryState < GameState
       @cursor_x += 1 if @cursor_x < 4
     when 'e'
       GameState.switch(@field_state)
-    when 'c'
-      exit
     end
   end
 
