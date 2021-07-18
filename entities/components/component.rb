@@ -20,12 +20,4 @@ class Component
     @object = obj
     obj.components << self
   end
-
-  def x
-    @object.x
-  end
-
-  def y
-    @object.y
-  end
 end
