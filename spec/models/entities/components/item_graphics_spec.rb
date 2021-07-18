@@ -5,7 +5,7 @@ RSpec.describe ItemGraphics do
 
   describe '#initialize' do
     it 'generate graphics' do
-      item = Item.new(object_pool, 2, 2)
+      item = Item.new(object_pool, 2, 2, ItemType.new('portion', '回復薬', '回復する', :consumption))
       expect(item.graphics).to be_truthy
     end
   end

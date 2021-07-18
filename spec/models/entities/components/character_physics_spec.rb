@@ -2,6 +2,7 @@
 
 RSpec.describe CharacterPhysics do
   let(:object_pool) { ObjectPool.new }
+  let(:item_type) { ItemType.new('portion', '回復薬', '回復する', :consumption) }
 
   before { World.new(object_pool, 'test_map.txt') }
 
@@ -22,7 +23,7 @@ RSpec.describe CharacterPhysics do
 
       before do
         Character.new(object_pool, input, 1, 2)
-        Item.new(object_pool, 2, 2)
+        Item.new(object_pool, 2, 2, item_type)
       end
 
       it { expect(character.physics.can_move_to?(0, 0)).to be(false) } # terrain
@@ -37,7 +38,7 @@ RSpec.describe CharacterPhysics do
 
       before do
         Character.new(object_pool, input, 1, 2)
-        Item.new(object_pool, 2, 2)
+        Item.new(object_pool, 2, 2, item_type)
       end
 
       it { expect(character.physics.can_move_to?(0, 0)).to be(false) } # terrain

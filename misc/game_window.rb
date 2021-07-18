@@ -24,14 +24,12 @@ class GameWindow
   end
 
   def main_loop
-    one_tern
-
     loop do
-      one_tern
+      one_turn
     end
   end
 
-  def one_tern
+  def one_turn
     @window = Window.new(lines - 1, cols - 1, PADDING, PADDING) # For variable window. It has performance problem?
     @window.clear
 

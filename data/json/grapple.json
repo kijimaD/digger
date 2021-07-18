@@ -2,7 +2,7 @@
     {
         "id": "bandage",
         "name": "バンテージ",
-        "description": "",
+        "description": "堅く巻いた包帯",
         "rank": 1,
         "attack": 6,
         "hit_rate": 80
@@ -118,5 +118,5 @@
         "rank": 7,
         "attack": 100,
         "hit_rate": 100
-    },
+    }
 ]

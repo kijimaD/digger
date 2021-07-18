@@ -10,6 +10,11 @@ class Inventory
   end
 
   def add(item)
-    @items << item
+    case item.type.category
+    when :consumption
+      @items << item
+    when :material
+      item.type.count += 1
+    end
   end
 end

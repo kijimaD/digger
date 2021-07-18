@@ -28,8 +28,6 @@ class PlayerInput < Component
       move_to(object.x + 1, object.y) # right
     when ' '
       FieldState.instance.execute = true
-    when 'c'
-      exit
     end
   end
   # rubocop:enable Metrics/MethodLength, Metrics/AbcSize

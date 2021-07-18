@@ -4,7 +4,7 @@
 class FieldState < GameState
   include Singleton
   attr_accessor :execute
-  attr_reader :character
+  attr_reader :character, :item_type_pool
 
   def initialize
     super
@@ -15,6 +15,8 @@ class FieldState < GameState
     @camera = Camera.new
     @camera.target = @character
     @object_pool.camera = @camera
+
+    @item_type_pool = ItemTypePool.new
     generate_game_objects
   end
 
@@ -49,6 +51,8 @@ class FieldState < GameState
       inventory = InventoryState.instance
       inventory.field_state = self
       GameState.switch(inventory)
+    when 'c'
+      exit
     end
   end
   # rubocop:enable Metrics/MethodLength
@@ -58,7 +62,8 @@ class FieldState < GameState
   def generate_game_objects
     @world.spawn_points(100).each do
       x, y = @world.spawn_point
-      Item.new(@object_pool, x, y)
+      item_type = @item_type_pool.types.select { |t| t.category == :consumption || t.category == :material }.sample
+      Item.new(@object_pool, x, y, item_type)
 
       x, y = @world.spawn_point
       Character.new(@object_pool, AiInput.new(@object_pool), x, y)
