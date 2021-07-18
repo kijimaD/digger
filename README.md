@@ -2,7 +2,7 @@
 # digger
 CLI game
 
-![image](https://user-images.githubusercontent.com/11595790/123513003-8e588780-d6c5-11eb-9f7e-4935d00bbb58.png)
+![Peek 2021-07-18 12-39](https://user-images.githubusercontent.com/11595790/126054920-af3a785e-1b70-4699-93f1-5c6ee5b584a8.gif)
 
 ![image](/state.png)
 
