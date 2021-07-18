@@ -2,6 +2,7 @@
 
 RSpec.describe HomeState do
   let(:home_state) { described_class.send(:new) }
+  let(:field_state) { FieldState.send(:new) }
 
   before do
     $game = GameWindow.new
@@ -21,6 +22,12 @@ RSpec.describe HomeState do
   end
 
   describe '#button_down' do
+    it 'can switch field_state' do
+      home_state.field_state = field_state
+      home_state.button_down('m')
+      expect($game.state.class).to eq(FieldState)
+    end
+
     it 'can exit' do
       expect { home_state.button_down('c') }.to raise_error SystemExit
     end
