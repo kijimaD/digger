@@ -5,6 +5,8 @@ class InventoryState < GameState
   include Singleton
   attr_accessor :field_state
 
+  TABS = %w[アイテム 武器 装飾 素材 キー].freeze
+
   def initialize
     super
     @cursor_x = 0
@@ -40,8 +42,7 @@ class InventoryState < GameState
   private
 
   def draw_tab
-    tabs = %w[アイテム 武器 装飾 素材 キー]
-    tabs.each.with_index(0) do |tab, i|
+    TABS.each.with_index(0) do |tab, i|
       $game.window.setpos(2, 20 + 10 * i)
       $game.window.addstr(tab)
     end
