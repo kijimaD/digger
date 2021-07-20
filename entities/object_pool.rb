@@ -26,8 +26,8 @@ class ObjectPool
   end
 
   def same_point_objects(x, y, object = nil)
-    objects.select do |obj|
-      obj.x == x && obj.y == y && object != obj # filter self object
+    @objects.select do |obj|
+      obj.x == x && obj.y == y && obj != object # filter self object
     end
   end
 end
