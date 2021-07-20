@@ -14,4 +14,10 @@ RSpec.describe Utils do
       expect(random[:symbol]).to be_truthy
     end
   end
+
+  describe '.distance_between' do
+    it 'return distance' do
+      expect(described_class.distance_between(4, 5, 4, 4)).to eq(1)
+    end
+  end
 end

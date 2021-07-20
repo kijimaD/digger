@@ -18,4 +18,10 @@ module Utils
       JSON.parse(j.read, symbolize_names: true)
     end
   end
+
+  def self.distance_between(x1, y1, x2, y2)
+    dx = x1 - x2
+    dy = y1 - y2
+    Math.sqrt(dx * dx + dy * dy)
+  end
 end

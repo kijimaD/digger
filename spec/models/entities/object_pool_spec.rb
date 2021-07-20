@@ -60,4 +60,46 @@ RSpec.describe ObjectPool do
       end
     end
   end
+
+  describe '#nearby' do
+    let(:input) { AiInput.new(object_pool) }
+
+    it 'include nearby objects' do
+      Character.new(object_pool, input, 1, 2)
+      Character.new(object_pool, input, 1, 3)
+      character = Character.new(object_pool, input, 1, 1)
+
+      expect(object_pool.nearby(character, 3).length).to eq(2)
+    end
+
+    it 'exclude outer objects' do
+      Character.new(object_pool, input, 2, 2)
+      Character.new(object_pool, input, 2, 3)
+      Character.new(object_pool, input, 8, 8)
+      Character.new(object_pool, input, 8, 7)
+      character = Character.new(object_pool, input, 5, 5)
+
+      expect(object_pool.nearby(character, 3).length).to eq(0)
+    end
+  end
+
+  describe '#nearby_point' do
+    let(:input) { AiInput.new(object_pool) }
+
+    it 'include nearby objects' do
+      Character.new(object_pool, input, 1, 2)
+      Character.new(object_pool, input, 1, 3)
+
+      expect(object_pool.nearby_point(1, 1, 3).length).to eq(2)
+    end
+
+    it 'exclude nearby objects' do
+      Character.new(object_pool, input, 2, 2)
+      Character.new(object_pool, input, 2, 3)
+      Character.new(object_pool, input, 8, 8)
+      Character.new(object_pool, input, 8, 7)
+
+      expect(object_pool.nearby_point(5, 5, 3).length).to eq(0)
+    end
+  end
 end
