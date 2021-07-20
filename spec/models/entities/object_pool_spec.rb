@@ -75,7 +75,6 @@ RSpec.describe ObjectPool do
     it 'exclude outer objects' do
       Character.new(object_pool, input, 2, 2)
       Character.new(object_pool, input, 2, 3)
-      Character.new(object_pool, input, 8, 8)
       Character.new(object_pool, input, 8, 7)
       character = Character.new(object_pool, input, 5, 5)
 
