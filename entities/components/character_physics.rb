@@ -8,7 +8,7 @@ class CharacterPhysics < Component
     super(object)
     @object = object
     @object_pool = object.object_pool
-    @direction = %i[up right down, left].sample
+    @direction = %i[up right down left].sample
   end
 
   def move_to_direction
