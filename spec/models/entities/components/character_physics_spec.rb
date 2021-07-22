@@ -52,11 +52,12 @@ RSpec.describe CharacterPhysics do
 
   describe '#can_move_to?' do
     context 'when player input character' do
-      let(:input) { PlayerInput.new(object_pool) }
-      let(:character) { Character.new(object_pool, input, 1, 1) }
+      let(:player_input) { PlayerInput.new(object_pool) }
+      let(:ai_input) { AiInput.new(object_pool) }
+      let(:character) { Character.new(object_pool, player_input, 1, 1) }
 
       before do
-        Character.new(object_pool, input, 1, 2)
+        Character.new(object_pool, ai_input, 1, 2)
         Item.new(object_pool, 2, 2, item_type)
       end
 
