@@ -10,6 +10,10 @@ class CharacterRoamingState < CharacterMotionState
   end
 
   def update
+    roaming
+  end
+
+  def roaming
     if should_change_direction?
       @object.physics.turn_right
       @arrive_wall = true
