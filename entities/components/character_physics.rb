@@ -2,7 +2,7 @@
 
 # Character physics(movement, collision...) class.
 class CharacterPhysics < Component
-  attr_reader :direction
+  attr_accessor :direction
 
   def initialize(object)
     super(object)

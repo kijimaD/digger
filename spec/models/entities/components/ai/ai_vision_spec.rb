@@ -36,6 +36,7 @@ RSpec.describe AiVision do
     context 'when cannot move' do
       it 'return true' do
         character = Character.new(object_pool, ai_input, 1, 1)
+        character.physics.direction = 0
         character.physics.turn_right
 
         expect(character.input.vision.can_go_forward?).to be(true)
@@ -45,6 +46,7 @@ RSpec.describe AiVision do
     context 'when can move' do
       it 'return false' do
         character = Character.new(object_pool, ai_input, 1, 1)
+        character.physics.direction = 0
         character.physics.turn_left
 
         expect(character.input.vision.can_go_forward?).to be(false)

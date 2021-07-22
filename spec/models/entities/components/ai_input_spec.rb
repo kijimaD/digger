@@ -13,17 +13,4 @@ RSpec.describe AiInput do
       expect(input.object).to eq(character)
     end
   end
-
-  describe '#random_move' do
-    context 'when execute false' do
-      before do
-        FieldState.instance.execute = false
-      end
-
-      it 'AI character not move' do
-        character.input.random_move
-        expect([character.x, character.y]).to eq([2, 2])
-      end
-    end
-  end
 end

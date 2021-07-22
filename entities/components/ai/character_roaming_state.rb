@@ -10,6 +10,6 @@ class CharacterRoamingState < CharacterMotionState
 
   def update
     @object.physics.turn_right if should_change_direction?
-    @object.physics.move_to_direction
+    @object.physics.move_to_direction if FieldState.instance.execute
   end
 end
