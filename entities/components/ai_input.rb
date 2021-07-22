@@ -2,6 +2,8 @@
 
 # NPC character input.
 class AiInput < Component
+  attr_accessor :vision, :motion
+
   def initialize(object_pool)
     super(nil)
     @object_pool = object_pool

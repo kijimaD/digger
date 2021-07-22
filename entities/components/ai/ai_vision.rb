@@ -21,6 +21,11 @@ class AiVision
     @in_sight = @object_pool.nearby(@viewer, @distance)
   end
 
+  def can_go_forward?
+    in_front = Utils.point_at_distance(@viewer.x, @viewer.y, @viewer.physics.direction, 1)
+    @viewer.physics.can_move_to?(*in_front)
+  end
+
   private
 
   # rubocop:disable Metrics/AbcSize

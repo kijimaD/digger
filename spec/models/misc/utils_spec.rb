@@ -20,4 +20,10 @@ RSpec.describe Utils do
       expect(described_class.distance_between(4, 5, 4, 4)).to eq(1)
     end
   end
+
+  describe '.point_at_distance' do
+    it 'return coordinate' do
+      expect(described_class.point_at_distance(1, 1, 90, 1)).to eq([2, 1])
+    end
+  end
 end

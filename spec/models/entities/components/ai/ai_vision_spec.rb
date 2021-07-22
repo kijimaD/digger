@@ -5,6 +5,8 @@ RSpec.describe AiVision do
   let(:player_input) { PlayerInput.new(object_pool) }
   let(:ai_input) { AiInput.new(object_pool) }
 
+  before { World.new(object_pool, 'test_map.txt') }
+
   describe '#initialize' do
     it 'can run' do
       expect { described_class.new(GameObject.new(object_pool, 1, 1), object_pool, 4) }.not_to raise_error
@@ -27,6 +29,26 @@ RSpec.describe AiVision do
       ai_vision = described_class.new(GameObject.new(object_pool, 1, 1), object_pool, 4)
 
       expect(ai_vision.closest_player).to eq(nil)
+    end
+  end
+
+  describe '#can_go_forward?' do
+    context 'when cannot move' do
+      it 'return true' do
+        character = Character.new(object_pool, ai_input, 1, 1)
+        character.physics.turn_right
+
+        expect(character.input.vision.can_go_forward?).to be(true)
+      end
+    end
+
+    context 'when can move' do
+      it 'return false' do
+        character = Character.new(object_pool, ai_input, 1, 1)
+        character.physics.turn_left
+
+        expect(character.input.vision.can_go_forward?).to be(false)
+      end
     end
   end
 end

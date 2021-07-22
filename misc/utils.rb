@@ -24,4 +24,11 @@ module Utils
     dy = y1 - y2
     Math.sqrt(dx * dx + dy * dy)
   end
+
+  def self.point_at_distance(source_x, source_y, angle, distance)
+    angle = (90 - angle) * Math::PI / 180
+    x = source_x + Math.cos(angle) * distance
+    y = source_y - Math.sin(angle) * distance
+    [x, y]
+  end
 end
