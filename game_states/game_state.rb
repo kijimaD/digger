@@ -16,5 +16,10 @@ class GameState
 
   def update; end
 
-  def button_down(char); end
+  def button_down(char)
+    case char
+    when 'c'
+      exit
+    end
+  end
 end

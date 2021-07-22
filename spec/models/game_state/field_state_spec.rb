@@ -15,7 +15,7 @@ RSpec.describe FieldState do
   end
 
   describe '#button_down' do
-    before { field_state.character.move(2, 2) }
+    after { field_state.character.move(2, 2) }
 
     it 'default' do
       expect([field_state.character.x, field_state.character.y]).to eq([2, 2])

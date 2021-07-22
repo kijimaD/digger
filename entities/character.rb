@@ -18,5 +18,6 @@ class Character < GameObject
 
   def on_collision(obj)
     obj.stats.add_message("#{obj.type.name} bump into a #{@type.name} (#{@x}, #{@y})")
+    obj.stats.add_message("▶ #{input.motion.current_state.class}") if input.is_a?(AiInput)
   end
 end

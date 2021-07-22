@@ -2,10 +2,50 @@
 
 # Character physics(movement, collision...) class.
 class CharacterPhysics < Component
+  attr_accessor :direction
+
   def initialize(object)
     super(object)
     @object = object
     @object_pool = object.object_pool
+    @direction = [0, 90, 180, 270].sample
+  end
+
+  def move_to_direction
+    case @direction
+    when 0
+      move_up
+    when 90
+      move_right
+    when 180
+      move_down
+    when 270
+      move_left
+    end
+  end
+
+  def turn_left
+    @direction = (@direction - 90) % 360
+  end
+
+  def turn_right
+    @direction = (@direction + 90) % 360
+  end
+
+  def move_up
+    move_to(@object.x, @object.y - 1)
+  end
+
+  def move_right
+    move_to(@object.x + 1, @object.y)
+  end
+
+  def move_down
+    move_to(@object.x, @object.y + 1)
+  end
+
+  def move_left
+    move_to(@object.x - 1, @object.y)
   end
 
   def move_to(x, y)

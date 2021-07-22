@@ -39,7 +39,9 @@ class FieldState < GameState
 
   # rubocop:disable Metrics/MethodLength
   def button_down(char)
+    super(char)
     @character.input.button_down(char)
+
     case char
     when 'm'
       return unless $debug
@@ -51,8 +53,6 @@ class FieldState < GameState
       inventory = InventoryState.instance
       inventory.field_state = self
       GameState.switch(inventory)
-    when 'c'
-      exit
     end
   end
   # rubocop:enable Metrics/MethodLength

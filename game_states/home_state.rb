@@ -21,13 +21,13 @@ class HomeState < GameState
   def update; end
 
   def button_down(char)
+    super(char)
+
     case char
     when 'm'
       return unless $debug
 
       GameState.switch(@field_state)
-    when 'c'
-      exit
     end
   end
 end
