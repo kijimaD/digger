@@ -24,20 +24,12 @@ class CharacterPhysics < Component
     end
   end
 
-  def turn_up
-    @direction = 0
-  end
-
   def turn_right
-    @direction = 90
-  end
-
-  def turn_down
-    @direction = 180
+    @direction = (@direction + 90) % 360
   end
 
   def turn_left
-    @direction = 270
+    @direction = (@direction - 90) % 360
   end
 
   def move_up

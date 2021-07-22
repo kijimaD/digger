@@ -16,10 +16,7 @@ class AiInput < Component
   end
 
   def update
-    random_move
-  end
-
-  def random_move
-    object.physics.move_to(object.x + rand(-1..1), object.y + rand(-1..1)) if FieldState.instance.execute
+    @vision.update
+    @motion.update
   end
 end

@@ -7,4 +7,9 @@ class CharacterRoamingState < CharacterMotionState
     @object = object
     @vision = vision
   end
+
+  def update
+    @object.physics.turn_right if should_change_direction?
+    @object.physics.move_to_direction
+  end
 end

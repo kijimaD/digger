@@ -6,6 +6,40 @@ RSpec.describe CharacterPhysics do
 
   before { World.new(object_pool, 'test_map.txt') }
 
+  describe '#turn_right' do
+    let(:input) { PlayerInput.new(object_pool) }
+    let(:character) { Character.new(object_pool, input, 1, 1) }
+
+    it 'can turn' do
+      before_direction = character.physics.direction
+      character.physics.turn_right
+      expect(character.physics.direction).not_to eq(before_direction)
+    end
+
+    it 'go around, same direction' do
+      before_direction = character.physics.direction
+      4.times { character.physics.turn_right }
+      expect(character.physics.direction).to eq(before_direction)
+    end
+  end
+
+  describe '#turn_left' do
+    let(:input) { PlayerInput.new(object_pool) }
+    let(:character) { Character.new(object_pool, input, 1, 1) }
+
+    it 'can turn' do
+      before_direction = character.physics.direction
+      character.physics.turn_left
+      expect(character.physics.direction).not_to eq(before_direction)
+    end
+
+    it 'go around, same direction' do
+      before_direction = character.physics.direction
+      4.times { character.physics.turn_left }
+      expect(character.physics.direction).to eq(before_direction)
+    end
+  end
+
   describe '#move_to' do
     let(:input) { PlayerInput.new(object_pool) }
     let(:character) { Character.new(object_pool, input, 1, 1) }

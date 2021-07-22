@@ -26,4 +26,8 @@ class CharacterMotionState
   def update
     # override
   end
+
+  def should_change_direction?
+    return true unless @vision.can_go_forward?
+  end
 end
