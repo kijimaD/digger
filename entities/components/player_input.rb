@@ -11,10 +11,6 @@ class PlayerInput < Component
     self.object = obj
   end
 
-  def move_to(x, y)
-    FieldState.instance.execute = object.physics.move_to(x, y) ? true : false
-  end
-
   # rubocop:disable Metrics/MethodLength
   def button_down(char)
     result = case char
