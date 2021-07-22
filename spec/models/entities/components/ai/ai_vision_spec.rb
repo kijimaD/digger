@@ -53,4 +53,14 @@ RSpec.describe AiVision do
       end
     end
   end
+
+  describe '#find_closest_player' do
+    it 'return closest character' do
+      close = Character.new(object_pool, player_input, 2, 2)
+      Character.new(object_pool, player_input, 5, 5) # far
+
+      character = Character.new(object_pool, ai_input, 1, 1)
+      expect(character.input.vision.find_closest_player).to eq(close)
+    end
+  end
 end
