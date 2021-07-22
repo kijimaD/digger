@@ -6,10 +6,16 @@ class CharacterRoamingState < CharacterMotionState
     super
     @object = object
     @vision = vision
+    @arrive_wall = false
   end
 
   def update
-    @object.physics.turn_right if should_change_direction?
+    if should_change_direction?
+      @object.physics.turn_right
+      @arrive_wall = true
+    end
+
+    @object.physics.turn_left if @vision.can_go_left? && @vision.can_go_forward? && @arrive_wall
     @object.physics.move_to_direction if FieldState.instance.execute
   end
 end

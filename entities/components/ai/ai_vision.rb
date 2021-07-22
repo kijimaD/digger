@@ -26,6 +26,18 @@ class AiVision
     @viewer.physics.can_move_to?(*in_front)
   end
 
+  def can_go_left?
+    direction = (@viewer.physics.direction - 90) % 360
+    in_left = Utils.point_at_distance(@viewer.x, @viewer.y, direction, 1)
+    @viewer.physics.can_move_to?(*in_left)
+  end
+
+  def can_go_right?
+    direction = (@viewer.physics.direction + 90) % 360
+    in_right = Utils.point_at_distance(@viewer.x, @viewer.y, direction, 1)
+    @viewer.physics.can_move_to?(*in_right)
+  end
+
   private
 
   # rubocop:disable Metrics/AbcSize
