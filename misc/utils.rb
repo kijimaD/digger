@@ -19,6 +19,12 @@ module Utils
     end
   end
 
+  def self.angle_between(x, y, target_x, target_y)
+    dx = target_x - x
+    dy = target_y - y
+    (180 - Math.atan2(dx, dy) * 180 / Math::PI)
+  end
+
   def self.distance_between(x1, y1, x2, y2)
     dx = x1 - x2
     dy = y1 - y2
