@@ -11,7 +11,7 @@ RSpec.describe CharacterRoamingState do
   describe '#roaming' do
     it 'if can not move, turn right' do
       ai_character.physics.direction = 0
-      expect { ai_character.input.motion.update }.to change{ ai_character.physics.direction }.from(0).to(90)
+      expect { ai_character.input.motion.update }.to change { ai_character.physics.direction }.from(0).to(90)
     end
   end
 end
