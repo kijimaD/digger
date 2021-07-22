@@ -8,20 +8,36 @@ class CharacterPhysics < Component
     super(object)
     @object = object
     @object_pool = object.object_pool
-    @direction = %i[up right down left].sample
+    @direction = [0, 90, 180, 270].sample
   end
 
   def move_to_direction
     case @direction
-    when :up
+    when 0
       move_up
-    when :right
+    when 90
       move_right
-    when :down
+    when 180
       move_down
-    when :left
+    when 270
       move_left
     end
+  end
+
+  def turn_up
+    @direction = 0
+  end
+
+  def turn_right
+    @direction = 90
+  end
+
+  def turn_down
+    @direction = 180
+  end
+
+  def turn_left
+    @direction = 270
   end
 
   def move_up
