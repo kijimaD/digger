@@ -2,10 +2,13 @@
 
 # AI vision.
 class AiVision
+  attr_accessor :target
+
   def initialize(viewer, object_pool, distance)
     @viewer = viewer
     @object_pool = object_pool
     @distance = distance
+    @target = nil
     in_sight
   end
 
@@ -47,4 +50,8 @@ class AiVision
     end
   end
   # rubocop:enable Metrics/AbcSize
+
+  def change_target(new_target)
+    @target = new_target
+  end
 end

@@ -10,7 +10,6 @@ class CharacterMotionFSM
     @roaming_state = CharacterRoamingState.new(object, vision)
     @chasing_state = CharacterChasingState.new(object, vision)
     switch_state(@roaming_state)
-    @target = nil
   end
 
   def draw; end
@@ -34,17 +33,13 @@ class CharacterMotionFSM
 
   def choose_state
     if @vision.find_closest_player
-      change_target(@vision.closest_player) if @vision.closest_player != @target
+      @vision.change_target(@vision.closest_player)
       new_state = @chasing_state
     else
-      @target = nil
+      @vision.target = nil
       new_state = @roaming_state
     end
 
     switch_state(new_state)
-  end
-
-  def change_target(new_target)
-    @target = new_target
   end
 end
