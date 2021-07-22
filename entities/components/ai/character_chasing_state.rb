@@ -7,4 +7,6 @@ class CharacterChasingState < CharacterMotionState
     @object = object
     @vision = vision
   end
+
+  def update; end
 end

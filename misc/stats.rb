@@ -4,7 +4,7 @@
 class Stats
   attr_accessor :messages
 
-  LOG_LENGTH = 10
+  LOG_LENGTH = 20
 
   def initialize
     @messages = []

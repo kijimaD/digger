@@ -11,7 +11,7 @@ class AiInput < Component
 
   def control(obj)
     self.object = obj
-    @vision = AiVision.new(obj, @object_pool, rand(4..8))
+    @vision = AiVision.new(obj, @object_pool, rand(6..10))
     @motion = CharacterMotionFSM.new(obj, @vision)
   end
 

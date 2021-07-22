@@ -38,8 +38,6 @@ class AiVision
     @viewer.physics.can_move_to?(*in_right)
   end
 
-  private
-
   # rubocop:disable Metrics/AbcSize
   def find_closest_player
     @in_sight.select { |obj| obj.instance_of?(Character) && obj.input.instance_of?(PlayerInput) }.min do |a, b|

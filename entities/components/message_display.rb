@@ -32,7 +32,7 @@ class MessageDisplay < Component
 
   def log_messages
     @character.stats.messages.each.with_index(1) do |message, i|
-      $game.window.setpos(MESSAGE_Y + 1 + i, MESSAGE_X)
+      $game.window.setpos(MESSAGE_Y + 2 + i, MESSAGE_X)
       $game.window.addstr(message.to_s)
     end
   end
