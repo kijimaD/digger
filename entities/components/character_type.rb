@@ -17,8 +17,8 @@ class CharacterType < Component
     when PlayerInput
       @symbol = '@'
       @name = 'Player'
-    else
-      json = Utils.load_json('character').sample
+    when AiInput
+      json = Utils.load_json('world/character').sample
       @symbol = json[:symbol]
       @name = json[:name]
     end

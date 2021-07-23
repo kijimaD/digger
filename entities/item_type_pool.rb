@@ -10,9 +10,9 @@ class ItemTypePool
 
   def generate_items
     item_types = []
-    categories = %i[canon consumption grapple handgun material rifle sword]
+    categories = %i[consumption material]
     categories.each do |c|
-      Utils.load_json(c).each do |obj|
+      Utils.load_json("item/#{c}").each do |obj|
         item_types << ItemType.new(obj[:id], obj[:name], obj[:description], c)
       end
     end

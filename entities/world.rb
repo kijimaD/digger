@@ -31,7 +31,7 @@ class World
 
   def generate_terrain
     terrain_pool = []
-    Utils.load_json('terrain').each do |obj|
+    Utils.load_json('world/terrain').each do |obj|
       terrain_pool << Terrain.new(obj[:id], obj[:symbol], obj[:passable])
     end
     terrain_pool
