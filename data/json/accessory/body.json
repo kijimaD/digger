@@ -1,0 +1,156 @@
+[
+    {
+        "id": "raggedy_cloak",
+        "name": "ボロマント",
+        "description": "",
+        "rank": 1,
+        "defence": 2
+    },
+    {
+        "id": "apron",
+        "name": "エプロン",
+        "description": "",
+        "rank": 1,
+        "defence": 3
+    },
+    {
+        "id": "white_coat",
+        "name": "白衣",
+        "description": "",
+        "rank": 1,
+        "defence": 4
+    },
+    {
+        "id": "protector",
+        "name": "プロテクター",
+        "description": "",
+        "rank": 1,
+        "defence": 6
+    },
+    {
+        "id": "copper_protector",
+        "name": "銅のプロテクター",
+        "description": "",
+        "rank": 1,
+        "defence": 10
+    },
+    {
+        "id": "jersey",
+        "name": "ジャージ",
+        "description": "",
+        "rank": 1,
+        "defence": 6
+    },
+    {
+        "id": "leather_jacket",
+        "name": "革のジャケット",
+        "description": "",
+        "rank": 1,
+        "defence": 9
+    },
+    {
+        "id": "iron_protector",
+        "name": "鉄のプロテクター",
+        "description": "",
+        "rank": 1,
+        "defence": 14
+    },
+    {
+        "id": "insect_shell_unit",
+        "name": "ゴキユニ",
+        "description": "",
+        "rank": 1,
+        "defence": 8
+    },
+    {
+        "id": "yellow_jersey",
+        "name": "黄色のジャージ",
+        "description": "",
+        "rank": 1,
+        "defence": 9
+    },
+    {
+        "id": "steel_protector",
+        "name": "鋼のプロテクター",
+        "description": "",
+        "rank": 1,
+        "defence": 18
+    },
+    {
+        "id": "black_suit",
+        "name": "黒服",
+        "description": "",
+        "rank": 1,
+        "defence": 12
+    },
+    {
+        "id": "long_school_uniform",
+        "name": "長ラン",
+        "description": "",
+        "rank": 1,
+        "defence": 12
+    },
+    {
+        "id": "camouflage_uniform",
+        "name": "迷彩服",
+        "description": "",
+        "rank": 1,
+        "defence": 12
+    },
+    {
+        "id": "stab_vest",
+        "name": "防刃ベスト",
+        "description": "",
+        "rank": 1,
+        "defence": 14
+    },
+    {
+        "id": "bulletproof_vest",
+        "name": "防弾チョッキ",
+        "description": "",
+        "rank": 1,
+        "defence": 14
+    },
+    {
+        "id": "phantom_protector",
+        "name": "幻のプロテクター",
+        "description": "",
+        "rank": 1,
+        "defence": 25
+    },
+    {
+        "id": "cosmic_protector",
+        "name": "宇宙プロテクター",
+        "description": "",
+        "rank": 1,
+        "defence": 30
+    },
+    {
+        "id": "demon_beast_jacket",
+        "name": "魔獣ジャケット",
+        "description": "",
+        "rank": 1,
+        "defence": 22
+    },
+    {
+        "id": "electric_resistant_jacket",
+        "name": "耐電ジャケット",
+        "description": "",
+        "rank": 1,
+        "defence": 23
+    },
+    {
+        "id": "fireproof_jacket",
+        "name": "耐火ジャケット",
+        "description": "",
+        "rank": 1,
+        "defence": 24
+    },
+    {
+        "id": "reverse_scale_suit",
+        "name": "逆鱗スーツ",
+        "description": "",
+        "rank": 1,
+        "defence": 30
+    }
+]

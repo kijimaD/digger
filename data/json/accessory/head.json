@@ -1,0 +1,114 @@
+[
+    {
+        "id": "helmet",
+        "name": "ヘルメット",
+        "description": "",
+        "rank": 1,
+        "defence": 3
+    },
+    {
+        "id": "hachimaki",
+        "name": "気合ハチマキ",
+        "description": "",
+        "rank": 1,
+        "defence": 2
+    },
+    {
+        "id": "hat",
+        "name": "帽子",
+        "description": "",
+        "rank": 1,
+        "defence": 3
+    },
+    {
+        "id": "insect_shell_met",
+        "name": "ゴキメット",
+        "description": "",
+        "rank": 1,
+        "defence": 4
+    },
+    {
+        "id": "fur_hat",
+        "name": "毛皮の帽子",
+        "description": "",
+        "rank": 1,
+        "defence": 4
+    },
+    {
+        "id": "nurse_cap",
+        "name": "ナースキャップ",
+        "description": "",
+        "rank": 1,
+        "defence": 4
+    },
+    {
+        "id": "hachigane",
+        "name": "ハチガネ",
+        "description": "",
+        "rank": 1,
+        "defence": 6
+    },
+    {
+        "id": "shine_hachigane",
+        "name": "光るハチガネ",
+        "description": "",
+        "rank": 1,
+        "defence": 6
+    },
+    {
+        "id": "iron_helmet",
+        "name": "鉄のヘルメット",
+        "description": "",
+        "rank": 1,
+        "defence": 7
+    },
+    {
+        "id": "baseball_cap",
+        "name": "野球帽",
+        "description": "",
+        "rank": 1,
+        "defence": 5
+    },
+    {
+        "id": "safety_helmet",
+        "name": "安全ヘルメット",
+        "description": "",
+        "rank": 1,
+        "defence": 8
+    },
+    {
+        "id": "head_light",
+        "name": "ヘッドライト",
+        "description": "",
+        "rank": 1,
+        "defence": 9
+    },
+    {
+        "id": "analysis_monocle",
+        "name": "解析モノクル",
+        "description": "",
+        "rank": 1,
+        "defence": 10
+    },
+    {
+        "id": "phantom_helmet",
+        "name": "幻のヘルメット",
+        "description": "",
+        "rank": 1,
+        "defence": 10
+    },
+    {
+        "id": "dragon_helmet",
+        "name": "ドラゴンメット",
+        "description": "",
+        "rank": 1,
+        "defence": 10
+    },
+    {
+        "id": "reverse_scale_helmet",
+        "name": "逆鱗メット",
+        "description": "",
+        "rank": 1,
+        "defence": 12
+    }
+]

@@ -1,0 +1,65 @@
+[
+    {
+        "id": "insect_shell_boots",
+        "name": "ゴキブーツ",
+        "description": "",
+        "rank": 1,
+        "defence": 4
+    },
+    {
+        "id": "exercise_shoes",
+        "name": "運動ぐつ",
+        "description": "",
+        "rank": 1,
+        "defence": 4
+    },
+    {
+        "id": "leather_shoes",
+        "name": "革ぐつ",
+        "description": "",
+        "rank": 1,
+        "defence": 5
+    },
+    {
+        "id": "safety_shoes",
+        "name": "安全ぐつ",
+        "description": "",
+        "rank": 1,
+        "defence": 6
+    },
+    {
+        "id": "iron_geta",
+        "name": "テツゲタ",
+        "description": "",
+        "rank": 1,
+        "defence": 8
+    },
+    {
+        "id": "jungle_boots",
+        "name": "ジャングルブーツ",
+        "description": "",
+        "rank": 1,
+        "defence": 6
+    },
+    {
+        "id": "demon_beast_boots",
+        "name": "魔獣のブーツ",
+        "description": "",
+        "rank": 1,
+        "defence": 9
+    },
+    {
+        "id": "jet_boots",
+        "name": "ジェットブーツ",
+        "description": "",
+        "rank": 1,
+        "defence": 12
+    },
+    {
+        "id": "reverse_scale_boots",
+        "name": "逆鱗ブーツ",
+        "description": "",
+        "rank": 1,
+        "defence": 12
+    }
+]
