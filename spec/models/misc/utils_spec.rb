@@ -9,7 +9,7 @@ RSpec.describe Utils do
 
   describe '.load_json' do
     it 'can access data' do
-      json = described_class.load_json('character')
+      json = described_class.load_json('world/character')
       random = json.sample
       expect(random[:symbol]).to be_truthy
     end

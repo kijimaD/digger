@@ -13,7 +13,7 @@ RSpec.describe ItemTypePool do
     end
 
     it 'can get category' do
-      expect(item_type_pool.types.count { |t| t.category == :canon }).to be > 10
+      expect(item_type_pool.types.count { |t| t.category == :material }).to be > 10
     end
   end
 end
