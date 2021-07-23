@@ -55,7 +55,7 @@ class InventoryState < GameState
   def draw_main
     case @cursor_x
     when 0
-      Inventory.instance.items.each.with_index(0) do |item, i|
+      Party.instance.inventory.items.each.with_index(0) do |item, i|
         $game.window.setpos(4 + i, 1)
         $game.window.addstr(item.type.name)
         $game.window.setpos(4 + i, 20)

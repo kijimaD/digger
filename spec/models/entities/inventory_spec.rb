@@ -2,7 +2,7 @@
 
 RSpec.describe Inventory do
   let(:object_pool) { ObjectPool.new }
-  let(:inventory) { described_class.send(:new) }
+  let(:inventory) { described_class.new }
 
   describe '#add' do
     context 'when get consumption category item' do

@@ -2,7 +2,6 @@
 
 # Inventory.
 class Inventory
-  include Singleton
   attr_accessor :items
 
   def initialize

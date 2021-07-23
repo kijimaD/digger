@@ -13,7 +13,7 @@ class Item < GameObject
 
   def on_collision(obj)
     obj.stats.add_message("Get #{@type.name} (#{obj.x}, #{obj.y})")
-    Inventory.instance.add(self)
+    Party.instance.inventory.add(self)
     mark_for_removal
   end
 end
