@@ -9,6 +9,7 @@ class CharacterMotionFSM
     @vision = vision
     @roaming_state = CharacterRoamingState.new(object, vision)
     @chasing_state = CharacterChasingState.new(object, vision)
+    @current_state = nil
     switch_state(@roaming_state)
   end
 
