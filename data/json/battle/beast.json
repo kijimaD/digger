@@ -1,0 +1,37 @@
+[
+    {
+        "id": "flag_dog",
+        "name": "ハタイヌ",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "cosmic_beast",
+        "name": "宇宙怪物",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "stalker",
+        "name": "ストーカー",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "cosmic_beast",
+        "name": "宇宙ビースト",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "dark_beast",
+        "name": "ダークビースト",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    }
+]

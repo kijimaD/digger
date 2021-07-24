@@ -1,0 +1,51 @@
+[
+    {
+        "id": "flag_child",
+        "name": "ハタ(子供)",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "flag_women",
+        "name": "ハタ(女性)",
+        "vitality": 4,
+        "attack": 3,
+        "agility": 3
+    },
+    {
+        "id": "flag_shoper",
+        "name": "ハタ(店員)",
+        "vitality": 5,
+        "attack": 4,
+        "agility": 3
+    },
+    {
+        "id": "flag_man",
+        "name": "ハタ(男性)",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "flag_bad",
+        "name": "ハタ(不良)",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "flag_security_guard",
+        "name": "ハタ(警備員)",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "flag_military",
+        "name": "ハタ(軍隊)",
+        "vitality": 8,
+        "attack": 8,
+        "agility": 8
+    }
+]

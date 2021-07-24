@@ -1,0 +1,44 @@
+[
+    {
+        "id": "green_slime",
+        "name": "緑ライム",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "red_slime",
+        "name": "赤ライム",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "yellow_slime",
+        "name": "黄ライム",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "blue_slime",
+        "name": "青ライム",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "cosmic_clionidae",
+        "name": "宇宙クリオネ",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "great_clionidae",
+        "name": "大いなるクリオネ",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    }
+]

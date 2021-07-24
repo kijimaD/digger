@@ -15,6 +15,11 @@
         "symbol": "h"
     },
     {
+        "id": "sub_human",
+        "name": "SubHuman",
+        "symbol": "H"
+    },
+    {
         "id": "ufo",
         "name": "UFO",
         "symbol": "o"
@@ -38,5 +43,10 @@
         "id": "artillery",
         "name": "Artillery",
         "symbol": "a"
+    },
+    {
+        "id": "insect",
+        "name": "Insect",
+        "symbol": "i"
     }
 ]

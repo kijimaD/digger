@@ -1,0 +1,113 @@
+[
+    {
+        "id": "dirty_ring",
+        "description": "",
+        "rank": 1,
+        "defence": 1
+    },
+    {
+        "id": "shine_ring",
+        "name": "光る指輪",
+        "description": "",
+        "rank": 1,
+        "defence": 1
+    },
+    {
+        "id": "red_stone_ring",
+        "name": "赤石の指輪",
+        "description": "",
+        "rank": 1,
+        "defence": 2
+    },
+    {
+        "id": "blue_stone_ring",
+        "name": "青石の指輪",
+        "description": "",
+        "rank": 1,
+        "defence": 2
+    },
+    {
+        "id": "white_stone_ring",
+        "name": "白石の指輪",
+        "description": "",
+        "rank": 1,
+        "defence": 2
+    },
+    {
+        "id": "red_light_ring",
+        "name": "赤光の指輪",
+        "description": "",
+        "rank": 1,
+        "defence": 4
+    },
+    {
+        "id": "blue_light_ring",
+        "name": "青光の指輪",
+        "description": "",
+        "rank": 1,
+        "defence": 4
+    },
+    {
+        "id": "white_light_ring",
+        "name": "白光の指輪",
+        "description": "",
+        "rank": 1,
+        "defence": 4
+    },
+    {
+        "id": "demon_beast_ring",
+        "name": "獣骨の指輪",
+        "description": "",
+        "rank": 1,
+        "defence": 4
+    },
+    {
+        "id": "dragon_scale_ring",
+        "name": "竜鱗の指輪",
+        "description": "",
+        "rank": 1,
+        "defence": 4
+    },
+    {
+        "id": "machine_ring",
+        "name": "機械の指輪",
+        "description": "",
+        "rank": 1,
+        "defence": 4
+    },
+    {
+        "id": "rainbow_ring",
+        "name": "虹色の指輪",
+        "description": "",
+        "rank": 1,
+        "defence": 5
+    },
+    {
+        "id": "reverse_scale_ring",
+        "name": "逆鱗の指輪",
+        "description": "",
+        "rank": 1,
+        "defence": 5
+    },
+    {
+        "id": "red_scarf",
+        "name": "赤いマフラー",
+        "description": "",
+        "rank": 1,
+        "defence": 3
+    },
+    {
+        "id": "substitute_doll",
+        "name": "身代わり人形",
+        "description": "",
+        "rank": 1,
+        "defence": 1
+    },
+    {
+        "id": "shield",
+        "name": "シールド",
+        "description": "",
+        "rank": 1,
+        "defence": 15
+    }
+]

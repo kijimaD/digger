@@ -1,0 +1,37 @@
+[
+    {
+        "id": "work_bot",
+        "name": "ワークボット",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "guard_bot",
+        "name": "ガードボット",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "sweeper",
+        "name": "スイーパー",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "armored_car",
+        "name": "装甲車",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "cosmic_tank",
+        "name": "宇宙戦車",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "id": "leaf",
+        "name": "ハッパ",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "gyasubigo",
+        "name": "ギャスビゴー星人",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "eggplant",
+        "name": "ナスビ",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "sakura",
+        "name": "サクラ",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "cosmo_mercenary",
+        "name": "宇宙傭兵",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    }
+]

@@ -19,7 +19,7 @@ RSpec.describe InventoryState do
 
   describe '#draw_tab' do
     it 'can display the item tab(consumption)' do
-      Inventory.instance.add(item)
+      Party.instance.inventory.add(item)
       $game.one_turn
     end
 

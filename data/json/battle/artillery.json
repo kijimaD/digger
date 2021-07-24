@@ -1,0 +1,30 @@
+[
+    {
+        "id": "beam_bot",
+        "name": "ビームボット",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "missile_bot",
+        "name": "ミサイルボッド",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "cosmic_gunner",
+        "name": "宇宙ガンナー",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "plasma_bot",
+        "name": "プラズマボット",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    }
+]

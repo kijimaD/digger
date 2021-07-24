@@ -1,0 +1,16 @@
+[
+    {
+        "id": "biting_cockroach",
+        "name": "人食いゴキブリ",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "cosmic_cockroach",
+        "name": "宇宙ゴキブリ",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    }
+]

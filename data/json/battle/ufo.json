@@ -1,0 +1,37 @@
+[
+    {
+        "id": "bat",
+        "name": "コウモリ",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "small_ufo",
+        "name": "小型UFO",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "cosmic_bat",
+        "name": "宇宙コウモリ",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "cosmic_brain",
+        "name": "宇宙ブレイン",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "elder_brain",
+        "name": "エルダーブレイン",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    }
+]
