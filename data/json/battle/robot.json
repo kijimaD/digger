@@ -1,0 +1,23 @@
+[
+    {
+        "id": "powered_suit",
+        "name": "パワードスーツ",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "power_bot",
+        "name": "パワーボット",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "cosmic_gander",
+        "name": "宇宙ガンダー",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    }
+]

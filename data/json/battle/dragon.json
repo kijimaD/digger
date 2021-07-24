@@ -1,0 +1,37 @@
+[
+    {
+        "id": "tadpole",
+        "name": "オタマ",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "dragon_bot",
+        "name": "ドラゴボット",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "cosmic_dragon",
+        "name": "宇宙ドラゴン",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "dragon_bot_mk2",
+        "name": "ドラゴボットMk2",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    },
+    {
+        "id": "cosmic_wilm",
+        "name": "宇宙ウィルム",
+        "vitality": 3,
+        "attack": 3,
+        "agility": 6
+    }
+]

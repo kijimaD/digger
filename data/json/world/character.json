@@ -15,6 +15,11 @@
         "symbol": "h"
     },
     {
+        "id": "sub_human",
+        "name": "SubHuman",
+        "symbol": "H"
+    },
+    {
         "id": "ufo",
         "name": "UFO",
         "symbol": "o"
