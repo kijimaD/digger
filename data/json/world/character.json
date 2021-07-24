@@ -43,5 +43,10 @@
         "id": "artillery",
         "name": "Artillery",
         "symbol": "a"
+    },
+    {
+        "id": "insect",
+        "name": "Insect",
+        "symbol": "i"
     }
 ]

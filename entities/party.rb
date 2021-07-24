@@ -26,7 +26,7 @@ class Party
 
   def generate_monsters
     monsters = []
-    categories = %w[artillery dog dragon flag insect robot slime sub_human tank ufo]
+    categories = %w[artillery beast dragon human insect robot slime sub_human tank ufo]
     categories.each do |category|
       Utils.load_json("battle/#{category}").each do |obj|
         obj[:category] = category
