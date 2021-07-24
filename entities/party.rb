@@ -9,7 +9,8 @@ class Party
   def initialize
     @inventory = Inventory.new
     @member_pool = generate_members
-    @members = @member_pool.select { |m| m.id == 'ishihara' }
+    @members = []
+    @members << @member_pool.find { |m| m.id == 'ishihara' }
   end
 
   def generate_members
