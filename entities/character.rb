@@ -28,11 +28,13 @@ class Character < GameObject
       monster = self
     end
     enter_battle(monster)
+    monster.mark_for_removal
   end
 
   def enter_battle(character)
     battle = BattleState.new(character)
-    battle.field_state = self
+    battle.field_state = FieldState.instance
     GameState.switch(battle)
+
   end
 end

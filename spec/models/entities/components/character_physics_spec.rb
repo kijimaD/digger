@@ -4,7 +4,10 @@ RSpec.describe CharacterPhysics do
   let(:object_pool) { ObjectPool.new }
   let(:item_type) { ItemType.new('portion', '回復薬', '回復する', :consumption) }
 
-  before { World.new(object_pool, 'test_map.txt') }
+  before do
+    $game = GameWindow.new
+    World.new(object_pool, 'test_map.txt')
+  end
 
   describe '#turn_right' do
     let(:input) { PlayerInput.new(object_pool) }

@@ -31,6 +31,8 @@ class BattleState < GameState
     case char
     when '-'
       @monsters.first.attack(5)
+    when 'f'
+      GameState.switch(@field_state) if $debug
     end
   end
 
