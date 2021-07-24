@@ -20,11 +20,18 @@ class Character < GameObject
     obj.stats.add_message("#{obj.type.name} bump into a #{@type.name} (#{@x}, #{@y})")
     # obj.stats.add_message("-> #{input.motion.current_state.class}") if input.is_a?(AiInput)
 
-    enter_battle if input.is_a?(PlayerInput) || obj.input.is_a?(PlayerInput)
+    return unless input.is_a?(PlayerInput) || obj.input.is_a?(PlayerInput)
+
+    if input.is_a?(PlayerInput)
+      monster = obj
+    elsif obj.input.is_a?(PlayerInput)
+      monster = self
+    end
+    enter_battle(monster)
   end
 
-  def enter_battle
-    battle = BattleState.instance
+  def enter_battle(character)
+    battle = BattleState.new(character)
     battle.field_state = self
     GameState.switch(battle)
   end
