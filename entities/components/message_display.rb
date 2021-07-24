@@ -41,7 +41,7 @@ class MessageDisplay < Component
   def party_status
     Party.instance.members.each.with_index(1) do |member, i|
       $game.window.setpos(MESSAGE_Y + 12 + i, MESSAGE_X)
-      $game.window.addstr("#{member.name}HP: #{member.max_hp}/#{member.hp} SP: #{member.max_hp}/#{member.hp}")
+      $game.window.addstr("#{member.type.name}HP: #{member.max_hp}/#{member.hp} SP: #{member.max_sp}/#{member.sp}")
     end
   end
 end

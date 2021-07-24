@@ -2,15 +2,15 @@
 
 # Party is composed of member.
 class Member < BattleActor
-  attr_reader :id, :name, :max_hp, :hp, :max_sp, :sp
+  attr_reader :type, :max_hp, :hp, :max_sp, :sp
 
-  def initialize(id, name)
+  def initialize(type)
     super()
-    @id = id
-    @name = name
-    @max_hp = 100
-    @hp = 100
-    @max_sp = 50
-    @sp = 50
+    @type = type
+    @level = 1
+    @max_hp = @type.vitality * 12 + (@level * 4)
+    @hp = max_hp.dup
+    @max_sp = @type.mind * 6 + (@level * 3)
+    @sp = max_sp.dup
   end
 end
