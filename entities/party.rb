@@ -4,8 +4,19 @@
 class Party
   include Singleton
   attr_accessor :inventory
+  attr_reader :members
 
   def initialize
     @inventory = Inventory.new
+    @member_pool = generate_members
+    @members = @member_pool.select { |m| m.id == 'ishihara' }
+  end
+
+  def generate_members
+    members = []
+    Utils.load_json('battle/member').each do |obj|
+      members << Member.new(obj[:id], obj[:name])
+    end
+    members
   end
 end

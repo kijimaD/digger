@@ -1,0 +1,182 @@
+[
+    {
+        "id": "ishihara",
+        "name": "石原",
+        "vitality": 7,
+        "strength": 7,
+        "dexterity": 7,
+        "agility": 7,
+        "mind": 7
+    },
+    {
+        "id": "aono",
+        "name": "青野",
+        "vitality": 12,
+        "strength": 9,
+        "dexterity": 1,
+        "agility": 5,
+        "mind": 6
+    },
+    {
+        "id": "echigo",
+        "name": "越後",
+        "vitality": 8,
+        "strength": 8,
+        "dexterity": 7,
+        "agility": 9,
+        "mind": 1
+    },
+    {
+        "id": "ogami",
+        "name": "大神",
+        "vitality": 8,
+        "strength": 9,
+        "dexterity": 3,
+        "agility": 7,
+        "mind": 8
+    },
+    {
+        "id": "arita",
+        "name": "有田",
+        "vitality": 7,
+        "strength": 9,
+        "dexterity": 11,
+        "agility": 6,
+        "mind": 2
+    },
+    {
+        "id": "hirayama",
+        "name": "平山",
+        "vitality": 6,
+        "strength": 6,
+        "dexterity": 6,
+        "agility": 6,
+        "mind": 4
+    },
+    {
+        "id": "ishida",
+        "name": "石田",
+        "vitality": 14,
+        "strength": 6,
+        "dexterity": 4,
+        "agility": 2,
+        "mind": 5
+    },
+    {
+        "id": "tsutsumi",
+        "name": "堤",
+        "vitality": 2,
+        "strength": 2,
+        "dexterity": 11,
+        "agility": 2,
+        "mind": 10
+    },
+    {
+        "id": "murayama",
+        "name": "村山",
+        "vitality": 6,
+        "strength": 4,
+        "dexterity": 6,
+        "agility": 9,
+        "mind": 6
+    },
+    {
+        "id": "kana",
+        "name": "夏菜",
+        "vitality": 3,
+        "strength": 4,
+        "dexterity": 9,
+        "agility": 11,
+        "mind": 6
+    },
+    {
+        "id": "yui",
+        "name": "ユイ",
+        "vitality": 6,
+        "strength": 8,
+        "dexterity": 4,
+        "agility": 7,
+        "mind": 7
+    },
+    {
+        "id": "riko",
+        "name": "リコ",
+        "vitality": 6,
+        "strength": 8,
+        "dexterity": 3,
+        "agility": 5,
+        "mind": 11
+    },
+    {
+        "id": "shirase",
+        "name": "白瀬",
+        "vitality": 4,
+        "strength": 6,
+        "dexterity": 10,
+        "agility": 9,
+        "mind": 6
+    },
+    {
+        "id": "incho",
+        "name": "委員長",
+        "vitality": 5,
+        "strength": 1,
+        "dexterity": 8,
+        "agility": 6,
+        "mind": 11
+    },
+    {
+        "id": "eri",
+        "name": "エリ",
+        "vitality": 2,
+        "strength": 4,
+        "dexterity": 9,
+        "agility": 7,
+        "mind": 5
+    },
+    {
+        "id": "rurika",
+        "name": "るりか",
+        "vitality": 4,
+        "strength": 1,
+        "dexterity": 6,
+        "agility": 8,
+        "mind": 10
+    },
+    {
+        "id": "mitsuyama",
+        "name": "光山",
+        "vitality": 10,
+        "strength": 13,
+        "dexterity": 9,
+        "agility": 13,
+        "mind": 4
+    },
+    {
+        "id": "ono",
+        "name": "小野",
+        "vitality": 9,
+        "strength": 13,
+        "dexterity": 8,
+        "agility": 9,
+        "mind": 8
+    },
+    {
+        "id": "domio",
+        "name": "ドミオ",
+        "vitality": 14,
+        "strength": 14,
+        "dexterity": 6,
+        "agility": 8,
+        "mind": 5
+    },
+    {
+        "id": "tsubaki",
+        "name": "椿",
+        "vitality": 10,
+        "strength": 10,
+        "dexterity": 13,
+        "agility": 11,
+        "mind": 11
+    }
+]
