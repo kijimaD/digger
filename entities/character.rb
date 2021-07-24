@@ -35,6 +35,5 @@ class Character < GameObject
     battle = BattleState.new(character)
     battle.field_state = FieldState.instance
     GameState.switch(battle)
-
   end
 end

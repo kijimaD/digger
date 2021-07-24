@@ -16,6 +16,12 @@ RSpec.describe BattleState do
     end
   end
 
+  describe '#draw' do
+    it 'can display' do
+      $game.one_turn
+    end
+  end
+
   describe '#generate_monster' do
     context 'when exist category'
     it 'return enemy object array' do
