@@ -7,7 +7,7 @@ open:
 lint:
 	bundle exec rubocop
 jsonlint:
-	npx jsonlint data/json/**/*.json
+	npx jsonlint-cli data/json/**/*.json
 run:
 	ruby main.rb
 run-debug:
