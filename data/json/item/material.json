@@ -70,5 +70,281 @@
         "name": "銅",
         "description": "赤黒く光沢のある金属",
         "rarity": 2
+    },
+    {
+        "id": "rough_cloth",
+        "name": "粗い布",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "beast_skin",
+        "name": "獣の皮",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "monster_leaf",
+        "name": "ハッパの葉",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "small_gear",
+        "name": "小さな歯車",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "brown_shell",
+        "name": "茶色い殻",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "leather",
+        "name": "なめし革",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "red_mucus",
+        "name": "赤色の粘液",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "yellow_mucus",
+        "name": "黄色の粘液",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "blue_mucus",
+        "name": "青色の粘液",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "iron",
+        "name": "鉄",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "cloth",
+        "name": "普通の布",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "red_stone",
+        "name": "赤い石",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "blue_stone",
+        "name": "青い石",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "white_stone",
+        "name": "白い石",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "steel",
+        "name": "鋼",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "durable_cloth",
+        "name": "丈夫な布",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "happy_grass",
+        "name": "幸せ草",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "big_gear",
+        "name": "大きな歯車",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "shiny_lens",
+        "name": "光るレンズ",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "tamahagane",
+        "name": "玉鋼",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "phantom_alloy",
+        "name": "幻の合金",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "demon_beast_fur",
+        "name": "魔獣の毛皮",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "rubber_meat",
+        "name": "ゴム質の肉",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "demon_beast_bone",
+        "name": "魔獣の骨",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "demon_beast_fang",
+        "name": "魔獣の牙",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "cosmic_waste",
+        "name": "宇宙クズ",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "cosmic_iron",
+        "name": "宇宙鉄",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "demon_beast_leather",
+        "name": "魔獣の革",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "rubber_leather",
+        "name": "ゴム質の革",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "red_gem",
+        "name": "赤い宝石",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "blue_gem",
+        "name": "青い宝石",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "white_gem",
+        "name": "白い宝石",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "mysterious_mechanical",
+        "name": "ふしぎな機械",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "cosmic_fuel",
+        "name": "宇宙燃料",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "dragon_scale",
+        "name": "竜のウロコ",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "psychokinesis_stone",
+        "name": "念動石",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "bright_lens",
+        "name": "輝くレンズ",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "rusted_cylinder",
+        "name": "錆びた筒",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "broken_mechanical",
+        "name": "壊れた機械",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "mysterious_cylinder",
+        "name": "なぞの筒",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "mysterious_mechanical",
+        "name": "なぞの機械",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "dragon_robot_core",
+        "name": "ドラゴコア",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "jet_black_bone",
+        "name": "漆黒の骨",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "cosmic_tree",
+        "name": "宇宙樹",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "reverse_scale",
+        "name": "逆鱗",
+        "description": "",
+        "rarity": 1
+    },
+    {
+        "id": "pera",
+        "name": "ペラ",
+        "description": "",
+        "rarity": 1
     }
 ]
