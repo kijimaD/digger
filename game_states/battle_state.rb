@@ -16,9 +16,27 @@ class BattleState < GameState
 
   def draw
     @monsters.each do |monster|
-      $game.window.setpos(2, 2)
+      ball = "
+           ,,,,,,*
+       ,,,*/(#&&@@&%(/
+     ,,,*//(%&@@@@@@@@&/.
+    ,..**//(#&@@@@@@@@@&/.
+   .,.  ..,,,/#&&@@@@@@&/,
+   ./%        .,,**///((*,.
+    (@#              .,,,
+    .%@@.            ,,,
+      ,#@@@/      ..,.
+         . .,**,.. .
+             "
+      world = ball.split("\n").slice(0..30).map { |y| y.slice(0..30) }
+      world.each_with_index do |line, index|
+        $game.window.setpos(1 + index, 1)
+        $game.window.addstr(line)
+      end
+
+      $game.window.setpos(2 + world.length, 2)
       $game.window.addstr(monster.type.name)
-      $game.window.setpos(4, 2)
+      $game.window.setpos(4 + world.length, 2)
       $game.window.addstr(Utils.gauge(monster.hp, monster.max_hp))
     end
   end
