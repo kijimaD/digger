@@ -17,3 +17,9 @@ Test
 export TERM=xterm && bundle exec rspec
 xdg-open coverage/index.html
 ```
+
+AA
+
+https://ascii.co.uk/art/insect
+https://asciiart.website/index.php?art=creatures/dragons
+https://asciiart.website/index.php?art=people/other
