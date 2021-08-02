@@ -51,4 +51,14 @@ RSpec.describe Utils do
       expect(described_class.point_at_distance(1, 1, 90, 1)).to eq([2, 1])
     end
   end
+
+  describe '.gauge' do
+    it 'return gauge string' do
+      expect(described_class.gauge(100, 200)).to eq('|||||-----')
+    end
+
+    it 'return gauge string' do
+      expect(described_class.gauge(33, 200)).to eq('||--------')
+    end
+  end
 end

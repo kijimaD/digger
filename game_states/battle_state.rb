@@ -19,7 +19,7 @@ class BattleState < GameState
       $game.window.setpos(2, 2)
       $game.window.addstr(monster.type.name)
       $game.window.setpos(4, 2)
-      $game.window.addstr('*' * monster.hp)
+      $game.window.addstr(Utils.gauge(monster.hp, monster.max_hp))
     end
   end
 
