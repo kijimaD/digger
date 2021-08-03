@@ -55,4 +55,11 @@ module Utils
     y = source_y - Math.sin(angle) * distance
     [x, y]
   end
+
+  def self.gauge(current, max)
+    return ('-' * 10) if current.negative?
+
+    percent = (current.to_f / max * 10).round
+    '|' * percent.to_i + '-' * (10 - percent)
+  end
 end

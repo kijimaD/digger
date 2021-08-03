@@ -7,7 +7,8 @@ RSpec.describe MonsterType do
       name: 'test',
       vitality: 1,
       attack: 1,
-      agility: 1
+      agility: 1,
+      category: 'robot'
     }
   end
 

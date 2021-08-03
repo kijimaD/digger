@@ -15,12 +15,7 @@ class BattleState < GameState
   def leave; end
 
   def draw
-    @monsters.each do |monster|
-      $game.window.setpos(2, 2)
-      $game.window.addstr(monster.type.name)
-      $game.window.setpos(4, 2)
-      $game.window.addstr('*' * monster.hp)
-    end
+    monster_image
   end
 
   def update
@@ -40,4 +35,23 @@ class BattleState < GameState
     monsters = []
     monsters << Party.instance.monster_pool.select { |monster| monster.type.category == category }.sample
   end
+
+  private
+
+  # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
+  def monster_image
+    @monsters.each do |monster|
+      world = monster.type.image.split("\n").slice(0..30).map { |y| y.slice(0..30) }
+      world.each_with_index do |line, index|
+        $game.window.setpos(1 + index, 1)
+        $game.window.addstr(line)
+      end
+
+      $game.window.setpos(2 + world.length, 2)
+      $game.window.addstr(monster.type.name)
+      $game.window.setpos(4 + world.length, 2)
+      $game.window.addstr(Utils.gauge(monster.hp, monster.max_hp))
+    end
+  end
+  # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 end

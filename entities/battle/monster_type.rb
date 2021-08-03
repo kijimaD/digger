@@ -2,7 +2,7 @@
 
 # MonsterType have static information for monster.
 class MonsterType
-  attr_accessor :id, :name, :vitality, :attack, :agility, :category
+  attr_accessor :id, :name, :vitality, :attack, :agility, :category, :image
 
   def initialize(hash)
     @id = hash[:id]
@@ -11,5 +11,6 @@ class MonsterType
     @attack = hash[:attack]
     @agility = hash[:agility]
     @category = hash[:category]
+    @image = File.read(Utils.media_path("aa/#{@category}.txt"))
   end
 end

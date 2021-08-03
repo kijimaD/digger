@@ -8,7 +8,8 @@ RSpec.describe Monster do
         name: 'test',
         vitality: 1,
         attack: 1,
-        agility: 1
+        agility: 1,
+        category: 'robot'
       }
     end
     let(:monster) { described_class.new(MonsterType.new(type)) }
