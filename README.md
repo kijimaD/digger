@@ -23,3 +23,7 @@ AA
 https://ascii.co.uk/art/insect
 https://asciiart.website/index.php?art=creatures/dragons
 https://asciiart.website/index.php?art=people/other
+https://asciiart.website/index.php?art=creatures/aliens
+https://asciiart.website/index.php?art=animals/dogs
+https://www.asciiart.eu/animals/birds-land
+http://www.ascii-art.de/ascii/t/tank.txt
