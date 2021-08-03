@@ -16,19 +16,7 @@ class BattleState < GameState
 
   def draw
     @monsters.each do |monster|
-      ball = "
-           ,,,,,,*
-       ,,,*/(#&&@@&%(/
-     ,,,*//(%&@@@@@@@@&/.
-    ,..**//(#&@@@@@@@@@&/.
-   .,.  ..,,,/#&&@@@@@@&/,
-   ./%        .,,**///((*,.
-    (@#              .,,,
-    .%@@.            ,,,
-      ,#@@@/      ..,.
-         . .,**,.. .
-             "
-      world = ball.split("\n").slice(0..30).map { |y| y.slice(0..30) }
+      world = monster.type.image.split("\n").slice(0..30).map { |y| y.slice(0..30) }
       world.each_with_index do |line, index|
         $game.window.setpos(1 + index, 1)
         $game.window.addstr(line)
