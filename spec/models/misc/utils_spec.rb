@@ -53,11 +53,11 @@ RSpec.describe Utils do
   end
 
   describe '.gauge' do
-    it 'return gauge string' do
+    it 'return gauge strings' do
       expect(described_class.gauge(100, 200)).to eq('|||||-----')
     end
 
-    it 'return gauge string' do
+    it 'return 10 strings' do
       expect(described_class.gauge(33, 200)).to eq('||--------')
     end
   end

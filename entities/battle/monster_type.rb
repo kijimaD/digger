@@ -11,12 +11,6 @@ class MonsterType
     @attack = hash[:attack]
     @agility = hash[:agility]
     @category = hash[:category]
-    load_image
-  end
-
-  private
-
-  def load_image
-    @image ||= File.read(Utils.media_path("aa/#{@category}.txt"))
+    @image = File.read(Utils.media_path("aa/#{@category}.txt"))
   end
 end
